@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd zc_plugin_tools
+            cd /home/utibe/zc_plugin_tools
             git pull
             npm run build
             pm2 restart externaltools
