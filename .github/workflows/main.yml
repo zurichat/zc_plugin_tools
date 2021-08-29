@@ -1,4 +1,4 @@
-name: Zuri Plugin Tools​
+name: Zuri External Tools​ Plugin
 on:
   push:
     branches: [ main ]
