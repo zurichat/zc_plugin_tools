@@ -1,5 +1,5 @@
 ---
-name: Issues
+name: Design Issues
 about: Create a Design issue for this project
 title: "[DESIGN ISSUE]"
 labels: Pending review, Design
