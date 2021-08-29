@@ -20,4 +20,5 @@ jobs:
             cd /home/utibe/zc_plugin_tools
             git pull
             npm run build
+            sudo su utibe
             pm2 restart externaltools
