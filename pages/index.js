@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>Welcome to The ZURI CHAT COMPANY TOOLS PLUGIN</h1>
-      <h2>Testing CI/CD</h2>
     </div>
   );
 }
