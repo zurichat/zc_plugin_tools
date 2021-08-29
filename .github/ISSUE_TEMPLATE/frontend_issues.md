@@ -1,5 +1,5 @@
 ---
-name: Issues
+name: Frontend Issues
 about: Create a Frontend issue for this project
 title: "[FRONTEND ISSUE]"
 labels: Pending review, Frontend
