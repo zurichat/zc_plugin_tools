@@ -1,6 +1,6 @@
 ---
 name: Issues
-about: Create a user story for this project
+about: Create an issue for this project
 title: "[ISSUE]"
 labels: Pending review
 assignees: ''
