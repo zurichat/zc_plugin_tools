@@ -18,6 +18,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd zc_plugin_tools
-            sudo git pull
-            sudo npm run build
+            git pull
+            npm run build
             pm2 restart externaltools
