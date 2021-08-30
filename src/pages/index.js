@@ -13,6 +13,7 @@ export default function Home() {
       <div className={`text-center p-12`}>
         <h1 className={`text-gray-800 text-5xl font-extrabold`}>{data.name}</h1>
         <p className={`text-2xl text-gray-600`}>{data.description}</p>
+        <h1>Edited by CI/CD</h1>
       </div>
     </React.Fragment>
   );
