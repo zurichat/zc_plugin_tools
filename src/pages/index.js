@@ -22,7 +22,7 @@ export default function Home() {
             textAlign: "center",
           }}
         >
-          Hi Melford ✌
+          Hi Chidi ✌
         </h1>
         <input
           style={{
