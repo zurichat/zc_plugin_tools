@@ -6,10 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "eslint": "eslint \"./**/*.js\"",
+    "eslint:fix": "eslint --fix \"./**/*.js\""
   },
   "dependencies": {
     "autoprefixer": "^10.3.3",
+    "eslint-plugin-next": "0.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "next": "11.1.0",
     "postcss": "^8.3.6",
     "react": "17.0.2",
@@ -17,7 +22,11 @@
     "tailwindcss": "^2.2.8"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0"
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.3.2"
   }
 }
