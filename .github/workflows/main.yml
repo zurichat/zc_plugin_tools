@@ -23,5 +23,8 @@ jobs:
           - name: Install app dependencies
             run: npm install
 
+          - name: Fix lint
+            run: npm run eslint:fix
+
           - name: Build app
             run: npm run build --if-present

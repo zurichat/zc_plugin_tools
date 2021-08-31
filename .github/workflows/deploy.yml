@@ -19,5 +19,6 @@ jobs:
           script: |
             cd zc_plugin_tools
             git pull
+            npm run eslint:fix
             npm run build
             pm2 restart all
