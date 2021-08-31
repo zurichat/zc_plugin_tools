@@ -1,11 +1,16 @@
-// import logo from './logo.svg';
-// import './App.css';
+import Layout from "./components/layout";
 import MainPage from "./components/MainPage";
+import SearchBar from "./components/searchbar.component";
+import TestInput from "./components/TextInput/textinput.component";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen justify-center">
-      <MainPage />
+    <div className="">
+      <Layout>
+        <SearchBar />
+        <MainPage />
+        <TestInput />
+      </Layout>
     </div>
   );
 }

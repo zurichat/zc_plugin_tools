@@ -3,12 +3,12 @@ import React from "react";
 const MainPage = () => {
   return (
     <div className="font-bold maincomp button border-2 border-red-500">
-      <p className="text-center">
+      <p className="text-center ">
         This is the main Page with{" "}
-        <span className="text-blue-800 font-extrabold">React</span>
+        <span className="text-blue-800 font-extrabold headreact">React</span>
       </p>
       <div className={`text-center p-12`}>
-        <h1 className={`text-gray-800 text-5xl font-extrabold`}>
+        <h1 className={`text-gray-800 text-5xl font-extrabold font-fam1`}>
           External Tools
         </h1>
         <p className={`text-2xl text-gray-600`}>
