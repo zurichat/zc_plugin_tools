@@ -23,7 +23,7 @@ export default function Home() {
             textAlign: "center",
           }}
         >
-          Hi Oscar E ✌
+          Hi Oscar E ✌ Team F
         </h1>
         <input
           style={{
