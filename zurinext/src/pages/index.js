@@ -15,6 +15,16 @@ export default function Home() {
         <p className={`text-2xl text-gray-600`}>{data.description}</p>
         <h1>Edited by CI/CD</h1>
         <h1>Edited Again</h1>
+        <h1>Edited  yet Again</h1>
+        <h1
+          style={{
+            marginTop: "20px",
+            fontSize: "20px",
+            textAlign: "center",
+          }}
+        >
+          Hi Oscar E ✌
+        </h1>
         <input
           style={{
             marginTop: "20px",
