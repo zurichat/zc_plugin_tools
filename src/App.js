@@ -1,3 +1,4 @@
+import GoogleDrive from "./components/GoogleDrive/index.component";
 import Layout from "./components/layout";
 import MainPage from "./components/MainPage";
 import SearchBar from "./components/searchbar.component";
@@ -10,6 +11,7 @@ function App() {
         <SearchBar />
         <MainPage />
         <TestInput />
+        <GoogleDrive />
       </Layout>
     </div>
   );
