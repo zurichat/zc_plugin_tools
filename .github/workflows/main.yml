@@ -18,6 +18,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      
+      - name: Enter server directory
+        run: cd server
+        
       - name: Install app dependencies
         run: yarn install
 
