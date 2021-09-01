@@ -4,7 +4,7 @@ export const tools = [
     name: "Gmail",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/gmail.png",
     category: "enterpriseApp",
     installed: true,
   },
@@ -12,7 +12,7 @@ export const tools = [
     name: "Figma",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/figma.png",
     category: "enterpriseApp",
     installed: true,
   },
@@ -20,7 +20,7 @@ export const tools = [
     name: "Github",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/github.png",
     category: "billiantBots",
     installed: true,
   },
@@ -28,7 +28,7 @@ export const tools = [
     name: "Google Drive",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/googleDrive.png",
     category: "workFromHome",
     installed: true,
   },
@@ -36,7 +36,7 @@ export const tools = [
     name: "Giphy",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/giphy.png",
     category: "billiantBots",
     installed: true,
   },
@@ -44,7 +44,7 @@ export const tools = [
     name: "Facebook",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/facebook.png",
     category: "enterpriseApp",
     installed: false,
   },
@@ -52,7 +52,7 @@ export const tools = [
     name: "UnSplash",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/unsplash.png",
     category: "dailyTools",
     installed: false,
   },
@@ -60,7 +60,7 @@ export const tools = [
     name: "Medium",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/medium.png",
     category: "dailyTools",
     installed: false,
   },
@@ -68,7 +68,7 @@ export const tools = [
     name: "Pinterest",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/pinterest.png",
     category: "dailyTools",
     installed: false,
   },
@@ -76,7 +76,7 @@ export const tools = [
     name: "Google+ Hangout",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/hangout.png",
     category: "workFromHome",
     installed: false,
   },
@@ -84,7 +84,7 @@ export const tools = [
     name: "Dribble",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/dribble.png",
     category: "billiantBots",
     installed: false,
   },
@@ -92,7 +92,7 @@ export const tools = [
     name: "DropBox",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/dropbox.png",
     category: "workFromHome",
     installed: false,
   },
@@ -100,7 +100,7 @@ export const tools = [
     name: "Behance",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/behance.png",
     category: "billiantBots",
     installed: false,
   },
@@ -108,7 +108,7 @@ export const tools = [
     name: "Twitter",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/twitter1.png",
     category: "enterpriseApp",
     installed: false,
   },
@@ -116,7 +116,7 @@ export const tools = [
     name: "LinkedIn",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/linkedin.png",
     category: "workFromHome",
     installed: false,
   },
@@ -124,7 +124,7 @@ export const tools = [
     name: "Trello",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/trello.png",
     category: "dailyTools",
     installed: false,
   },
@@ -132,7 +132,7 @@ export const tools = [
     name: "Google Calendar",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/calender.png",
     category: "workFromHome",
     installed: false,
   },
@@ -140,7 +140,7 @@ export const tools = [
     name: "Hubspot",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/hubspot.png",
     category: "billiantBots",
     installed: false,
   },
@@ -148,7 +148,7 @@ export const tools = [
     name: "Box",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/box.png",
     category: "dailyTools",
     installed: false,
   },
@@ -156,7 +156,7 @@ export const tools = [
     name: "Zoom",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/zoom.png",
     category: "workFromHome",
     installed: false,
   },
@@ -164,7 +164,7 @@ export const tools = [
     name: "Outlook for Zuri",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/outlook.png",
     category: "workFromHome",
     installed: false,
   },
@@ -172,7 +172,7 @@ export const tools = [
     name: "Simple Pool",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/pool.png",
     category: "workFromHome",
     installed: false,
   },
@@ -180,7 +180,7 @@ export const tools = [
     name: "Toast for Github",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/toast.png",
     category: "workFromHome",
     installed: false,
   },
@@ -188,15 +188,15 @@ export const tools = [
     name: "Google Keep",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/keep.png",
     category: "enterpriseApp",
     installed: false,
   },
   {
-    name: "Quick Quiz",
+    name: "Sales Force",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/salesforce.png",
     category: "billiantBots",
     installed: false,
   },
@@ -204,7 +204,7 @@ export const tools = [
     name: "Google Meet",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/meet.png",
     category: "enterpriseApp",
     installed: false,
   },
@@ -212,7 +212,7 @@ export const tools = [
     name: "Google Photos",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/photos.png",
     category: "enterpriseApp",
     installed: false,
   },
@@ -220,7 +220,7 @@ export const tools = [
     name: "Microsoft Office for Zuri",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/office",
     category: "workFromHome",
     installed: false,
   },
@@ -228,7 +228,7 @@ export const tools = [
     name: "Snapchat",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "",
+    image: "./apps/snapchat.png",
     category: "billiantBots",
     installed: false,
   },

@@ -2,6 +2,11 @@ import Layout from "./components/layout";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ToolsView from "./components/ToolsViewPage/ToolsView";
 import ToolsDirectory from "./components/ToolsDirectory/ToolsDirectory";
+import Gmail from "./components/Apps/Gmail/Gmail";
+import Figma from "./components/Apps/Figma/Figma";
+import Github from "./components/Apps/Github/Github";
+import Giphy from "./components/Apps/Giphy/Giphy";
+import GoogleDrive from "./components/Apps/GoogleDrive/GoogleDrive";
 function App() {
   return (
     <div className="">
@@ -10,7 +15,12 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={ToolsView} />
-            <Route path="/tools" component={ToolsDirectory} />
+            <Route exact path="/tools" component={ToolsDirectory} />
+            <Route path="/gmail" component={Gmail} />
+            <Route path="/figma" component={Figma} />
+            <Route path="/github" component={Github} />
+            <Route path="/giphy" component={Giphy} />
+            <Route path="/googledrive" component={GoogleDrive} />
           </Switch>
         </BrowserRouter>
       </Layout>
