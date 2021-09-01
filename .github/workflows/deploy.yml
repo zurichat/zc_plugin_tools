@@ -18,5 +18,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd zc_plugin_tools/server
-            PORT=3000 pm2 start yarn --name tools_plugin" --max-memory-restart 670M  -- start
+            PORT=3000 pm2 start yarn --name "tools_plugin" --max-memory-restart 670M  -- start
 
