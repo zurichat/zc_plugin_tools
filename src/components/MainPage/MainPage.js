@@ -1,6 +1,8 @@
 import React from "react";
+import { tools } from "../../data/tools.data";
 
 const MainPage = () => {
+  console.log(tools);
   return (
     <div className="font-bold border-2 border-red-500 bg-white">
       <p className="text-center ">
