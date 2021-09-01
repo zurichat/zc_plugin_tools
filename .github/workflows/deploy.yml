@@ -19,6 +19,7 @@ jobs:
           script: |
             cd zc_plugin_tools
             git pull
+            cd server
             yarn install
             yarn build
-            pm2 restart all
+            yarn start
