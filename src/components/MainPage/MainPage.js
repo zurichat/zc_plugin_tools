@@ -2,7 +2,7 @@ import React from "react";
 
 const MainPage = () => {
   return (
-    <div className="font-bold maincomp button border-2 border-red-500">
+    <div className="font-bold border-2 border-red-500 bg-white">
       <p className="text-center ">
         This is the main Page with{" "}
         <span className="text-blue-800 font-extrabold headreact">React</span>

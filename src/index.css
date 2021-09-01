@@ -19,14 +19,6 @@ code {
     monospace;
 }
 
-.maincomp {
-  background-color: gray;
-}
-
-.button {
-  @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg  transition transform duration-200 ease-in text-gray-700 text-3xl;
-}
-
 .headreact {
   font-family: "Oswald", sans-serif;
 }
