@@ -4,7 +4,7 @@
   "description": "This api serves all requests for the company online tools on Zuri Chat",
   "main": "app.js",
   "scripts": {
-    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "start": "node index.js --env production",
     "build": "cd ../client && yarn install && yarn build",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
