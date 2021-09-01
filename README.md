@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Company Online Tools Plugin ✌
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The company online tools plugin is a feature which allows users to interact with third party tools like Google Drive, Figma, Github, etc. to make work flow for themselves or their team faster and easier.
+ 
+All our tools are external applications that you may have used or heard of but to maximize productivity, we are giving you access to some of their awesome features right in Zuri Chat.
 
-## Available Scripts
+## Design:
+Figma link to the design implemented:
+<br>
+ coming soon... 👀
 
-In the project directory, you can run:
+## Hosted URL:
+https://externaltools.zuri.chat/
 
-### `yarn start`
+## Tech Stack:
+ - React js
+ - Nodejs
+ - Tailwind
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Project Setup & Contribution Guide:
+ - Fork this REPO
+ - Clone the repo from your account to your local PC
+ ``` 
+ git clone https://github.com/<username>/zc_plugin_tools.git
+ ```
 
-### `yarn test`
+#
+## BACKEND
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - Switch to the **client** directory and install all dependencies
+ ``` 
+ cd server 
+ yarn install  
+ ```
 
-### `yarn build`
+## FRONTEND
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - Switch to the **server** directory and install all dependencies
+ ``` 
+ cd client 
+ yarn install 
+ ```
+# How to Contribute
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ - Add the main repo remote to your project upstream
+ ```
+ git remote add upstream https://github.com/zurichat/zc_plugin_tools.git
+ ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ - Pull from upstream
+ ```
+ git pull upstream dev
+ ```
 
-### `yarn eject`
+ - Switch to a new branch (development)
+ ```
+ git checkout -b development
+ ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ - Add your work/code
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - When done making your changes, run
+```
+  git add .
+  git commit -m <your commit message>
+  git push origin development
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Hosting Live with vercel (first time only)
+- Create a Vercel Account and give vercel access to your github
+- Make a new project
+- Select the repo (zc_plugin_tools) you just worked on
+- Setup and deploy.
+- After deploying...
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How to contribute continued...
+- Click on **Fetch upstream** on your forked repo
+- Create a Pull Request to `` dev `` branch, only if there are no merge conflicts
+- Add your tech stack team lead as a reviewer of the Pull request.
+- Get him / her to approve your PR
+- Wait for the admin to review and merge your code
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  # For Local Testing:
+ - Run backend server
+ ```
+ cd server
+ yarn run dev
+ ```
+ - Open http://localhost:3600/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ - Run Frontend server
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - Open another terminal (can be in vscode) and run
+ ```
+ cd client
+ yarn start
+ ```
+ - Open http://localhost:3000/
+ ```
