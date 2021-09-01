@@ -15,7 +15,7 @@ const MainPage = () => {
           The zuri chat company tools plugin
         </p>
         <h1>Edited by CI/CD</h1>
-        <h1>Edited Again</h1>
+        <h1>How far</h1>
         <input
           style={{
             marginTop: "20px",
