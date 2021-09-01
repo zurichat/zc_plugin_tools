@@ -17,9 +17,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd zc_plugin_tools
-            git pull
-            cd server
-            yarn install
-            yarn build
-            yarn start
+            pm2 list
