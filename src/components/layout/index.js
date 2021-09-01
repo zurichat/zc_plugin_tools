@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </div>
-      <div className="flex-grow bg-yellow-200" style={{ minWidth: "520px" }}>
+      <div className="flex-grow bg-gray-200" style={{ minWidth: "520px" }}>
         {children}
       </div>
     </div>

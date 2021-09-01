@@ -6,7 +6,7 @@ export const tools = [
       "Get access to the organization tools without leaving the zuri chat",
     image: "",
     category: "enterpriseApp",
-    installed: false,
+    installed: true,
   },
   {
     name: "Figma",
@@ -14,7 +14,7 @@ export const tools = [
       "Get access to the organization tools without leaving the zuri chat",
     image: "",
     category: "enterpriseApp",
-    installed: false,
+    installed: true,
   },
   {
     name: "Github",
@@ -22,7 +22,7 @@ export const tools = [
       "Get access to the organization tools without leaving the zuri chat",
     image: "",
     category: "billiantBots",
-    installed: false,
+    installed: true,
   },
   {
     name: "Google Drive",
@@ -30,7 +30,7 @@ export const tools = [
       "Get access to the organization tools without leaving the zuri chat",
     image: "",
     category: "workFromHome",
-    installed: false,
+    installed: true,
   },
   {
     name: "Giphy",
@@ -38,7 +38,7 @@ export const tools = [
       "Get access to the organization tools without leaving the zuri chat",
     image: "",
     category: "billiantBots",
-    installed: false,
+    installed: true,
   },
   {
     name: "Facebook",

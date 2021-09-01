@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         fam1: ["Dancing Script", "cursive"],
         fam2: ["Oswald", "sans-serif"],
+        fam3: ["Lato", "sans-serif"],
       },
     },
   },
