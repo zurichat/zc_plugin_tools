@@ -53,9 +53,9 @@ https://externaltools.zuri.chat/
  git pull upstream dev
  ```
 
- - Switch to a new branch (development)
+ - Switch to a new branch (dev)
  ```
- git checkout -b development
+ git checkout -b dev
  ```
 
  - Add your work/code
@@ -64,7 +64,7 @@ https://externaltools.zuri.chat/
 ```
   git add .
   git commit -m <your commit message>
-  git push origin development
+  git push origin dev
 ```
 
 ## Hosting Live with vercel (first time only)
