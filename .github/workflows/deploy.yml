@@ -19,5 +19,5 @@ jobs:
           script: |
             cd zc_plugin_tools
             git pull
-            npm run build
+            yarn build
             pm2 restart all
