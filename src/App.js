@@ -1,5 +1,5 @@
 import Layout from "./components/layout";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ToolsView from "./components/ToolsViewPage/ToolsView";
 import ToolsDirectory from "./components/ToolsDirectory/ToolsDirectory";
 import Gmail from "./components/Apps/Gmail/Gmail";
