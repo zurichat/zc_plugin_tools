@@ -1,0 +1,10 @@
+.github_home {
+}
+
+.github_home_padding {
+  @apply p-2 sm:p-4 lg:p-6 xl:p-8 2xl:p-10;
+}
+
+.top_nav {
+  @apply flex justify-between;
+}
