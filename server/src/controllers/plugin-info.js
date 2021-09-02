@@ -3,23 +3,23 @@ const response = require("../utils/response");
 const appInfo = [
   {
     name: "GITHUB",
-    logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    logo: "https://res.cloudinary.com/pablowolf/image/upload/v1630613460/GitHub-Mark_v0odrb.png",
   },
   {
     name: "FIGMA",
-    logo: "https://cdn.sanity.io/images/599r6htc/production/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=670&h=670&q=75&fit=max&auto=format",
+    logo: "https://res.cloudinary.com/pablowolf/image/upload/v1630613524/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024_bq4w0h.png",
   },
   {
     name: "GOOGLE DRIVE",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png",
+    logo: "https://res.cloudinary.com/pablowolf/image/upload/v1630613549/Google_Drive_logo_i0llf0.png",
   },
   {
     name: "GIPHY",
-    logo: "https://images-eu.ssl-images-amazon.com/images/I/113Ja712zxL.png",
+    logo: "https://res.cloudinary.com/pablowolf/image/upload/v1630613567/113Ja712zxL_xtxsun.png",
   },
   {
     name: "GMAIL",
-    logo: "https://cdn.icon-icons.com/icons2/2631/PNG/512/gmail_new_logo_icon_159149.png",
+    logo: "https://res.cloudinary.com/pablowolf/image/upload/v1630613587/gmail_new_logo_icon_159149_jchsqd.png",
   },
 ];
 
