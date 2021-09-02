@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+.github_home {
+  font-family: 'Lato', sans-serif;
+  @apply flex flex-col flex-nowrap gap-10;
+}
+
+.github_home_padding {
+  @apply p-2 sm:p-4 lg:p-6 xl:p-8 2xl:p-10;
+}
+
+.top_nav {
+  @apply flex justify-between items-center;
+}
+
+.github_home_main {
+  @apply flex flex-col lg:flex-row gap-6 flex-nowrap;
+}
+
+.github_home_main-section1 {
+  @apply w-full lg:w-1/5 flex flex-col gap-4;
+}
+.github_home_main-section2 {
+  @apply w-full lg:w-4/5 flex flex-col lg:gap-5 gap-3;
+}
+
+.github_btn_container-btn {
+  border-color: #009b69;
+  @apply border-2 p-4 md:p-4 lg:p-1 xl:p-2 2xl:p-3  text-lg lg:text-base xl:text-lg 2xl:text-xl font-semibold rounded;
+}
+.github_home-desc {
+  @apply text-lg lg:text-base xl:text-lg 2xl:text-xl;
+}
+.github_categories {
+  @apply p-2 max-w-max rounded border-2;
+  border-color: #a1a1a1;
+}
+
+.github_home_nav {
+  border-color: #c4c4c4;
+  @apply border-b-2;
+}
+
+.github_home_nav-link {
+  @apply py-4 border-b-2 cursor-pointer text-lg lg:text-base xl:text-lg 2xl:text-xl;
+}
+.github_home_nav-active {
+  @apply border-b-2;
+  border-color: #009b69;
+}
