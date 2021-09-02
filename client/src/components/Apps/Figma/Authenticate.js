@@ -19,7 +19,8 @@ function Authenticate() {
 
 	const deployedCallBackURI = "ttp://externaltools.zuri.chat/authenticate/";
 
-	const vercelCallbackURI = "https://zc-plugin-tools2.vercel.app/";
+	const vercelCallbackURI =
+		"https://zc-plugin-tools-oz8hq3z3r-preshy-jones.vercel.app/";
 	const clientSecret = "V3CDaxZOdHJqFedUFdaR3JbFUS1Abd";
 
 	const fetchAccesskey = (e) => {
