@@ -22,6 +22,7 @@ function Authenticate() {
 	const vercelCallbackURI =
 		"https://zc-plugin-tools-oz8hq3z3r-preshy-jones.vercel.app/";
 	const clientSecret = "V3CDaxZOdHJqFedUFdaR3JbFUS1Abd";
+	const proxy = "https://secret-ocean-49799.herokuapp.com/";
 
 	const fetchAccesskey = (e) => {
 		e.preventDefault();
@@ -29,7 +30,7 @@ function Authenticate() {
 		setTimeout(() => {
 			axios({
 				method: "POST",
-				url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${vercelCallbackURI}&code=${code}&grant_type=authorization_code`,
+				url: `${proxy}https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${vercelCallbackURI}&code=${code}&grant_type=authorization_code`,
 			})
 				.then((response) => {
 					console.log(response);
