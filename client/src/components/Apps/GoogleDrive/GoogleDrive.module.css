@@ -1,0 +1,34 @@
+.container{
+    height: 100%;
+    padding-top: 6%;
+    background-color: #f6f6f6
+}
+
+.container .layer1{
+    width: 100%;
+    height: 8.97%;
+}
+
+.container .layer2{
+    border:  1px solid #E7E7E7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.container .layer2 h3{
+    height: 100%;
+    
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    margin: 14px 14px 0 14px;
+    padding-bottom: 14px;
+    cursor: pointer;
+}
+
+.markGreen{
+    border-bottom: #0acf83 1px solid;
+}
