@@ -16,6 +16,7 @@ https://externaltools.zuri.chat/
  - React js
  - Nodejs
  - Tailwind
+ - Yarn (not npm 👀)
 
 
 # Project Setup & Contribution Guide:
@@ -28,10 +29,11 @@ https://externaltools.zuri.chat/
 #
 ## BACKEND
 
- - Switch to the **client** directory and install all dependencies
+ - Switch to the **client** directory, install all dependencies and build frontend
  ``` 
  cd server 
- yarn install  
+ yarn install 
+ yarn build 
  ```
 
 ## FRONTEND
