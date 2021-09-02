@@ -17,7 +17,7 @@ function Authenticate() {
 
 	const localHostCallBackURI = "http://localhost:3000/authenticate/";
 
-	const deplayedCallBackURI = "ttp://externaltools.zuri.chat/authenticate/";
+	const deployedCallBackURI = "ttp://externaltools.zuri.chat/authenticate/";
 
 	const clientSecret = "V3CDaxZOdHJqFedUFdaR3JbFUS1Abd";
 
@@ -27,7 +27,7 @@ function Authenticate() {
 		setTimeout(() => {
 			axios({
 				method: "POST",
-				url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${localHostCallBackURI}&code=${code}&grant_type=authorization_code`,
+				url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${deployedCallBackURI}&code=${code}&grant_type=authorization_code`,
 			}).then((response) => {
 				console.log(response.data);
 				setGenerated(true);
