@@ -3,6 +3,8 @@ const morgan = require("morgan");
 const compression = require("compression");
 const cors = require("cors");
 const path = require("path");
+const frontendBase = path.join(__dirname, "..", "..", "..", "client", "build");
+const frontendIndex = path.join(frontendBase, "index.html");
 
 const { NotFoundError } = require("../lib/errors");
 const errorMiddleware = require("../middlewares/error");
@@ -13,9 +15,7 @@ module.exports = (app) => {
   app.use(compression());
   app.use(morgan("dev"));
 
-  app.use(
-    express.static(path.join(__dirname, "..", "..", "..", "client", "build"))
-  );
+  app.use(express.static(frontendBase));
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
@@ -23,8 +23,8 @@ module.exports = (app) => {
 
   app.use("/api", routes);
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "..", "..", "client", "build"));
+  app.get("*", (req, res, next) => {
+    res.sendFile(frontendIndex);
   });
 
   app.use((req, res, next) => {
