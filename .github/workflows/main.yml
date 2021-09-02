@@ -1,7 +1,7 @@
 name: Zuri External Tools​ Plugin
 on:
   push:
-    branches: [dev]
+    branches: [main]
 
 jobs:
   build:
@@ -18,12 +18,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-          
-      - name: Install app dependencies
-        run: cd server && yarn install
 
-      - name: Build frontend and backend
-        run: cd server && yarn build --if-present
+      - name: Install frontend dependencies
+        working-directory: ./client
+        run: yarn install
+
+      - name: Build frontend
+        working-directory: ./client
+        run: yarn build
+
+      - name: Install backend dependencies
+        working-directory: ./server
+        run: yarn install
 
       - name: Start app
-        run: cd server && yarn start
+        working-directory: ./server
+        run: yarn start
