@@ -16,6 +16,7 @@ https://externaltools.zuri.chat/
  - React js
  - Nodejs
  - Tailwind
+ - Yarn (not npm 👀)
 
 
 # Project Setup & Contribution Guide:
