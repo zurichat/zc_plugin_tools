@@ -39,7 +39,7 @@ const InstalledTools = () => {
         <div>
           <div className="flex cursor-pointer">
             <div
-              className="bg-gray-300 flex w-2/3 lg:w-full p-3 justify-center items-center rounded-xl space-x-3 border-2 border-dashed "
+              className="bg-gray-300 flex w-2/3 lg:w-full p-4 justify-center items-center rounded-xl space-x-3 border-2 border-dashed "
               onClick={handleClick}
             >
               <div>
