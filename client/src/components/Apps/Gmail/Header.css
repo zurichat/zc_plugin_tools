@@ -1,0 +1,57 @@
+body {
+  background: whitesmoke;
+}
+
+header img {
+  cursor: pointer;
+}
+
+header button {
+  color: #555;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+header button p {
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+img.search {
+  padding: 0 20px;
+}
+
+img.settings {
+  padding-right: 20px;
+}
+
+form {
+  display: block;
+  padding: 10px 5px;
+  background: #fff;
+  border-radius: 3px;
+  outline-width: 1px;
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  flex: 1;
+}
+
+form input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+
+form img {
+  padding: 0 10px;
+}
