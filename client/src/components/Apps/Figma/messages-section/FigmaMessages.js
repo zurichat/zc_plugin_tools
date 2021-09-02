@@ -5,7 +5,7 @@ import './../css/messages.css'
 
 const FigmaMessages = () => {
     return <>
-            <p>This is the message section</p>
+            <p>This is the message section .</p>
     </>
 }
 
