@@ -20,7 +20,7 @@ function Authenticate() {
 	const deployedCallBackURI = "ttp://externaltools.zuri.chat/authenticate/";
 
 	const vercelCallbackURI =
-		"https://zc-plugin-tools-oz8hq3z3r-preshy-jones.vercel.app/";
+		"https://zc-plugin-tools-oz8hq3z3r-preshy-jones.vercel.app/authenticate";
 	const clientSecret = "V3CDaxZOdHJqFedUFdaR3JbFUS1Abd";
 	//const proxy = "https://secret-ocean-49799.herokuapp.com/";
 
