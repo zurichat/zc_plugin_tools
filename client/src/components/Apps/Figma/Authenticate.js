@@ -27,21 +27,21 @@ function Authenticate() {
 	const fetchAccesskey = async (e) => {
 		e.preventDefault();
 		setisLoading(true);
-		setTimeout(async () => {
-			const result = await axios({
-				method: "POST",
-				url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${vercelCallbackURI}&code=${code}&grant_type=authorization_code`,
+		//setTimeout(async () => {
+		const result = await axios({
+			method: "POST",
+			url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${localHostCallBackURI}&code=${code}&grant_type=authorization_code`,
+		})
+			.then((response) => {
+				console.log(response);
+				setGenerated(true);
+				setisLoading(false);
+				setAccessToken(response.data.access_token);
 			})
-				.then((response) => {
-					console.log(response);
-					setGenerated(true);
-					setisLoading(false);
-					setAccessToken(response.data.access_token);
-				})
-				.catch((error) => {
-					console.log(error.response);
-				});
-		}, 2000);
+			.catch((error) => {
+				console.log(error.response);
+			});
+		//	}, 2000);
 		// return setState("holla");
 	};
 	return (
