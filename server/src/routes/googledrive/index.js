@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const googleDrvieController = require("../controllers/googledrive/index");
+const googleDrvieController = require("../../controllers/googledrive/index");
 
 
 module.exports = function () {
