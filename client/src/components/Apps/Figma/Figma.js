@@ -6,7 +6,7 @@ const Figma = () => {
 	const deployedUrl =
 		"https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=http://externaltools.zuri.chat/authenticate/&scope=file_read&state=state&response_type=code";
 	const vercelUrl =
-		"https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=//https://zc-plugin-tools-oz8hq3z3r-preshy-jones.vercel.app/authenticate/&scope=file_read&state=state&response_type=code";
+		"https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=https://zc-plugin-tools-oz8hq3z3r-preshy-jones.vercel.app/authenticate/&scope=file_read&state=state&response_type=code";
 	return (
 		<div>
 			<h2 className="text-lg text-gray-600 font-bold">FIGMA HOME PAGE</h2>
