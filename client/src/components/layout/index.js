@@ -5,7 +5,7 @@ import { faEdit } from "@fortawesome/free-regular-svg-icons";
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-grow min-h-screen">
-      <div className="max-w-md min-w-0 border-2 border-blue-700  ">
+      <div className="max-w-md min-w-0   ">
         <div className="flex space-x-4 p-6">
           <img src="./zurichatlogo.svg" alt="Zuri Logo" />
           <p className="font-bold text-2xl">Zuri</p>

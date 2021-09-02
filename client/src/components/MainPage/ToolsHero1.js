@@ -7,7 +7,7 @@ const ToolsHero = () => {
   const [hidden, setHidden] = useState(false);
   return (
     <>
-      <div className={`${hidden ? "hidden" : "flex"} flex-col mx-6 my-4`}>
+      <div className={` flex-col mx-6 my-4`}>
         <div className="flex justify-between font-bold pb-3">
           <div>Tools</div>
           <Link to={"/tools"} className="no-underline">
@@ -19,9 +19,13 @@ const ToolsHero = () => {
             </div>
           </Link>
         </div>
-        <div className="bg-white flex p-3 rounded-lg ">
+        <div
+          className={`${
+            hidden ? "hidden" : "flex"
+          } bg-white flex p-3 rounded-lg`}
+        >
           <div className="flex-1">
-            <div className=" max-w-md pt-4 pl-2 ">
+            <div className=" max-w-md pd-1 md:pt-4 pl-2 ">
               <div className="font-bold text-xl">
                 Powerful tools integrated just for Zuri chat
               </div>

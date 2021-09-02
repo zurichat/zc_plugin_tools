@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 // import ModalComponent from "../Modal/Modal";
 import Modal from "react-bootstrap/Modal";
+import { useHistory } from "react-router-dom";
 
-const InstallToolsCard = ({ name, image, description }) => {
+const InstallToolsCard = ({ name, image, description, linkName }) => {
   const [modalShowContent, setModalShowContent] = useState(false);
-
+  // console.log(linkName);
   function MyVerticallyCenteredModal(props) {
     return (
       <Modal
@@ -69,13 +70,16 @@ const InstallToolsCard = ({ name, image, description }) => {
       </Modal>
     );
   }
+
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push(`/${linkName}`);
+  };
   return (
     <div>
-      <div
-        className="flex cursor-pointer"
-        onClick={() => setModalShowContent(true)}
-      >
-        <div className="bg-white flex w-max p-3 justify-center items-center space-x-4 rounded-lg">
+      <div className="flex " onClick={handleClick}>
+        <div className="bg-white flex w-max p-3 justify-center items-center space-x-4 rounded-lg cursor-pointer">
           <div className=" p-1 border border-gray-300 rounded-lg ">
             <img src={image} alt="" width={50} />
           </div>
@@ -85,12 +89,12 @@ const InstallToolsCard = ({ name, image, description }) => {
           </div>
         </div>
       </div>
-      <MyVerticallyCenteredModal
+      {/* <MyVerticallyCenteredModal
         show={modalShowContent}
         onHide={() => setModalShowContent(false)}
         name={name}
         image={image}
-      />
+      /> */}
     </div>
   );
 };
