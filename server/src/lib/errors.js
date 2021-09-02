@@ -1,7 +1,7 @@
 class AppError extends Error {
   constructor(message, statusCode = 500) {
     super(message);
-    this.name = "Ecom360Error";
+    this.name = "ZC-plugin-tools-API-Error";
     this.statusCode = statusCode;
     this.isOperational = true;
     this.date = new Date();

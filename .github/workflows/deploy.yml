@@ -21,4 +21,5 @@ jobs:
             git pull
             cd server
             yarn install
-            yarn build         
+            yarn build    
+            pm2 restart all

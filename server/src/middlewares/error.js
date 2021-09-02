@@ -20,7 +20,7 @@ const errorMiddleware = function (error, req, res, next) {
   const errorMessage = error.message ?? error;
   logger.error(error);
 
-  if (error?.name === "Ecom360Error" || error?.isOperational) {
+  if (error?.name === "ZC-plugin-tools-API-Error" || error?.isOperational) {
     return res
       .status(error.statusCode)
       .send(response(error.message, null, false));
