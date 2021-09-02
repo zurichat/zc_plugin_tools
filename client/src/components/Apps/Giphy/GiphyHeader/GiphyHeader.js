@@ -7,7 +7,7 @@ import "./GiphyHeader.css";
 const GiphyHeader = () => {
   return (
     <div className="giphy-headerr">
-      <SearchBar text="Search Zuri" />
+      <SearchBar text="Search Giphy" />
       <img src={Settings} alt="" className="settingsgiphy" />
       <img src={DisplayPic} alt="" className="dpgiphy" />
     </div>
