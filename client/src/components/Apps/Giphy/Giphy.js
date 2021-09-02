@@ -1,7 +1,15 @@
 import React from "react";
+import MainSideSection from "./MainSideSection";
+import "./main-layout.css";
 
-const Giphy = () => {
-  return <div>This is the giphy page</div>;
-};
+function GiphyMainLayout() {
+  return (
+    <React.Fragment>
+      <section>
+        <MainSideSection />
+      </section>
+    </React.Fragment>
+  );
+}
 
-export default Giphy;
+export default GiphyMainLayout;
