@@ -4,7 +4,7 @@ paths:
       summary: Example Get
       description: gets data
       tags:
-        - C
+        - C [Giphy]
       parameters:
         - in: query
           name: page
@@ -18,7 +18,7 @@ paths:
     get:
       summary: Get Random GIF
       tags:
-        - C
+        - C [Giphy]
       responses:
         200:
           description: Status and message and data
@@ -27,7 +27,7 @@ paths:
     get:
       summary: Get Trending GIFs
       tags:
-        - C
+        - C [Giphy]
       responses:
         200:
           description: Status and message and data
@@ -37,7 +37,7 @@ paths:
       summary: Example Post
       description: Posts data
       tags:
-        - C
+        - C [Giphy]
       produces:
         - application/json
       parameters:
