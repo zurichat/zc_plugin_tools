@@ -4,6 +4,6 @@ const googleDriveApi = require("./googledrive/index");
 
 module.exports = () => {
   router.use(pluginInfoRouter());
-  router.use(googleDriveApi())
+  router.use(googleDriveApi());
   return router;
 };
