@@ -11,7 +11,8 @@ function App() {
   return (
     <div className="">
       <Layout>
-        {/* Insert your compoents inside this layout entity */}
+        {/* Insert your components inside this layout entity */}
+        <Giphy />
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={ToolsView} />

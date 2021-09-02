@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@emotion/styled": "^11.3.0",
+    "styled-components": "^5.3.1"
+  }
+}

@@ -1,7 +1,12 @@
 import React from "react";
+import GiphyHeader from "./GiphyHeader/GiphyHeader";
 
 const Giphy = () => {
-  return <div>This is the giphy page</div>;
+  return (
+    <div>
+      <GiphyHeader />
+    </div>
+  );
 };
 
 export default Giphy;
