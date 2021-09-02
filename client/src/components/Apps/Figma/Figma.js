@@ -16,8 +16,6 @@ class Figma extends Component{
     this.state = initialState
   }
 
-  
-
   render (){
     return <>
     <SearchBar />
