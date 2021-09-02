@@ -19,6 +19,7 @@ function Authenticate() {
 
 	const deployedCallBackURI = "ttp://externaltools.zuri.chat/authenticate/";
 
+	const vercelCallbackURI = "https://zc-plugin-tools2.vercel.app/";
 	const clientSecret = "V3CDaxZOdHJqFedUFdaR3JbFUS1Abd";
 
 	const fetchAccesskey = (e) => {
@@ -27,7 +28,7 @@ function Authenticate() {
 		setTimeout(() => {
 			axios({
 				method: "POST",
-				url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${deployedCallBackURI}&code=${code}&grant_type=authorization_code`,
+				url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${vercelCallbackURI}&code=${code}&grant_type=authorization_code`,
 			}).then((response) => {
 				console.log(response.data);
 				setGenerated(true);
@@ -42,7 +43,7 @@ function Authenticate() {
 			<h1>Authenticate</h1>
 			<h1>{state}</h1>
 			<button
-				className="px-4 py-2 bg-gray-700 text-white rounded-lg"
+				className="px-4 py-2 bg-gray-700 text-white rounded-sm"
 				onClick={fetchAccesskey}>
 				Generate Api key
 			</button>
