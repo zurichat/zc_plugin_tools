@@ -30,7 +30,7 @@ function Authenticate() {
 		//setTimeout(async () => {
 		const result = await axios({
 			method: "POST",
-			url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${localHostCallBackURI}&code=${code}&grant_type=authorization_code`,
+			url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${vercelCallbackURI}&code=${code}&grant_type=authorization_code`,
 		})
 			.then((response) => {
 				console.log(response);
