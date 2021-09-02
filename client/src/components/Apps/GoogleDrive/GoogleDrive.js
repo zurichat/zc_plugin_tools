@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./GoogleDrive.module.css";
-import Messages from "./Messages/Messages";
-import About from "./About/About";
+// import Messages from "./Messages/Messages";
+// import About from "./About/About";
 
 const GoogleDrive = () => {
-  const [page, setPage] = useState("messages");
+  // const [page, setPage] = useState("messages");
   const [clicked, setClicked] = useState("desc")
 
   console.log(page);
