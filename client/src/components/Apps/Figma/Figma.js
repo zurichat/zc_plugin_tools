@@ -1,9 +1,13 @@
 import React from "react";
+import Searchbar from "./Searchbar";
 
 const Figma = () => {
-  return <div>
-    hello world
-  </div>;
+  return <>
+    <div>
+      <Searchbar/>
+      hello world
+    </div>
+  </>
 };
 
 export default Figma;
