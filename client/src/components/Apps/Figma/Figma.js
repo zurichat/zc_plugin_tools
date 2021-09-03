@@ -31,11 +31,13 @@ class Figma extends Component {
 					<h4 className="Logo-tag">Figma</h4>
 					<div className="arrow-down">^</div>
 				</div>
-				<a
-					className="px-4 py-2 bg-gray-700 text-white rounded-sm"
-					href={deployedUrl}>
-					Connect to figma
-				</a>
+				<div className="mb-1.5">
+					<a
+						className="px-4 py-2 bg-gray-700 text-white rounded-sm"
+						href={deployedUrl}>
+						Connect to figma
+					</a>
+				</div>
 				<div className="welcome-nav">
 					<h4
 						onClick={() => {
