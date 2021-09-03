@@ -6,8 +6,9 @@ import Gmail from "./components/Apps/Gmail/Gmail";
 import Figma from "./components/Apps/Figma/Figma";
 import Github from "./components/Apps/Github/Github";
 import Giphy from "./components/Apps/Giphy/Giphy";
-import Authenticate from "./components/Apps/Figma/Authenticate";
+import Authenticate from "./components/Apps/Figma/subRoutes/Authenticate";
 import GoogleDrive from "./components/Apps/GoogleDrive/GoogleDrive";
+import FigmaSubRoutes from "./components/Apps/Figma/SubRoute";
 function App() {
 	return (
 		<div className="">
@@ -18,9 +19,9 @@ function App() {
 						<Route exact path="/" component={ToolsView} />
 						<Route exact path="/tools" component={ToolsDirectory} />
 						<Route path="/gmail" component={Gmail} />
+						<Route path="/figma/:subroute" component={FigmaSubRoutes} />
 						<Route path="/figma" component={Figma} />
 						<Route path="/github" component={Github} />
-						<Route path="/authenticate" component={Authenticate} />
 						<Route path="/giphy" component={Giphy} />
 						<Route path="/googledrive" component={GoogleDrive} />
 					</Switch>
