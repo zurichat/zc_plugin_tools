@@ -10,8 +10,12 @@ const Github = () => {
       {/* <ToolsHeader /> */}
       <Router>
         <Switch>
-          <Route exact path="/github" component={GithubHome} />
-          <Route exact path="/github/github-installed" component={GithubInstalled} />
+          <Route exact path='/github' component={GithubHome} />
+          <Route
+            exact
+            path='/github/github-installed'
+            component={GithubInstalled}
+          />
         </Switch>
       </Router>
     </>
