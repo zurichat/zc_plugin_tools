@@ -14,8 +14,8 @@ import {tools} from "./../data/tools.data";
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1"  id="tools-list">
       {
         this.filtered.map(val => (
-          <div class='border-2'>
-            <img width="30%" src={val.image} alt={val.name+' image'}/>
+          <div>
+            <img width="30px" src={val.image} alt={val.name+' image'}/>
             <p>{val.name}</p>
           </div>
         ))
