@@ -7,6 +7,7 @@ const Giphy = () => {
     <>
       {/* <ToolsHeader /> */}
       <div>
+        <GiphyHeader />
         <DescriptionAction />
       </div>
     </>
