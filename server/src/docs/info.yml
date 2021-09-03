@@ -1,0 +1,12 @@
+paths:
+  /info:
+    get:
+      summary: Info details
+      description: Info on Team Hobbes projects
+      tags:
+        - Info
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: Status and message and data
