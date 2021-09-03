@@ -1,10 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-//import { IoChevronBackOutline } from "react-icons/io5";
-//import { AiFillGithub } from "react-icons/ai";
-=======
->>>>>>> dc4a6648bf45420531a2b3db1bf68e8483004430
 import Image from "../assets/ZV_64LdGoao.jpg";
 import GithubLogo from "../assets/Rectangle 693.jpg";
 import "../style/GithubHome.css";

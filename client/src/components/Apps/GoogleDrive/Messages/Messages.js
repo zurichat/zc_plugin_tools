@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import styles from './Messages.module.css';
 
 
@@ -35,12 +34,7 @@ function Messages (){
             
         </div>
     )
-=======
-import styles from "./Messages.module.css";
+    }
 
-function Messages() {
-  return <div className={styles.wrapper}>This is the Messages page</div>;
->>>>>>> dc4a6648bf45420531a2b3db1bf68e8483004430
-}
 
 export default Messages;
