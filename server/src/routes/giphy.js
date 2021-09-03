@@ -1,8 +1,10 @@
 const router = require('express').Router()
 const giphy = require('../controllers/giphy')
 
-router.get('/random', giphy.randomGif)
+module.exports = function () {
+  router.get('/random', giphy.randomGif)
 
-router.get('/trending', giphy.trendingGifs)
+  router.get('/trending', giphy.trendingGifs)
 
-module.exports = router
+  return router
+}
