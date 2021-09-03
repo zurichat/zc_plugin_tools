@@ -6,6 +6,6 @@ const googleDriveApi = require("./googledrive");
 module.exports = () => {
   router.use('/giphy', giphy())
   router.use(pluginInfoRouter())
-  router.use(googleDriveApi());
+  router.use('/googledrive',googleDriveApi());
   return router
 }
