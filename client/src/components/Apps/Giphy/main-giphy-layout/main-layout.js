@@ -1,6 +1,6 @@
-import React from "react";
-import DescriptionAction from "../descriptionActions/descriptionAction";
-import "./main-layout.css";
+import React from 'react';
+import DescriptionAction from '../descriptionActions/descriptionAction';
+import './main-layout.css';
 
 function MainGiphyLayout() {
   return (

@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { IoChevronBackOutline } from "react-icons/io5";
-import { AiFillGithub } from "react-icons/ai";
-import Image from "../assets/ZV_64LdGoao.jpg";
-import GithubLogo from "../assets/Rectangle 693.jpg";
-import "../style/GithubHome.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { IoChevronBackOutline } from 'react-icons/io5';
+import { AiFillGithub } from 'react-icons/ai';
+import Image from '../assets/ZV_64LdGoao.jpg';
+import GithubLogo from '../assets/Rectangle 693.jpg';
+import '../style/GithubHome.css';
 const GithubHome = () => {
   return (
     <section className="github_home github_home_padding">
@@ -43,7 +43,7 @@ const GithubHome = () => {
               </button>
             </div>
           </div>
-          <div className={"hidden lg:block p-0.5 bg-githubGrey"}></div>
+          <div className={'hidden lg:block p-0.5 bg-githubGrey'}></div>
           <div className={`hidden lg:flex flex-col gap-3`}>
             <p className={`flex flex-col gap-1`}>
               <span className={`font-bold github_home-desc`}>

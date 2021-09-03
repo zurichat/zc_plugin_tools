@@ -1,5 +1,5 @@
-import React from "react";
-import MainGiphyLayout from "./main-giphy-layout/main-layout";
+import React from 'react';
+import MainGiphyLayout from './main-giphy-layout/main-layout';
 
 const Giphy = () => {
   return (
