@@ -4,6 +4,7 @@ const googleDriveApi = require("./googledrive");
 const sideBarRouter = require("./sidebar");
 const githubRouter = require("./github");
 const giphy = require("./giphy");
+const githubRouter = require("./github");
 
 module.exports = () => {
   router.use(pluginInfoRouter());
@@ -18,4 +19,4 @@ module.exports = () => {
   });
 
   return router;
-};
+}
