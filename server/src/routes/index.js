@@ -1,9 +1,17 @@
-const router = require('express').Router()
-const pluginInfoRouter = require('./plugin-info')
-const giphy = require('./giphy')
+const router = require("express").Router();
+const pluginInfoRouter = require("./plugin-info");
+const sideBarRouter = require("./sidebar");
+const giphy = require("./giphy");
 
 module.exports = () => {
-  router.use('/giphy', giphy())
-  router.use(pluginInfoRouter())
-  return router
-}
+  router.use(pluginInfoRouter());
+  router.use(sideBarRouter());
+  router.use(giphy());
+
+  // Handle Invalid API routes
+  router.use((req, res, next) => {
+    next(new NotFoundError());
+  });
+
+  return router;
+};

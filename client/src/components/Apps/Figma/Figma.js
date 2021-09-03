@@ -5,7 +5,7 @@ import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
 import logo from "./images/fignaLogo.png";
 import "./css/Figma.css";
-import ToolsHeader from "../../toolsheader/toolsheader";
+// import ToolsHeader from "../../toolsheader/toolsheader";
 
 const initialState = {
   page: "about",
@@ -24,7 +24,7 @@ class Figma extends Component {
 
     return (
       <>
-        <ToolsHeader />
+        {/* <ToolsHeader /> */}
         <SearchBar />
         <div className="Start-title">
           <div className="figmalogo-container">
