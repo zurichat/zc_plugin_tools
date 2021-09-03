@@ -7,18 +7,6 @@ import "../style/GithubHome.css";
 const GithubHome = () => {
   return (
     <section className='github_home github_home_padding'>
-      <div className='top_nav'>
-        <h2 className={`font-bold text-lg lg:text-lg xl:text-xl 2xl:text-2xl`}>
-          Tool Directory
-        </h2>
-        <Link
-          to={`/`}
-          className='flex items-center gap-2 lg:text-md font-semibold'
-        >
-          <IoChevronBackOutline />
-          Back home
-        </Link>
-      </div>
       <div className={`github_home_main`}>
         <section className={`github_home_main-section1`}>
           <div className={`flex flex-col gap-4`}>
