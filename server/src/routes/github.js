@@ -1,14 +1,10 @@
-const githubRouter = require("express").Router();
-
+const router = require("express").Router();
 const githubController = require("../controllers/github");
 
 module.exports = function () {
-  githubRouter.get("/github/:user", githubController.getUser);
+  router.get("/repos/:username", githubController.usersRepo);
 
-  githubRouter.get(
-    "/github/:username/:repo",
-    githubController.fetchRepoBranches
-  );
+  router.get("/github/:username/:repo", githubController.fetchRepoBranches);
 
-  return githubRouter;
+  return router;
 };

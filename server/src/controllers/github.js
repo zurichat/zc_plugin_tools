@@ -1,14 +1,14 @@
-const axios = require("axios");
 const response = require("../utils/response");
+const axios = require("axios");
 
-class GithubController {
-  async getUser(req, res) {
+class githubController {
+  async usersRepo(req, res) {
     try {
-      const { user } = req.params;
-      const resp = await axios.get(`https://api.github.com/users/${user}`);
-      res.status(200).json(resp.data);
-    } catch (error) {
-      res.status(400).json(error);
+      const reposUrl = `https://api.github.com/users/${req.params.username}/repos`;
+      const { data } = await axios.get(reposUrl);
+      res.status(200).send({ repos: data });
+    } catch (e) {
+      res.status(400).send(`this error occured ${e}`);
     }
   }
 
@@ -24,4 +24,4 @@ class GithubController {
   }
 }
 
-module.exports = new GithubController();
+module.exports = new githubController();

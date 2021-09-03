@@ -2,8 +2,8 @@ const router = require("express").Router();
 const pluginInfoRouter = require("./plugin-info");
 const googleDriveApi = require("./googledrive");
 const sideBarRouter = require("./sidebar");
-const githubRouter = require("./github");
 const giphy = require("./giphy");
+const githubRouter = require("./github");
 
 module.exports = () => {
   router.use(pluginInfoRouter());
