@@ -1,4 +1,5 @@
-import styles from './Messages.module.css'
+import styles from './Messages.module.css';
+
 
 
 function Messages (){
@@ -27,6 +28,7 @@ function Messages (){
            <div>
            <textarea id="story" name="story"
           rows="5" cols="33" placeholder="Send a message to Google Drive">
+            
            </textarea>
            </div>
             
