@@ -16,10 +16,9 @@ const login = Joi.object({
   password: Joi.string().required(),
 });
 
-
 module.exports = {
   signUp,
   login,
-  sendVerificationToken,
-  verifySignUpToken,
+  // sendVerificationToken, - eslint no-undefined
+  // verifySignUpToken,  - eslint no-undefined
 };
