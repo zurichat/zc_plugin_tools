@@ -29,6 +29,7 @@ const InstalledTools = () => {
             .map(({ name, image, description, linkName }) => {
               return (
                 <InstallToolsCard
+                  key={name}
                   name={name}
                   image={image}
                   description={description}

@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+// import { faChevronLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+// import { Link } from "react-router-dom";
 
 const ToolsHeaderMain = () => {
   return (
