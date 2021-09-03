@@ -1,24 +1,22 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-const HomeLayout = ({ children }) => {
-  <div className="flex flex-grow min-h-screen">
-    <div className="flex-grow bg-gray-200">{children}</div>
-  </div>;
-};
+const HomeLayout = ({ children }) => (
+  <div className="">
+    <div className="">{children}</div>
+  </div>
+);
 
 const HomeLayoutRoutes = ({ component: Component, ...rest }) => {
   return (
-    <div>
-      <Route
-        {...rest}
-        render={(props) => (
-          <HomeLayout>
-            <Component {...props} />
-          </HomeLayout>
-        )}
-      />
-    </div>
+    <Route
+      {...rest}
+      render={(props) => (
+        <HomeLayout>
+          <Component {...props} />
+        </HomeLayout>
+      )}
+    />
   );
 };
 

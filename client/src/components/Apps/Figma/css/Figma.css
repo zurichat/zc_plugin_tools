@@ -9,6 +9,7 @@
     padding: 20px 0 20px 20px;
     justify-content: flex-start;
     align-items: center;
+    position :relative;
 }
 
 .Start-title h4 {
@@ -56,3 +57,13 @@
     border-bottom: 1px solid #0ACF83;
 }
 
+.fig-connect-btn {
+    position: absolute;
+    top: 95px;
+    left: 180px;
+    
+}
+
+.fig-connect-btn a {
+    background-color: #0ACF83 ;
+}
