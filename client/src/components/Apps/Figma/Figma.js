@@ -5,7 +5,7 @@ import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
 import logo from "./images/fignaLogo.png";
 import "./css/Figma.css";
-import ToolsHeader from "../../toolsheader/toolsheader";
+// import ToolsHeader from "../../toolsheader/toolsheader";
 
 const initialState = {
   page: "about",
@@ -24,7 +24,7 @@ class Figma extends Component {
 
     return (
       <>
-        <ToolsHeader />
+        {/* <ToolsHeader /> */}
         <SearchBar />
         <div className="Start-title">
           <div className="figmalogo-container">
@@ -33,7 +33,7 @@ class Figma extends Component {
           <h4 className="Logo-tag">Figma</h4>
           <div className="arrow-down">^</div>
         </div>
-        <div className="mb-1.5">
+        <div className="mb-1.5 fig-connect-btn">
           <a
             className="px-4 py-2 bg-gray-700 text-white rounded-sm"
             href={deployedUrl}
