@@ -16,13 +16,12 @@ class GithubController {
     const { username, repo } = req.params;
     try {
       const url = `https://api.github.com/repos/${username}/${repo}/branches`;
-      const {data} = await axios.get(url);
+      const { data } = await axios.get(url);
       res.send(response("Repo branches retrieved successfully", data));
-    } catch(e){
+    } catch (e) {
       res.send(response(e.message, null, false));
     }
   }
-
 }
 
 module.exports = new GithubController();
