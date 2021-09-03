@@ -1,11 +1,12 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-import { faEdit } from "@fortawesome/free-regular-svg-icons";
+// import { faEdit } from "@fortawesome/free-regular-svg-icons";
+
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-grow min-h-screen">
-      <div className="max-w-md min-w-0 border-2 border-blue-700  ">
+      {/* <div className="max-w-md min-w-0 border-2 border-blue-700  ">
         <div className="flex space-x-4 p-6">
           <img src="./zurichatlogo.svg" alt="Zuri Logo" />
           <p className="font-bold text-2xl">Zuri</p>
@@ -31,10 +32,9 @@ const Layout = ({ children }) => {
             <p>Messages</p>
           </div>
         </div>
-      </div>
-      <div className="flex-grow bg-gray-200" style={{ minWidth: "520px" }}>
-        {children}
-      </div>
+      </div> */}
+
+      <div className="flex-grow bg-gray-200">{children}</div>
     </div>
   );
 };

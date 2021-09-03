@@ -1,7 +1,15 @@
-import React from "react";
+import ToolsHeader from "../../toolsheader/toolsheader";
+import DescriptionAction from "./descriptionActions/descriptionAction";
 
 const Giphy = () => {
-  return <div>This is the giphy page</div>;
+  return (
+    <>
+      <ToolsHeader />
+      <div>
+        <DescriptionAction />
+      </div>
+    </>
+  );
 };
 
 export default Giphy;
