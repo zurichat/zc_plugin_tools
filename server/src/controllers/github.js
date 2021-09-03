@@ -12,4 +12,4 @@ class GithubController {
   }
 }
 
-module.exports = new PluginInfoController();
+module.exports = new GithubController();
