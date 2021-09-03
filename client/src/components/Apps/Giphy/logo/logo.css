@@ -1,0 +1,14 @@
+.logo-wrapper {
+    background: white;
+    border-radius: 8px;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+.logo-wrapper img {
+    border-radius: 8px;
+    width: 60%;
+}
