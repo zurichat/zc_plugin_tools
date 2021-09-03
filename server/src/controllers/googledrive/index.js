@@ -1,5 +1,5 @@
-const response = require("../utils/response");
-const env = require("../config/env");
+const response = require("../../utils/response");
+const env = require("../../config/env");
 const { google } = require("googleapis");
 
 const {
