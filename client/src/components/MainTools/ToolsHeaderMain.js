@@ -1,13 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+// import { faChevronLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+// import { Link } from "react-router-dom";
 
 const ToolsHeaderMain = () => {
   return (
     <div>
       <div className="flex flex-col mx-8 my-4">
-        <div className="flex justify-between  pb-3 mb-3">
+        {/* <div className="flex justify-between  pb-3 mb-3">
           <div className="font-black">Tools Directory</div>
           <Link to={"/"} className="no-underline">
             <div className="flex justify-between items-center space-x-2 cursor-pointer text-black">
@@ -17,7 +17,7 @@ const ToolsHeaderMain = () => {
               <div className="">Back to Tools</div>
             </div>
           </Link>
-        </div>
+        </div> */}
         <div className="border-b-2 border-gray-300">
           <div className="flex pb-8 ">
             <input
