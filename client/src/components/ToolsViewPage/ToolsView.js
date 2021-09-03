@@ -5,7 +5,7 @@ const ToolsView = () => {
     <div>
       {
         /* insert your component for those working on the company tools view page */
-        SearchBarTools()
+        <SearchBarTools />
       }
     </div>
   );
