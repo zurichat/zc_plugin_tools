@@ -79,7 +79,7 @@ const InstallToolsCard = ({ name, image, description, linkName }) => {
   return (
     <div>
       <div className="flex " onClick={handleClick}>
-        <div className="bg-white flex w-max p-3 justify-center items-center space-x-4 rounded-lg cursor-pointer">
+        <div className="bg-white flex w-full p-3 justify-center items-center space-x-4 rounded-lg cursor-pointer">
           <div className=" p-1 border border-gray-300 rounded-lg ">
             <img src={image} alt="" width={50} />
           </div>

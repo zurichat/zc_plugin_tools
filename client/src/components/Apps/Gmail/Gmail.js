@@ -12,7 +12,7 @@ const Gmail = () => {
   return (
     // Please Clean the code below and add your code to complete your task, This is an example code that can be deleted
     <div className="flex flex-col h-screen">
-      <div
+      {/* <div
         onClick={handleClick}
         className="cursor-pointer p-2 flex space-x-2 bg-gray-500 w-max m-4 rounded-full text-white"
       >
@@ -20,7 +20,7 @@ const Gmail = () => {
           <FontAwesomeIcon icon={faAngleDoubleLeft} className="" />
         </div>
         <div className="">back to main</div>
-      </div>
+      </div> */}
       <div className="flex flex-1 justify-center items-center ">
         <div className="font-extrabold text-2xl">
           This is the Gmail Home Page
