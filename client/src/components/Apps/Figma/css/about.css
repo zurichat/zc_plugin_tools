@@ -9,13 +9,11 @@
     display: flex;
     margin-top: 20px;
     padding: 20px;
-
 }
 
 .banner-section .banner-image-container {
     display: flex;
     flex-direction: column;
-
 }
 
 .banner-section .banner-image-container img {
