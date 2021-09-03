@@ -33,7 +33,7 @@ class Figma extends Component {
           <h4 className="Logo-tag">Figma</h4>
           <div className="arrow-down">^</div>
         </div>
-        <div className="mb-1.5">
+        <div className="mb-1.5 fig-connect-btn">
           <a
             className="px-4 py-2 bg-gray-700 text-white rounded-sm"
             href={deployedUrl}

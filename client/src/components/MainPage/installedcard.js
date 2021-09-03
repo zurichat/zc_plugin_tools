@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import ModalComponent from "../Modal/Modal";
-import Modal from "react-bootstrap/Modal";
+// import Modal from "react-bootstrap/Modal";
 import { useHistory, Link } from "react-router-dom";
 
 const InstallToolsCard = ({ name, image, description, linkName }) => {
