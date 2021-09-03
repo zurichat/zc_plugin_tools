@@ -1,0 +1,44 @@
+paths:
+  /get-example:
+    get:
+      summary: Example Get
+      description: gets data
+      tags:
+        - D
+      parameters:
+        - in: query
+          name: page
+          type: integer
+          required: true
+      responses:
+        200:
+          description: Status and message and data
+
+  /post-example:
+    post:
+      summary: Example Post
+      description: Posts data
+      tags:
+        - D
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: request
+          required: true
+          schema:
+            $ref: "#/definitions/example"
+      responses:
+        200:
+          description: Status and message and data
+
+definitions:
+  example:
+    type: object
+    properties:
+      user:
+        type: string
+        required: true
+      password:
+        type: string
+        required: true

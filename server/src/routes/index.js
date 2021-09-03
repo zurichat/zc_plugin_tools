@@ -1,10 +1,10 @@
-const router = require("express").Router();
-const pluginInfoRouter = require("./plugin-info");
-const githubRouter = require("./github");
+const router = require('express').Router();
+const pluginInfoRouter = require('./plugin-info');
+const giphy = require('./giphy');
 
 module.exports = () => {
+  router.use('/giphy', giphy());
   router.use(pluginInfoRouter());
   router.use(githubRouter());
-
   return router;
-};
+}
