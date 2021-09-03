@@ -1,15 +1,14 @@
 import React from "react";
-import MainSideSection from "./MainSideSection";
-import "./main-layout.css";
+import MainGiphyLayout from "./main-giphy-layout/main-layout";
 
-function GiphyMainLayout() {
+const Giphy = () => {
   return (
     <React.Fragment>
-      <section>
-        <MainSideSection />
-      </section>
+      <MainGiphyLayout />
     </React.Fragment>
   );
-}
+};
 
-export default GiphyMainLayout;
+export default Giphy;
+
+// Please add all your components into the main-layout.js file inside the main-giphy-layout folder not in here.

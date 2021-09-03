@@ -1,0 +1,30 @@
+.giphyButton {
+    width: 100%;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0.7em 0;
+    font-size: 16px;
+    margin: 5px auto;
+    transition: 0.2s;
+}
+
+.greenButton {
+    background-color: #009B69;
+    color: white;
+}
+
+.greenButton:hover{
+    background: #007c55;
+    transition: 0.2s;
+}
+
+.whiteBtn {
+    background-color: white;
+    color: #009B69;
+    border: 1px solid #009B69;
+}
+
+.whiteBtn:hover{
+    background: rgb(241, 241, 241);
+    transition: 0.2s;
+}
