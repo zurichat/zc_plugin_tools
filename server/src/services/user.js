@@ -13,7 +13,6 @@ class UserService {
   update(id, updateQuery) {
     return User.findByIdAndUpdate(id, updateQuery);
   }
-
 }
 
 module.exports = new UserService();
