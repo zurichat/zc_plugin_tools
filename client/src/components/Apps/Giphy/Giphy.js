@@ -1,7 +1,11 @@
-import React from "react";
+import DescriptionAction from "./descriptionActions/descriptionAction";
 
 const Giphy = () => {
-  return <div>This is the giphy page</div>;
+  return (
+    <div>
+      <DescriptionAction />
+    </div>
+    );
 };
 
 export default Giphy;
