@@ -1,14 +1,7 @@
-import styles from './About.module.css'
+import styles from "./About.module.css";
 
-
-function About () {
-
-    return(
-        <div className={styles.wrapper}>
-            This is the about page
-        </div>
-    )
+function About() {
+  return <div className={styles.wrapper}>This is the about page</div>;
 }
 
-
-export default About
+export default About;
