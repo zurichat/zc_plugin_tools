@@ -1,0 +1,62 @@
+paths:
+  /get-example:
+    get:
+      summary: Example Get
+      description: gets data
+      tags:
+        - C [Giphy]
+      parameters:
+        - in: query
+          name: page
+          type: integer
+          required: true
+      responses:
+        200:
+          description: Status and message and data
+
+  /giphy/random:
+    get:
+      summary: Get Random GIF
+      tags:
+        - C [Giphy]
+      responses:
+        200:
+          description: Status and message and data
+
+  /giphy/trending:
+    get:
+      summary: Get Trending GIFs
+      tags:
+        - C [Giphy]
+      responses:
+        200:
+          description: Status and message and data
+
+  /post-example:
+    post:
+      summary: Example Post
+      description: Posts data
+      tags:
+        - C [Giphy]
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: request
+          required: true
+          schema:
+            $ref: "#/definitions/example"
+      responses:
+        200:
+          description: Status and message and data
+
+definitions:
+  example:
+    type: object
+    properties:
+      user:
+        type: string
+        required: true
+      password:
+        type: string
+        required: true
