@@ -4,6 +4,7 @@ import Githubgivepermission from "./containers/Githubgivepermission";
 // import ToolsHeader from "../../toolsheader/toolsheader";
 import GithubHome from "./containers/GithubHome";
 import GithubInstalled from "./containers/GithubInstalled";
+import Githubauth from "./containers/Githubauth";
 
 const Github = () => {
   return (
@@ -13,6 +14,7 @@ const Github = () => {
         <Switch>
           <Route exact path='/github/githubgivepermission' component={Githubgivepermission} />
           <Route exact path='/github' component={GithubHome} />
+          <Route exact path='/github/auth' component={Githubauth} />
           <Route
             exact
             path='/github/github-installed'

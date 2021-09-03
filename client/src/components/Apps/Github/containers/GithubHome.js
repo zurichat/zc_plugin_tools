@@ -15,7 +15,7 @@ const GithubHome = () => {
             </div>
             <div className={`github_btn_container flex flex-col gap-2`}>
               <button
-                onClick={()=> window.open("./github/githubgivepermission")}
+                onClick={()=> window.open("./github/auth")}
                 className={`github_btn_container-btn bg-githubGreen text-white`}
               >
                 Add to Zuri Chat
