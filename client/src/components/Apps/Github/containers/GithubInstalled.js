@@ -56,10 +56,10 @@ const GithubInstalled = () => {
       <hr className="bg-gray-400 h-1 " />
     </div>
     <div className="mb-20 ml-3">
-      <div className="" >
+      <div>
         <div className="block" >
           <div className="grid grid-cols-12 mb-7" >
-            <div className="" >
+            <div>
               <img src={git} alt="git banner" />
             </div>
             <div className="col-span-11">
@@ -68,9 +68,9 @@ const GithubInstalled = () => {
             </div>
           </div>
           <div className="flex mb-2" >
-            <img src={line} alt="line" /><div className="px-8 pb-1 border border-gray-400 rounded-3xl" >
+            <img src={line} className="w-40 sm:h-auto sm:w-auto" alt="line" /><div className="px-8 pb-1 border border-gray-400 rounded-3xl" >
               <h2 className="text-black-500 text-xs font-bold" >Today</h2>
-            </div><img src={line} alt="line" />
+            </div><img src={line} className="w-40 sm:h-auto sm:w-auto"  alt="line" />
           </div>
           <div className="grid grid-cols-12 mb-4" >
             <div className="" >
@@ -97,7 +97,7 @@ const GithubInstalled = () => {
               <img className="mx-1" src={list} alt="list" />
               <img className="mx-1" src={align} alt="align" />
             </div>
-            <div className=" inline-flex relative left-2/3">
+            <div className=" inline-flex lg:relative left-2/3">
               <img className="mx-1" src={aa} alt="aa" />
               <img className="mx-1" src={atsign} alt="atsign" />
               <img className="mx-1" src={smile} alt="smile" />
