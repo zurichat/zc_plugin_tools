@@ -23,7 +23,7 @@ import chevdown from "../assets/chev-down.svg";
 
 const GithubInstalled = () => {
   return <div className="container" >
-      <div className="inline-flex lg:relative mt-4 left-2/3" >
+      <div className="inline-flex lg:relative mt-3 left-2/3" >
         <input type="text"  className="border-2 border-gray-300 w-60 h-7 rounded-sm" placeholder="   Search here" />
         <img src={vector} className="mx-3" alt="setting wheel" />
         <div className="bg-green-200 rounded-full relative bottom-1" >
@@ -48,14 +48,14 @@ const GithubInstalled = () => {
         <img src={info} alt="info" className="relative left-full" />
       </div>
     </div>
-    <div className="mb-20 divide-y-2 > *">
-      <ul className="inline-flex font-medium text-sm ml-4 -mb-0.5 text-gray-400">
-        <li className="pr-2 border-bottom-2 border-b-8 hover:text-black hover:border-green-400" >Description</li>
-        <li className="pr-2 hover:text-black border-b-8 hover:text-black hover:border-green-400" >About</li>
+    <div className="mb-48 divide-y-2 > *">
+      <ul className="inline-flex font-medium text-md ml-4 -mb-0.5 text-gray-500">
+        <li className="pr-2 border-bottom-2 border-b-4 text-black border-green-400" >Description</li>
+        <li className="pr-2 hover:text-black border-b-5 hover:text-black" >About</li>
       </ul>
-      <hr className="bg-gray-400 h-1 " />
+      <hr className="bg-gray-700 " />
     </div>
-    <div className="mb-20 ml-3">
+    <div className="mb-20 ml-10">
       <div>
         <div className="block" >
           <div className="grid grid-cols-12 mb-7" >
@@ -67,13 +67,13 @@ const GithubInstalled = () => {
               <p>Here you can post and recieve comments with <a href="#" className="text-decoration-none text-blue-500" >@Github</a></p>
             </div>
           </div>
-          <div className="flex mb-2" >
-            <img src={line} className="w-40 sm:h-auto sm:w-auto" alt="line" /><div className="px-8 pb-1 border border-gray-400 rounded-3xl" >
+          <div className="flex mb-4" >
+            <img src={line} className="w-10 sm:h-auto sm:w-full" alt="line" /><div className="sm:px-8 py-1 px-4 sm:py-2 rounded-3xl" style={{border: '1px solid gray'}} >
               <h2 className="text-black-500 text-xs font-bold" >Today</h2>
-            </div><img src={line} className="w-40 sm:h-auto sm:w-auto"  alt="line" />
+            </div><img src={line} className="w-10 sm:h-auto sm:w-full"  alt="line" />
           </div>
-          <div className="grid grid-cols-12 mb-4" >
-            <div className="" >
+          <div className="grid grid-cols-12 mb-12" >
+            <div>
               <img src={git} alt="git banner" />
             </div>
             <div className="col-span-11">
@@ -86,7 +86,7 @@ const GithubInstalled = () => {
               <p className="text-xs text-black-500 mt-3">Looking for additional help? Try /github help</p>
             </div>
           </div>
-          <div className="bg-white rounded-md border border-gray-300 px-10 mr-5" >
+          <div className="bg-white rounded-md border border-gray-300 py-2 px-10 mr-5" >
             <textarea className="border-0 w-full" placeholder="Send a message to Github" ></textarea>
             <div className="inline-flex" >
               <img className="mx-1" src={zap} alt="zap" />
@@ -97,7 +97,7 @@ const GithubInstalled = () => {
               <img className="mx-1" src={list} alt="list" />
               <img className="mx-1" src={align} alt="align" />
             </div>
-            <div className=" inline-flex lg:relative left-2/3">
+            <div className="hidden sm:inline-flex lg:relative left-2/3">
               <img className="mx-1" src={aa} alt="aa" />
               <img className="mx-1" src={atsign} alt="atsign" />
               <img className="mx-1" src={smile} alt="smile" />
