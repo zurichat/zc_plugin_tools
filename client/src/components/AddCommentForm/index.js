@@ -25,7 +25,7 @@ class NameForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label className="formName">
-                    Why do you want to Add GoogleDrive to Zuri Plugin
+                    Why do you want to Add GoogleDrive to Zuri Plugin Tools
                 </label>
                 <input className='input-space'
                     type="text"

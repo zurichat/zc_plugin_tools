@@ -1,5 +1,6 @@
 import React from "react";
 import './modal.css'
+import { func, bool } from 'prop-types';
 import { ImCancelCircle } from 'react-icons/im';
 
 const Modal = ({ handleClose, show, children }) => {
@@ -8,18 +9,26 @@ const Modal = ({ handleClose, show, children }) => {
     return (
         <div className={showHideClassName}>
             <section className="modal-main">
-                <ImCancelCircle style={{
-                    color: 'white',
-                    float: 'right',
-                    width: 40,
-                    marginTop: 20
-                }}
+                <ImCancelCircle
+                    style={{
+                        color: 'white',
+                        float: 'right',
+                        width: 40,
+                        marginTop: 20
+                    }}
                     onClick={handleClose} />
                 {children}
-
             </section>
         </div>
     );
 };
+
+Modal.propTypes = {
+    handleClose: func,
+    show: func,
+    children: bool,
+};
+
+
 
 export default Modal
