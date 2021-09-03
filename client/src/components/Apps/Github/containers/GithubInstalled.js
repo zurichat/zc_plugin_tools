@@ -21,7 +21,7 @@ import paperclip from "../assets/paperclip.svg";
 import aa from "../assets/Aa.svg";
 import chevdown from "../assets/chev-down.svg";
 
-const GithubInstall = () => {
+const GithubInstalled = () => {
   return <div className="container" >
       <div className="inline-flex lg:relative mt-4 left-2/3" >
         <input type="text"  className="border-2 border-gray-300 w-60 h-7 rounded-sm" placeholder="   Search here" />
@@ -113,4 +113,4 @@ const GithubInstall = () => {
   </div>;
 };
 
-export default GithubInstall;
+export default GithubInstalled;
