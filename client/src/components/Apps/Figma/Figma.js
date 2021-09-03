@@ -12,7 +12,7 @@ const Figma = () => {
 			<div className="mt-6">
 				<a
 					className="px-4 py-2 bg-gray-700 text-white rounded-sm"
-					href={localHostUrl}>
+					href={deployedUrl}>
 					Connect to figma
 				</a>
 			</div>
