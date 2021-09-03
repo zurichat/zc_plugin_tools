@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { IoChevronBackOutline } from "react-icons/io5";
+// import { Link } from "react-router-dom";
+// import { IoChevronBackOutline } from "react-icons/io5";
 import Image from "../assets/ZV_64LdGoao.jpg";
 import GithubLogo from "../assets/Rectangle 693.jpg";
 import "../style/GithubHome.css";
 const GithubHome = () => {
   return (
     <section className="github_home github_home_padding">
-      <div className="top_nav">
+      {/* <div className="top_nav">
         <h2 className={`font-bold text-lg lg:text-lg xl:text-xl 2xl:text-2xl`}>
           Tool Directory
         </h2>
@@ -18,7 +18,7 @@ const GithubHome = () => {
           <IoChevronBackOutline />
           Back home
         </Link>
-      </div>
+      </div> */}
       <div className={`github_home_main`}>
         <section className={`github_home_main-section1`}>
           <div className={`flex flex-col gap-4`}>
