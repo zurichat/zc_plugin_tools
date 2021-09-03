@@ -124,8 +124,6 @@ const GithubHome = () => {
 export default GithubHome;
 =======
 import React from "react";
-import { Link } from "react-router-dom";
-import { IoChevronBackOutline } from "react-icons/io5";
 import Image from "../assets/ZV_64LdGoao.jpg";
 import GithubLogo from "../assets/Rectangle 693.jpg";
 import "../style/GithubHome.css";
