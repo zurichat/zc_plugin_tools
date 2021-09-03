@@ -1,19 +1,14 @@
 import React from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
-import { useHistory } from "react-router-dom";
-import ToolsHeader from "../../toolsheader/toolsheader";
+// import { useHistory } from "react-router-dom";
+// import ToolsHeader from "../../toolsheader/toolsheader";
 
 const Gmail = () => {
-  const history = useHistory();
-
-  const handleClick = () => {
-    history.push("/");
-  };
   return (
     // Please Clean the code below and add your code to complete your task, This is an example code that can be deleted
     <>
-      <ToolsHeader />
+      {/* <ToolsHeader /> */}
       <div className="flex flex-col h-screen">
         {/* <div
         onClick={handleClick}

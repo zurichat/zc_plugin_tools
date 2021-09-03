@@ -21,15 +21,15 @@ import About from "./About/About";
 import { useHistory } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
-import ToolsHeader from "../../toolsheader/toolsheader";
+// import ToolsHeader from "../../toolsheader/toolsheader";
 
 const GoogleDrive = () => {
   const [page, setPage] = useState("messages");
   const history = useHistory();
 
-  const handleClick = () => {
-    history.push("/");
-  };
+  // const handleClick = () => {
+  //   history.push("/");
+  // };
   // console.log(page);
 
   return (
@@ -43,7 +43,7 @@ const GoogleDrive = () => {
         </div>
         <div className="">back to main</div>
       </div> */}
-      <ToolsHeader />
+      {/* <ToolsHeader /> */}
       <div className={styles.container}>
         <div className={styles.layer1}></div>
 >>>>>>> 2a0a6fc3b3848f1d7180daa7de0f52422b34bcbc
