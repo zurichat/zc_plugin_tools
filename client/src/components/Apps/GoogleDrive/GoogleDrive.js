@@ -3,8 +3,9 @@ import styles from "./GoogleDrive.module.css";
 import Messages from "./Messages/Messages";
 import About from "./About/About";
 import { useHistory } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
+import ToolsHeader from "../../toolsheader/toolsheader";
 
 const GoogleDrive = () => {
   const [page, setPage] = useState("messages");
@@ -26,6 +27,7 @@ const GoogleDrive = () => {
         </div>
         <div className="">back to main</div>
       </div> */}
+      <ToolsHeader />
       <div className={styles.container}>
         <div className={styles.layer1}></div>
 
