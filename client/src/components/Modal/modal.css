@@ -1,0 +1,74 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:50%;
+    height: 50%;
+    /* background: rgba(0, 0, 0, 0.6); */
+  }
+  
+  .modal-main {
+    position:fixed;
+    background: gray;
+    width: 50%;
+    height: auto;
+    top:50%;
+    left:60%;
+    transform: translate(-50%,-50%);
+    padding-bottom: 30px
+  }
+  
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+
+  .modal-button {
+      background-color: white;
+      padding: 5px;
+      align-items: center;
+      display: flex;
+      margin: auto;
+      margin-top: 80px
+  }
+
+  .formName{
+      font-size: 17px;
+      margin-left: 20px;
+      color: white;
+      padding: 8px;
+      justify-content: center;
+      display: flex;
+      margin: auto;
+      padding: 50px
+  }
+  .input-space {
+      margin-top: 40px;
+      justify-content: center;
+      display: flex;
+      margin: auto;
+      padding: 10px;
+      width: 50%;
+      border-radius: 4px
+  }
+  
+  .submit-button {
+      padding: 6px;
+      justify-content: center;
+      display: flex;
+      margin: auto;
+      margin-top: 50px;
+  }
+
+  .open-button {
+    padding: 6px;
+    color: green;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid white
+}
