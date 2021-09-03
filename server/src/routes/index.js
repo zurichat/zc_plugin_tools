@@ -1,7 +1,10 @@
 const router = require("express").Router();
+
 const pluginInfoRouter = require("./plugin-info");
 const sideBarRouter = require("./sidebar");
 const giphy = require("./giphy");
+
+const { NotFoundError } = require("../lib/errors");
 
 module.exports = () => {
   router.use(pluginInfoRouter());
