@@ -5,14 +5,13 @@
 }
 
 .main-side-section {
-  width: calc(100vw - 262px);
+  width: 100%;
   min-height: 100vh;
-  background-color: #f1f0f0;
   color: rgb(36, 35, 35);
 }
 
 @media screen and (max-width: 991px) {
   .main-side-section {
-    width: 100vw;
+    width: 100%;
   }
 }
