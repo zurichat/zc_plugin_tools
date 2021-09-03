@@ -1,11 +1,15 @@
 import React from 'react';
 import MainGiphyLayout from './main-giphy-layout/main-layout';
+// import ToolsHeader from "../../toolsheader/toolsheader";
 
 const Giphy = () => {
   return (
-    <React.Fragment>
-      <MainGiphyLayout />
-    </React.Fragment>
+    <>
+      {/* <ToolsHeader /> */}
+      <div>
+        <MainGiphyLayout />
+      </div>
+    </>
   );
 };
 

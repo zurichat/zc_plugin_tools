@@ -1,25 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { IoChevronBackOutline } from 'react-icons/io5';
-import { AiFillGithub } from 'react-icons/ai';
 import Image from '../assets/ZV_64LdGoao.jpg';
 import GithubLogo from '../assets/Rectangle 693.jpg';
 import '../style/GithubHome.css';
 const GithubHome = () => {
   return (
     <section className="github_home github_home_padding">
-      <div className="top_nav">
-        <h2 className={`font-bold text-lg lg:text-lg xl:text-xl 2xl:text-2xl`}>
-          Tool Directory
-        </h2>
-        <Link
-          to="/"
-          className="flex items-center gap-2 lg:text-md font-semibold"
-        >
-          <IoChevronBackOutline />
-          Back home
-        </Link>
-      </div>
       <div className={`github_home_main`}>
         <section className={`github_home_main-section1`}>
           <div className={`flex flex-col gap-4`}>
@@ -60,7 +47,7 @@ const GithubHome = () => {
             <p className={`flex flex-col gap-1`}>
               <span className={`font-bold github_home-desc`}>Categories</span>
               <ul
-                className={`font-normal text-lg lg:text-base xl:text-lg 2xl:text-xl text-githubTextGrey flex flex-row lg:flex-col gap-1`}
+                className={`font-normal text-lg lg:text-base xl:text-lg 2xl:text-xl text-githubTextGrey flex flex-col gap-1`}
               >
                 <li className={`github_categories`}>Productivity</li>
                 <li className={`github_categories`}>Communication</li>
