@@ -147,7 +147,7 @@ const ToolsView = () => {
 
               fontFamily: "Lato",
               fontStyle: "normal",
-              fontWeight: "bolder",
+              fontWeight: "bold",
               fontSize: 14,
               color: "#242424"
             }}
