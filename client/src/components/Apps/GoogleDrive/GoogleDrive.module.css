@@ -14,6 +14,31 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
+}
+
+
+
+.container .layer2 .rightLayer2{
+  width: 100%;
+  display: flex;
+}
+
+.container .layer2 .leftLayer2{
+  width: 100%;
+  display: flex;
+}
+
+.container .layer2 .leftLayer2 button{
+  border: 1px solid #0acf83;
+  padding: 10px;
+  border-radius: 5px;
+  color: #0acf83;
+}
+
+.container .layer2 .leftLayer2 button:hover{
+  background-color: #0acf83;
+  color: #e7e7e7;
 }
 
 .container .layer2 h3 {
