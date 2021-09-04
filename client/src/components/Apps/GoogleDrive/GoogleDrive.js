@@ -5,14 +5,11 @@ import About from "./About/About";
 import DownloadPage from "./DownloadPage/DownloadPage.js"
 import googleDriveLogo from './assets/logos_google-drive.png'
 import arrowDown from './assets/arrow down.png'
-import ToolsHeader from "../../toolsheader/toolsheader";
-import DownloadPage from "./DownloadPage/DownloadPage.js"
 
 const GoogleDrive = () => {
   const [page, setPage] = useState("messages");
   const [display, setDisplay] = useState("main");
-  
- 
+
 
   return (
     <>
@@ -30,26 +27,24 @@ const GoogleDrive = () => {
           <div className={styles.layer2}>
             <div className={styles.rightLayer2}>
               <h3 className={page === "messages" ? styles.markGreen : null}
-              onClick={() => setPage("messages")}>
-              Messages
-            </h3>
-            <h3
-              className={page === "about" ? styles.markGreen : null}
-              onClick={() => setPage("about")}>
-              About
-            </h3>
+                onClick={() => setPage("messages")}>
+                Messages
+              </h3>
+              <h3
+                className={page === "about" ? styles.markGreen : null}
+                onClick={() => setPage("about")}>
+                About
+              </h3>
             </div>
             <div className={styles.leftLayer2}>
               <button onClick={() => setDisplay('downloadPage')}>Show download page</button>
             </div>
-            
-
-          </div>
+           </div>   
           <>
             {page === "messages" ? <Messages /> : null}
             {page === "about" ? <About /> : null}
           </>
-        </div> 
+      </div>
         
         :
         <div className={styles.container}>
