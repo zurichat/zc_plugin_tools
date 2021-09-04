@@ -25,7 +25,7 @@ class NameForm extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit} >
                     <label className={styles.name_style}>
-                        Why you want to Add Google Drive to Zuri Plugin
+                        Why you want to Add Google Drive to Zuri Plugin Tools
                     </label>
                     <input type="text"
                         value={this.state.value} onChange={this.handleChange}
