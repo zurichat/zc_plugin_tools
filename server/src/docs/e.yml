@@ -1,0 +1,42 @@
+paths:
+  /googledrive:
+    get:
+      summary: Google Drive
+      description: Info on Team Hobbes Google Drive App
+      tags:
+        - E [Google Drive]
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Status and message and data
+
+
+  /post-example:
+    post:
+      summary: Example Post
+      description: Posts data
+      tags:
+        - E [Google Drive]
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: request
+          required: true
+          schema:
+            $ref: "#/definitions/example"
+      responses:
+        200:
+          description: Status and message and data
+
+definitions:
+  example:
+    type: object
+    properties:
+      user:
+        type: string
+        required: true
+      password:
+        type: string
+        required: true

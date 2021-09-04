@@ -1,9 +1,17 @@
 require("dotenv").config();
-const env = process.env.NODE_ENV || "development";
+const env = process.env ?? process.secrets;
+const mode = env.NODE_ENV || "development";
 
 // common environmental variables for all environments
 const common = {
-  PORT: process.env.PORT || 3600,
+  PORT: env.PORT || 3600,
+  GIPHY_API_KEY: env.GIPHY_API_KEY,
+  GOOGLE_DRIVE_KEYS: {
+    CLIENT_ID: env.CLIENT_ID,
+    CLIENT_SECRET: env.CLIENT_SECRET,
+    REFRESH_TOKEN: env.REFRESH_TOKEN,
+    REDIRECT_URI: "https://developers.google.com/oauthplayground",
+  },
 };
 
 // environmental variables for development
@@ -16,7 +24,7 @@ const development = {
 // environmental variables for production
 const production = {
   NODE_ENV: "production",
-  DB_URI: process.env.DB_URI,
+  DB_URI: env.DB_URI,
   ...common,
 };
 
@@ -33,4 +41,4 @@ const config = {
   test,
 };
 
-module.exports = config[env];
+module.exports = config[mode];

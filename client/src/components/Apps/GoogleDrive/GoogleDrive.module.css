@@ -1,34 +1,58 @@
-.container{
-    height: 100%;
-    padding-top: 6%;
-    background-color: #f6f6f6
+.container {
+  height: 100%;
+  padding-top: 6%;
+  /* background-color: #f6f6f6 */
 }
 
-.container .layer1{
-    width: 100%;
-    height: 8.97%;
+.container .layer1 {
+  width: 100%;
+  height: 8.97%;
 }
 
-.container .layer2{
-    border:  1px solid #E7E7E7;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.container .layer2 {
+  border: 1px solid #e7e7e7;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
 }
 
 
-.container .layer2 h3{
-    height: 100%;
-    
-    font-size: 14px;
-    text-align: center;
-    display: flex;
-    align-items: flex-end;
-    margin: 14px 14px 0 14px;
-    padding-bottom: 14px;
-    cursor: pointer;
+
+.container .layer2 .rightLayer2{
+  width: 100%;
+  display: flex;
 }
 
-.markGreen{
-    border-bottom: #0acf83 1px solid;
+.container .layer2 .leftLayer2{
+  width: 100%;
+  display: flex;
+}
+
+.container .layer2 .leftLayer2 button{
+  border: 1px solid #0acf83;
+  padding: 10px;
+  border-radius: 5px;
+  color: #0acf83;
+}
+
+.container .layer2 .leftLayer2 button:hover{
+  background-color: #0acf83;
+  color: #e7e7e7;
+}
+
+.container .layer2 h3 {
+  height: 100%;
+
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  margin: 14px 14px 0 14px;
+  padding-bottom: 14px;
+  cursor: pointer;
+}
+
+.markGreen {
+  border-bottom: #0acf83 1px solid;
 }
