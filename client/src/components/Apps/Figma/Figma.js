@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./../../searchbar.component";
 import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
+import FigmaDownload from "./downloads-section/FigmaDownload";
 import logo from "./images/fignaLogo.png";
 import "./css/Figma.css";
 // import ToolsHeader from "../../toolsheader/toolsheader";
@@ -44,10 +45,11 @@ class Figma extends Component {
             onClick={() => {
               this.setState({ page: "messages" });
             }}
-            className={this.state.page === "about" ? "" : "selected"}
+            className={this.state.page === "about"||"download" ? "" : "selected"}
           >
             Messages
           </h4>
+          
           <h4
             onClick={() => {
               this.setState({ page: "about" });
@@ -56,8 +58,18 @@ class Figma extends Component {
           >
             About
           </h4>
+          <h4
+            onClick ={()=> {
+              this.setState({page : 'download'});
+            }}
+            className={this.state.page === "download" ? "selected" : ""}
+          >
+            Download
+          </h4>
         </div>
-        {this.state.page === "about" ? <FigmaAbout /> : <FigmaMessages />}
+        {this.state.page == "about"?
+        <FigmaAbout /> : this.state.page == "download" ? 
+        <FigmaDownload /> : <FigmaMessages />}
       </>
     );
   }
