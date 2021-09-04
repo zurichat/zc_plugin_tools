@@ -4,7 +4,7 @@ const googleDriveApi = require("./googledrive");
 const sideBarRouter = require("./sidebar");
 const githubRouter = require("./github");
 const giphy = require("./giphy");
-const githubRouter = require("./github");
+const githubRepoRouter = require("./githubRepo");
 
 module.exports = () => {
   router.use(pluginInfoRouter());
@@ -12,6 +12,7 @@ module.exports = () => {
   router.use(sideBarRouter());
   router.use(giphy());
   router.use(githubRouter());
+  router.use(githubRepoRouter());
 
   // Handle Invalid API routes
   router.use((req, res, next) => {
