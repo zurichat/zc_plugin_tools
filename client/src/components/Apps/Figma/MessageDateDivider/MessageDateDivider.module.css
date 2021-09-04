@@ -1,0 +1,21 @@
+.dividercontainer {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  height: 1px;
+  background-color: #cfcfcf;
+  flex-grow: 1;
+}
+
+.dividertext {
+  border-radius: 23px;
+  width: 30px;
+  background-color: #cfcfcf;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100px;
+  padding: 5px 20px;
+}
