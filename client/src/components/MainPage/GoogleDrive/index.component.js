@@ -1,8 +1,5 @@
 import React from "react";
-
 import "../../assets/googledrive/styles/index.css";
-
-
 const GoogleDrive = () => {
   return (
     <div className="text-center h-48 py-4 w-4/5 mx-auto" id="entryBtn">
