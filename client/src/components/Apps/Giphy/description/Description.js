@@ -1,9 +1,11 @@
 import React from 'react'
+import './description.css'
 
 const Description = () => {
     return (
-        <div>
-            <h4>Giphy</h4>
+        <div className="description">
+            <h2>Giphy</h2>
+            
         </div>
     )
 }

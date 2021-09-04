@@ -1,0 +1,26 @@
+.screenshots-wrapper {
+    padding: 0.7em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: -10px;
+}
+
+.screenshots-wrapper img {
+    min-width: 280px;
+    max-width: 360px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 640px) {
+    .screenshots-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .screenshots-wrapper img {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}

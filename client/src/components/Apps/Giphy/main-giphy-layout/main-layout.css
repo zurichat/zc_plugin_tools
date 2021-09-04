@@ -3,6 +3,13 @@
   width: 100%;
   padding: 0.5em 2em;
   color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-side-section .top {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 991px) {
