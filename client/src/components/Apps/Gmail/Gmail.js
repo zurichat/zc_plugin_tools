@@ -9,7 +9,13 @@ import gmailLogo from '../../../assets/gmailLogo.png'
 import Header from "./Header";
 import './Header.css';
 
+import './Header.css';
+
+// components
+import Header from './Header';
+
 const Gmail = () => {
+<<<<<<< HEAD
 
   const [clicked, setClicked] = useState("desc");
 
@@ -129,6 +135,14 @@ const Gmail = () => {
       </div>
     </div>
   );
+=======
+  return (
+    <div>
+      This is the Gmail page
+      <Header />
+    </div>
+  )
+>>>>>>> ec5b996b661f6971af1c59edd0dfdbeb20abada6
 };
 
 export default Gmail;
