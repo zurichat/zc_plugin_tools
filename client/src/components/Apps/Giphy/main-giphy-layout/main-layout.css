@@ -1,11 +1,7 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 .main-side-section {
   width: 100%;
+  padding: 0.5em 2em;
   color: black;
 }
 
