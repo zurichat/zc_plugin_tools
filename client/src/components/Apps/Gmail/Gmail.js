@@ -1,7 +1,14 @@
 import React from "react";
 
+import Header from "./Header";
+import './Header.css';
+
 const Gmail = () => {
-  return <div>This is the Gmail page</div>;
+  return ( 
+    <div>
+      <Header/>
+    </div>
+  )
 };
 
 export default Gmail;
