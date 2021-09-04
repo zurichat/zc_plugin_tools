@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { GreenBtn, WhiteBtn } from '../buttons/button';
 import Logo from '../logo/logo';
 
@@ -9,7 +11,17 @@ const DescriptionAction = () => {
       <Logo />
       <div className="btn-wrapper">
         <GreenBtn>Add to Zuri Chat</GreenBtn>
-        <WhiteBtn>Learn more</WhiteBtn>
+      </div>
+      <div className="learn">
+        <Link >Learn more & Support</Link>
+      </div>
+      <div className="categories-section">
+        <p>Categories</p>
+        <div className="categoryBtns">
+          <WhiteBtn >Social & fun</WhiteBtn>
+          <WhiteBtn >Essential Apps</WhiteBtn>
+        </div>
+        
       </div>
     </div>
   );
