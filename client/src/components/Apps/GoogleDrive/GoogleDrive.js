@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./GoogleDrive.module.css";
-import Modal from '../GoogleDrive/Modal/index'
+import Modal from './Modal/index'
 
 const GoogleDrive = () => {
   const [clicked, setClicked] = useState("desc");
