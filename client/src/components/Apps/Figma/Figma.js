@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./../../searchbar.component";
-import SearchBar from "./../../searchbar.component";
 import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
 import logo from "./images/fignaLogo.png";
@@ -25,7 +24,6 @@ class Figma extends Component {
     return (
       <>
         {/* <ToolsHeader /> */}
-        <SearchBar />
         <div className="Start-title">
           <div className="figmalogo-container">
             <img src={logo} />
@@ -33,14 +31,14 @@ class Figma extends Component {
           <h4 className="Logo-tag">Figma</h4>
           <div className="arrow-down">^</div>
         </div>
-        <div className="mb-1.5 fig-connect-btn">
+        {/* <div className="mb-1.5 fig-connect-btn">
           <a
             className="px-4 py-2 bg-gray-700 text-white rounded-sm"
             href={deployedUrl}
           >
             Connect to figma
           </a>
-        </div>
+        </div> */}
         <div className="welcome-nav">
           <h4
             onClick={() => {
