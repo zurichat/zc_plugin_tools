@@ -16,7 +16,7 @@ const Gmail = () => {
           <div className=" flex justify-center w-full bg-white self-center py-6">
             <img
               src={gmailLogo}
-              alt="GMail Logo"
+              alt="Gmail Logo"
               className="h-44 "
             />
           </div>
