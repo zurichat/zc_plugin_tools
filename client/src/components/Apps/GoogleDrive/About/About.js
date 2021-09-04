@@ -45,15 +45,15 @@ export default function About() {
         </div>
       </div>
       <div className="flex flex-col gap-2 items-start mb-5 px-4">
-        <button className="w-60 p-3 font-fam3 text-sm b font-semibold border text-googledrive-grn border-googledrive-grn rounded bg-gray-backg">
+        <button className="w-60 p-3 font-fam3 text-sm b font-semibold border-2 text-googledrive-grn border-googledrive-grn rounded bg-gray-backg">
           Configuration
         </button>
-        <button className="w-60 p-3 font-fam3 text-sm b font-semibold border text-googledrive-grn border-googledrive-grn rounded bg-gray-backg">
+        <button className="w-60 p-3 font-fam3 text-sm b font-semibold border-2 text-googledrive-grn border-googledrive-grn rounded bg-gray-backg">
           App Homepage
         </button>
       </div>
       <div>
-        <div className="border-googledrive-bdr p-4 border-t border-b ">
+        <div className="p-4 border-gray-300 border-t border-b ">
           <h3 className="font-fam3 font-black text-googledrive-header text-sm">
             Screenshots
           </h3>
