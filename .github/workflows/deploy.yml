@@ -3,7 +3,10 @@ name: Deploy to server
 on:
   push:
     branches:
-      - master
+      - dev
+      - main
+  pull_request:
+    branches:
       - main
 
 jobs:
@@ -18,6 +21,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd zc_plugin_tools/
+            git clean -fd
+            git stash
             git pull
             cd server
             yarn install
