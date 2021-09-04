@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./../../searchbar.component";
+import SearchBar from "./../../searchbar.component";
 import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
 import logo from "./images/fignaLogo.png";
@@ -16,14 +17,15 @@ class Figma extends Component {
   }
 
   render() {
-    // const localHostUrl =
-    //   "https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=http://localhost:3000/figma/authenticate/&scope=file_read&state=state&response_type=code";
-    // const deployedUrl =
-    //   "https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=http://externaltools.zuri.chat/figma/authenticate/&scope=file_read&state=state&response_type=code";
+    const localHostUrl =
+      "https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=http://localhost:3000/figma/authenticate/&scope=file_read&state=state&response_type=code";
+    const deployedUrl =
+      "https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=http://externaltools.zuri.chat/figma/authenticate/&scope=file_read&state=state&response_type=code";
 
     return (
       <>
         {/* <ToolsHeader /> */}
+        <SearchBar />
         <div className="Start-title">
           <div className="figmalogo-container">
             <img src={logo} />
@@ -31,14 +33,14 @@ class Figma extends Component {
           <h4 className="Logo-tag">Figma</h4>
           <div className="arrow-down">^</div>
         </div>
-        {/* <div className="mb-1.5 fig-connect-btn">
+        <div className="mb-1.5 fig-connect-btn">
           <a
             className="px-4 py-2 bg-gray-700 text-white rounded-sm"
             href={deployedUrl}
           >
             Connect to figma
           </a>
-        </div> */}
+        </div>
         <div className="welcome-nav">
           <h4
             onClick={() => {
