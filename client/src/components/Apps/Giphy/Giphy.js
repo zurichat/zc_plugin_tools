@@ -1,13 +1,12 @@
 // import ToolsHeader from "../../toolsheader/toolsheader";
-import DescriptionAction from "./descriptionActions/descriptionAction";
+import React from 'react';
+import MainGiphyLayout from './main-giphy-layout/MainGiphyLayout';
 
 const Giphy = () => {
   return (
     <>
       {/* <ToolsHeader /> */}
-      <div>
-        <DescriptionAction />
-      </div>
+      <MainGiphyLayout />
     </>
   );
 };
