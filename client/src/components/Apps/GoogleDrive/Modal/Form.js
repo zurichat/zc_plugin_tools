@@ -1,5 +1,5 @@
-import React from 'react'
-import { ThemeProvider } from 'react-bootstrap';
+import React from 'react';
+
 import styles from "../GoogleDrive.module.css";
 
 
@@ -36,7 +36,6 @@ class NameForm extends React.Component {
                     <div>
                         <input type="submit" value="Submit" className={styles.submit_button} />
                     </div>
-
                 </form>
             </div>
         );

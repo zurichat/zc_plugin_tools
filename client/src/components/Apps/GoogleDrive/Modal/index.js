@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useCallback } from 'react';
-
+import { func } from 'prop-types';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import styles from "../GoogleDrive.module.css";
 import NameForm from './Form';
@@ -49,6 +49,11 @@ const Modal = ({ showModal, setShowModal }) => {
             ) : null}
         </>
     );
+};
+
+Modal.propTypes = {
+    showModal: func,
+    setShowModal: func,
 };
 
 export default Modal

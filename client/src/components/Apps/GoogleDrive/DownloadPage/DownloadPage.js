@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/react-in-jsx-scope */
 import { useState } from 'react'
 
 import Modal from '../Modal/index'
@@ -11,6 +13,7 @@ function DownloadPage() {
     setShowModal(prev => !prev);
   };
   return (
+    // eslint-disable-next-line react/react-in-jsx-scope
     <div className=" flex w-full">
       <div className=" flex flex-col w-3/12  px-4">
         <div className=" flex justify-center w-full bg-white self-center py-6">
