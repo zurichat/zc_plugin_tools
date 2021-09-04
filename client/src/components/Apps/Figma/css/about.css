@@ -4,3 +4,69 @@
     font-family: 'Lato', sans-serif;
    
 }
+.banner-section {
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.banner-section .banner-image-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-section .banner-image-container img {
+    width: 250px;
+    border-radius: 8px;
+}
+
+.banner-section .banner-image-container button {
+    padding: 5px 20px;
+    background-color: #F0EFEF;
+    border: 1px solid #cfcfcf;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.description .heading {
+    font-size: 1.31rem;
+    font-weight: 600;
+}
+
+.description p {
+    font-size: .94rem;
+    color: #3A3A3A;
+}
+/* Media Queries - Ipad and Desktop Screens */
+@media (min-width: 721px) {
+    .description{
+        padding-left: 20px;
+        max-width: 450px;
+    }
+}
+/* Media Queries - Small Screens */
+@media (max-width: 720px) {
+    .banner-section {
+        flex-direction: column;
+    }
+    .banner-image-container {
+        max-width: 240px;
+    }
+
+    .banner-image-container img {
+        width: 100%;
+    }
+    .description .heading {
+        padding-top: 15px;
+        padding-bottom: 12px;
+    }
+}
+@media (max-width: 280px) {
+    .description{
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
