@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./../../searchbar.component";
-import SearchBar from "./../../searchbar.component";
 import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
 import logo from "./images/fignaLogo.png";
@@ -25,7 +24,6 @@ class Figma extends Component {
     return (
       <>
         {/* <ToolsHeader /> */}
-        <SearchBar />
         <div className="Start-title">
           <div className="figmalogo-container">
             <img src={logo} />
