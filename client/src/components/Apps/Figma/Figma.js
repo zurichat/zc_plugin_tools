@@ -20,7 +20,6 @@ class Figma extends Component {
 			"https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=http://localhost:3000/figma/authenticate/&scope=file_read&state=state&response_type=code";
 		const deployedUrl =
 			"https://www.figma.com/oauth?client_id=V2IvPlEApDfBT9uNS5Rbrf&redirect_uri=http://externaltools.zuri.chat/figma/authenticate/&scope=file_read&state=state&response_type=code";
-
 		return (
 			<>
 				<SearchBar />
@@ -34,7 +33,11 @@ class Figma extends Component {
 				<div className="mb-1.5">
 					<a
 						className="px-4 py-2 bg-gray-700 text-white rounded-sm"
-						href={deployedUrl}>
+						href={
+							window.location.hostname == "localhost"
+								? localHostUrl
+								: deployedUrl
+						}>
 						Connect to figma
 					</a>
 				</div>

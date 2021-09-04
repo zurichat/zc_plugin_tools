@@ -28,7 +28,11 @@ function Authenticate() {
 
 		const result = await axios({
 			method: "POST",
-			url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${deployedCallBackURI}&code=${code}&grant_type=authorization_code`,
+			url: `https://www.figma.com/api/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&redirect_uri=${
+				window.location.hostname == "localhost"
+					? localHostCallBackURI
+					: deployedCallBackURI
+			}&code=${code}&grant_type=authorization_code`,
 		})
 			.then((response) => {
 				console.log(response);
