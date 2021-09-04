@@ -20,11 +20,17 @@
 
 .whiteBtn {
     background-color: white;
-    color: #009B69;
-    border: 1px solid #009B69;
+    color: #767676;
+    border: 1px solid #767676;
+    width: fit-content;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 2px 0;
+    border-radius: 4px;
 }
 
 .whiteBtn:hover{
-    background: rgb(241, 241, 241);
+    background: rgb(240, 240, 240);
     transition: 0.2s;
 }
