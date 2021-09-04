@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import styles from "./GoogleDrive.module.css";
+import Modal from '../GoogleDrive/Modal/index'
 
 const GoogleDrive = () => {
   const [clicked, setClicked] = useState("desc");
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  };
 
   return (
     <div className={styles.container}>
@@ -15,7 +21,8 @@ const GoogleDrive = () => {
               className="h-44 "
             />
           </div>
-          <button className="bg-green-500 py-2 my-2">Add to Zuri</button>
+          <button className="bg-green-500 py-2 my-2" onClick={openModal}>Add to Zuri</button>
+          <Modal showModal={showModal} setShowModal={setShowModal} />
           <div className="w-full border  mb-6"></div>
 
           <p className="font-bold">Supported Languages</p>
@@ -38,41 +45,37 @@ const GoogleDrive = () => {
           <div className=" border-b w-full flex mb-4">
             <button
               onClick={() => setClicked("desc")}
-              className={`mr-6  border-b  px-2 ${
-                clicked == "desc"
-                  ? "text-black border-green-600"
-                  : "text-gray-500"
-              }`}
+              className={`mr-6  border-b  px-2 ${clicked == "desc"
+                ? "text-black border-green-600"
+                : "text-gray-500"
+                }`}
             >
               Description
             </button>
             <button
               onClick={() => setClicked("feat")}
-              className={`mr-6  border-b  px-2 ${
-                clicked == "feat"
-                  ? "text-black border-green-600"
-                  : "text-gray-500"
-              }`}
+              className={`mr-6  border-b  px-2 ${clicked == "feat"
+                ? "text-black border-green-600"
+                : "text-gray-500"
+                }`}
             >
               Features
             </button>
             <button
               onClick={() => setClicked("perm")}
-              className={`mr-6  border-b  px-2 ${
-                clicked == "perm"
-                  ? "text-black border-green-600"
-                  : "text-gray-500"
-              }`}
+              className={`mr-6  border-b  px-2 ${clicked == "perm"
+                ? "text-black border-green-600"
+                : "text-gray-500"
+                }`}
             >
               Permission
             </button>
             <button
               onClick={() => setClicked("sec")}
-              className={`mr-6  border-b  px-2 ${
-                clicked == "sec"
-                  ? "text-black border-green-600"
-                  : "text-gray-500"
-              }`}
+              className={`mr-6  border-b  px-2 ${clicked == "sec"
+                ? "text-black border-green-600"
+                : "text-gray-500"
+                }`}
             >
               {" "}
               Security and Compliance
