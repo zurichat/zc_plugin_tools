@@ -1,12 +1,51 @@
 .container {
   height: 100%;
-  padding-top: 6%;
-  /* background-color: #f6f6f6 */
+  display: flex;
+  flex-direction: column;
+  /* background-color: #f6f6f6; */
 }
 
 .container .layer1 {
   width: 100%;
-  height: 8.97%;
+  height: 100%;
+  height: 86px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container .layer1 .logoWrapper{
+  width: 43.83px;
+  height: 43.83px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 22px;
+  margin-right: 8px;
+}
+
+.container .layer1 .logoWrapper img{
+  width: 21.97px;
+  height: 19.66px;
+}
+
+.container .layer1 .googleDriveWrapper{
+  display: flex;
+  align-items: center;
+}
+
+.container .layer1 .googleDriveWrapper h2{
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  font-style: normal;
+  margin-right: 7.7px;
+}
+
+.container .layer1 .googleDriveWrapper img{
+  width: 12.6px;
 }
 
 .container .layer2 {
@@ -14,6 +53,29 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+
+.container .layer2 .rightLayer2{
+  width: 100%;
+  display: flex;
+}
+
+.container .layer2 .leftLayer2{
+  width: 100%;
+  display: flex;
+}
+
+.container .layer2 .leftLayer2 button{
+  border: 1px solid #0acf83;
+  padding: 10px;
+  border-radius: 5px;
+  color: #0acf83;
+}
+
+.container .layer2 .leftLayer2 button:hover{
+  background-color: #0acf83;
+  color: #e7e7e7;
 }
 
 .container .layer2 h3 {
