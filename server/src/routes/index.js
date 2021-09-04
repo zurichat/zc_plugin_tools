@@ -2,7 +2,6 @@ const router = require("express").Router();
 const pluginInfoRouter = require("./plugin-info");
 const googleDriveApi = require("./googledrive");
 const sideBarRouter = require("./sidebar");
-const githubRouter = require("./github");
 const giphy = require("./giphy");
 const githubRepoRouter = require("./githubRepo");
 
@@ -20,4 +19,4 @@ module.exports = () => {
   });
 
   return router;
-}
+};
