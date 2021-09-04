@@ -13,8 +13,8 @@ const FigmaAbout = () => {
             <img src = {logo} />
             <button>Configuration</button>
             <button>App Homepage</button>
-            </div>
-            <div className="description">
+        </div>
+        <div className="description">
             <h2 className="heading">Figma</h2>
             <p>Figma is where teams receive comments and post comments about their teams design success for further collaborations. 
             The Figma app for Zuri Chat keeps everyone up to date on the latest design work through relevant notifications about file updates and comments.<br></br><br></br>
