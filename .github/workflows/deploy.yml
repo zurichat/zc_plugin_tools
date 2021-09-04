@@ -21,6 +21,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd zc_plugin_tools/
+            git clean -fd
+            git stash
             git pull
             cd server
             yarn install
