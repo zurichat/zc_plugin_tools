@@ -40,11 +40,9 @@ class GoogleDriveController {
       });
     }
   }
-  class FetchApiController {
   async getApi(req, res) {
     res.send(fetch("Api Info returned successfully"));
-  }  
-}
+  } 
 }
 
 module.exports = new GoogleDriveController();
