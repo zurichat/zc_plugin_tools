@@ -40,8 +40,8 @@ class GoogleDriveController {
       });
     }
   }
-  async getApi(req, res) {
-    res.send(fetch("Api Info returned successfully"));
+  async getData(req, res) {
+    res.send(fetch("Data Info returned successfully"));
   } 
 }
 
