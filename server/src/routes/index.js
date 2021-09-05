@@ -4,6 +4,7 @@ const googleDriveApi = require("./googledrive");
 const sideBarRouter = require("./sidebar");
 const giphy = require("./giphy");
 const githubRouter = require("./github");
+const { NotFoundError } = require("../lib/errors");
 
 module.exports = () => {
   router.use(pluginInfoRouter());
@@ -13,7 +14,7 @@ module.exports = () => {
   router.use(githubRouter());
 
   // Handle Invalid API routes
-  router.use((req, res, next) => {
+  router.use("*", (req, res, next) => {
     next(new NotFoundError());
   });
 
