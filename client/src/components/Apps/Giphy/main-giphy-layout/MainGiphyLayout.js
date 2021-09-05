@@ -2,7 +2,6 @@ import React from 'react';
 import './main-layout.css';
 import DescriptionAction from '../descriptionActions/descriptionAction';
 import Description from '../description/Description';
-import Screenshots from '../screenshots/screenshots';
 
 function MainGiphyLayout() {
   return (
@@ -11,9 +10,7 @@ function MainGiphyLayout() {
         <DescriptionAction />
         <Description />
       </div>
-      <div className="bottom">
-        <Screenshots />
-      </div>
+      
     </div>
   );
 }
