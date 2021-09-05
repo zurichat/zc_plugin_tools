@@ -25,7 +25,7 @@
 .chat ul li {
     list-style-type: disc;
 }
-a {
+.wrapper .chat ul a {
     color: deepskyblue;
 }
 textarea {
