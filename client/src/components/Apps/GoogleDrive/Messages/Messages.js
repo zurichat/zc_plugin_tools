@@ -3,15 +3,15 @@ import styles from "./Messages.module.css";
 function Messages() {
   return <div className={styles.wrapper}>
   <div className={styles.child}>
-   <div className={styles.driveimg}>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1147px-Google_Drive_icon_%282020%29.svg.png"/>
-   </div>
-  <div className={styles.info}>
+      <div className={styles.driveimg}>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1147px-Google_Drive_icon_%282020%29.svg.png"/>
+      </div>
+      <div className={styles.info}>
        <p><b>This conversation is just between the two of you.</b></p>
        <p>Here you can post and receive comments with <a href="#">@GDrive</a>.</p>
-   </div>
+      </div>
 
-  </div>
+</div>
   <div className={styles.chat}>
       <ul>
           <li>Type <b>"off"</b> or <b>"stop"</b> to turn off notifications.</li>
