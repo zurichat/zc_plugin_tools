@@ -51,7 +51,7 @@ const GithubInstalled = () => {
     <div className="mb-48 divide-y-2 > *">
       <ul className="inline-flex font-medium text-md ml-4 -mb-0.5 text-gray-500">
         <li className="pr-2 border-bottom-2 border-b-4 text-black border-green-400" >Description</li>
-        <li className="pr-2 hover:text-black border-b-5 hover:text-black" >About</li>
+        <li className="pr-2 hover:text-black border-b-5 " >About</li>
       </ul>
       <hr className="bg-gray-700 " />
     </div>
