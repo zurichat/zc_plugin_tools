@@ -154,6 +154,60 @@ const Gmail = () => {
             </ul>
           </div>
         ) : null}
+
+        {clicked === "sec" ? (
+          <div className="mt-4">
+            <div className="flex spa">
+              <div className="bg-white w-full py-4 px-4 flex justify-between rounded items-center h-30">
+                <p>Download security and compliance information</p>
+                <button className="btn p-7 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
+                  Download CSV
+                </button>
+              </div>
+            </div>
+            <div className="h-px w-full bg-gray-300"></div>
+            <div className="bg-white w-full py-4 px-4 flex justify-between rounded items-center">
+              <p>
+                Review the details to better understand this app’s security
+                practices. To learn more about assessing apps for your workspace
+                visit our{" "}
+                <a href="/home" className="text-green-600">
+                  Help Center
+                </a>
+                <div className="link mt-9">
+                  <div className="mt-3">
+                    <h3 className="font-extrabold">General</h3>
+                    {/* <i className="fa fa-angle-right"></i> */}
+                  </div>
+                  <div className="mt-3 h-px bg-gray-300"></div>
+                  <div className="mt-3">
+                    <h3 className="font-extrabold">
+                      Privacy & data governance
+                    </h3>
+                    {/* <i className="fa fa-angle-right"></i> */}
+                  </div>
+                  <div className="mt-3 h-px bg-gray-300"></div>
+                  <div className="mt-3">
+                    <h3 className="font-extrabold">
+                      Certifications & compliance
+                    </h3>
+                    {/* <i className="fa fa-angle-right"></i> */}
+                  </div>
+                  <div className="mt-3 h-px bg-gray-300"></div>
+                  <div className="mt-3">
+                    <h3 className="font-extrabold">Security</h3>
+                    {/* <i className="fa fa-angle-right"></i> */}
+                  </div>
+                </div>
+              </p>
+            </div>
+            <div className="mt-5"></div>
+            <div className="bg-white w-full py-4 px-4 rounded items-center">
+              <h3 className="font-extrabold mb-3">Scopes</h3>
+              <p>ZuriChat for Gmail has 8 User Token Scopes</p>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
