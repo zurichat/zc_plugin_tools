@@ -22,6 +22,12 @@
 .chat {
   margin-left: 133.91px;
 }
+.chat ul li {
+    list-style-type: disc;
+}
+a {
+    color: deepskyblue;
+}
 textarea {
     border: 1px solid #999999;
     border-radius: 5px;
@@ -29,4 +35,18 @@ textarea {
     margin-left: 20px;
     margin-top: 40px;
     text-indent: 25px;
+}
+
+@media screen and (max-width:500px) {
+    .wrapper .child {
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper .child .driveimg img{
+        margin: 0 0 2% 10px;
+    }
+
+    .driveimg, .info, .chat {
+        margin: 0 5%;
+    }
 }
