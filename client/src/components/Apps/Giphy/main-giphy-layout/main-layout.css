@@ -14,6 +14,12 @@
 
 @media screen and (max-width: 991px) {
   .main-side-section {
-    width: 100vw;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-side-section .top {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }

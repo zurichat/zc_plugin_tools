@@ -1,0 +1,21 @@
+.giphy-plugin-page {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+.backBtn {
+    padding: 1em 2em;
+    font-weight: 400;
+}
+
+.backBtn a {
+    font-size: 14px;
+}
+
+.backBtn a:hover {
+    color: black;
+}

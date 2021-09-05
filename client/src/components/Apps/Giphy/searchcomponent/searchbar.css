@@ -1,21 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .appsearchbarr {
   display: flex;
-  position: relative;
-  margin-top: 1rem;
-  width: 85%;
+  width: 100%;
 }
 
 .appsearchbarr input {
   position: relative;
   width: 100%;
-  margin-left: 2rem;
-  padding-left: 1rem;
   background: rgba(255, 255, 255, 0.4);
   border: 0.8px solid rgba(153, 153, 153, 0.2);
   box-sizing: border-box;
@@ -23,27 +13,25 @@
   height: 35px;
   outline: none;
   font-size: 0.9rem;
+  padding: 0 1em;
 }
 
 .appsearchbarr input::placeholder {
   font-size: 0.7rem;
-  position: absolute;
-  top: 0.55rem;
+  padding: 0 1em;
 }
 .appsearchbarr img {
-  position: absolute;
-  right: 0.6rem;
-  top: 0.35rem;
+  margin-left: -2rem;
 }
 
 @media (max-width: 920px) {
   .appsearchbarr {
-    width: 80%;
+    width: 100%;
   }
 }
 
 @media (max-width: 500px) {
   .appsearchbarr {
-    width: 50%;
+    width: 100%;
   }
 }

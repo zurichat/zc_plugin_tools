@@ -1,9 +1,16 @@
-.description  {
+.giphy-description  {
     padding: 0.5em;
     width: 75vw;
 }
 
-.description h2 {
-    font-size: 1.6em;
+.giphy-description h2 {
+    font-size: 25px;
     font-weight: 600;
+    padding-bottom: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    .giphy-description {
+      width: 100%;
+  }
 }
