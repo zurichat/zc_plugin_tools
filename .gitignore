@@ -1,2 +1,6 @@
 node_modules 
 build
+
+.yarn
+# Local Netlify folder
+.netlify
