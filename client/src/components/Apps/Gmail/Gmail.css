@@ -2,8 +2,9 @@
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 4fr;
-  padding: 1rem;
+  grid-template-columns: 1fr 4fr;
+  /* padding: 2rem 1rem; */
+  column-gap: 1.5rem;
 }
 
 .container .btn {

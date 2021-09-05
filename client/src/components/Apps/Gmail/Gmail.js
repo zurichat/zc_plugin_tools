@@ -10,7 +10,7 @@ import gmailLogo from "../../../assets/gmailLogo.png";
 const Gmail = () => {
   const [clicked, setClicked] = useState("desc");
   return (
-    <div className="container max-w-screen-lg mt-9">
+    <div className="container mt-9">
       <div className="container-left flex flex-col">
         <div className="flex flex-col self-baseline mb-3">
           <img src={gmailLogo} alt="Gmail Logo" className="w-60" />
@@ -30,15 +30,17 @@ const Gmail = () => {
         <p className="font-bold">Pricing</p>
         <p className="mb-4 text-sm">Free</p>
         <p className="font-bold">Categories</p>
-        <button className=" w-1/3 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
-          Productivity
-        </button>
-        <button className=" w-1/2 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
-          Project Management
-        </button>
-        <button className=" w-1/3 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
-          Other Tools
-        </button>
+        <div className="pt-3">
+          <button className="p-6 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
+            Productivity
+          </button>
+          <button className="p-4 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
+            Project Management
+          </button>
+          <button className="p-4 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
+            Other Tools
+          </button>
+        </div>
       </div>
       <div className="container-right">
         <h1 className="text-4xl font-black mb-5">Gmail</h1>
