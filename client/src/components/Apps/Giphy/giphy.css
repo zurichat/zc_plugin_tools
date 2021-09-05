@@ -33,7 +33,7 @@
     background: transparent;
 }
 ::-webkit-scrollbar-thumb{
-    background: #DADADA;
+    background: #b6b6b6;
     width: 5px;
     border-radius: 10px;
 }
