@@ -134,7 +134,6 @@ const Gmail = () => {
               
               <h4 className="mt-3">ZuriChat for Gmail will be able to do:</h4>
               <p className="p-3">Perform actions as you</p><hr/>
-              
             </div>
           ) : null}
         </div>
