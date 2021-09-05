@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
-import { useHistory } from "react-router-dom";
-import ToolsHeader from "../../toolsheader/toolsheader";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
+// import { useHistory } from "react-router-dom";
+// import ToolsHeader from "../../toolsheader/toolsheader";
 import gmailLayout from '../../../assets/gmailLayout.png'
 import gmailLogo from '../../../assets/gmailLogo.png'
 
@@ -16,7 +16,7 @@ const Gmail = () => {
           <div className=" flex justify-center w-full bg-white self-center py-6">
             <img
               src={gmailLogo}
-              alt="Gmail Logo"
+              alt="Gmail Logo"height
               className="h-44 "
             />
           </div>
@@ -141,5 +141,4 @@ const Gmail = () => {
     </div>
   );
 };
-
 export default Gmail;
