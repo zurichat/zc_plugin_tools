@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js --env production",
-    "build": "cd ../client && yarn install && yarn build",
     "eslint": "eslint \"./**/*.js\"",
     "eslint:fix": "eslint --fix \"./**/*.js\"",
     "dev": "nodemon --watch */*.* app.js",
