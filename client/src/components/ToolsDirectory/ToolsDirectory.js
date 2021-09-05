@@ -5,6 +5,7 @@ const ToolsDirectory = () => {
   return (
     <div>
       {/* insert your component for those working on the company tools directory page */}
+      
       <ToolsMainPage />
     </div>
   );
