@@ -120,6 +120,23 @@ const Gmail = () => {
               </ul>
             </div>
           ) : null}
+          {clicked === "perm" ? (
+            <div className=" w-full rounded-md py-10">
+              <img src={gmailLayout} alt="Gmail Layout illustration" />
+            </div>
+          ) : null}
+          {clicked === "perm" ? (
+            <div className="relative bg-white p-4">
+              <h3>Permissions</h3>
+              <h4>ZuriChat for Gmail will be able to view:</h4>
+              <p className="p-3">Content and info about channels and conversations</p><hr/>
+              <p className="p-3">Content and info about your workspace</p><hr/>
+              
+              <h4 className="mt-3">ZuriChat for Gmail will be able to do:</h4>
+              <p className="p-3">Perform actions as you</p><hr/>
+              
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
