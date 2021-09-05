@@ -1,4 +1,52 @@
 .wrapper{
     width: 100%;
     margin-top: 5px;
+    top: 144px;
+    font-size: 15px;
+}
+.wrapper .child{
+    display: flex;
+    flex-direction: row;
+    padding-top: 120px;
+    
+}
+.wrapper .child .driveimg img{
+    height: 66.74px;
+    width: 69.74px;
+    margin-left: 40px;
+}
+.info {
+    margin-left: 23.91px;
+
+}
+.chat {
+  margin-left: 133.91px;
+}
+.chat ul li {
+    list-style-type: disc;
+}
+.wrapper .chat ul a {
+    color: deepskyblue;
+}
+textarea {
+    border: 1px solid #999999;
+    border-radius: 5px;
+    width: 95%;
+    margin-left: 20px;
+    margin-top: 40px;
+    text-indent: 25px;
+}
+
+@media screen and (max-width:500px) {
+    .wrapper .child {
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper .child .driveimg img{
+        margin: 0 0 2% 10px;
+    }
+
+    .driveimg, .info, .chat {
+        margin: 0 5%;
+    }
 }
