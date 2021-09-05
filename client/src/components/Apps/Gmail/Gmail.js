@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
-// import { useHistory } from "react-router-dom";
-// import ToolsHeader from "../../toolsheader/toolsheader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
+import ToolsHeader from "../../toolsheader/toolsheader";
 import gmailLayout from '../../../assets/gmailLayout.png'
 import gmailLogo from '../../../assets/gmailLogo.png'
 
