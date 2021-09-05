@@ -14,3 +14,12 @@
 .container-left img {
   border-radius: 15px;
 }
+
+@media (max-width: 767px) {
+  .container {
+    display: block;
+  }
+  .container-right {
+    width: 100%;
+  }
+}

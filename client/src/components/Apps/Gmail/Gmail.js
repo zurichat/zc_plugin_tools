@@ -13,7 +13,7 @@ const Gmail = () => {
     <div className="container mt-9">
       <div className="container-left flex flex-col">
         <div className="flex flex-col self-baseline mb-3">
-          <img src={gmailLogo} alt="Gmail Logo" className="w-60" />
+          <img src={gmailLogo} alt="Gmail Logo" className="w-full sm:w-60" />
           <div className="flex flex-col mt-4">
             <button className="btn text-white bg-green-600 hover:bg-green-500 font-extrabold text-sm p-3">
               Add to Zuri
@@ -82,7 +82,7 @@ const Gmail = () => {
             }`}
           >
             {" "}
-            Security and Compliance
+            Security & Compliance
           </button>
         </div>
         {clicked === "desc" ? (
