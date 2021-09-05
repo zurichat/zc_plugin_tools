@@ -1,4 +1,5 @@
 const response = require("../../utils/response");
+const response = require("../utils/fetchPosts");
 const env = require("../../config/env");
 const { google } = require("googleapis");
 
@@ -43,3 +44,16 @@ class GoogleDriveController {
 }
 
 module.exports = new GoogleDriveController();
+
+
+
+class FetchApiController {
+  async getApi(req, res) {
+    res.send(fetch("Api Info returned successfully"));
+  }
+  
+
+   
+}
+
+module.exports = new FetchApiController();
