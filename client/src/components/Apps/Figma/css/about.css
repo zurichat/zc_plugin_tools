@@ -45,7 +45,33 @@
     font-size: 15px;
     color: #3A3A3A;
 }
+.screenshots-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    border-bottom: .7px solid #cfcfcf;
+    padding-left: 20px;
+}
 
+.screenshots-heading-container h4 {
+    padding: 30px 20px 5px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border-top: .7px solid #cfcfcf;
+    border-bottom: .7px solid #cfcfcf;
+
+}
+
+.screenshots-container {
+    display: flex;
+    padding: 20px;
+}
+.screenshots-container img {
+    width: 195px;
+    padding-right: 40px;
+}
 
 
 
