@@ -80,7 +80,6 @@
 
 .container .layer2 h3 {
   height: 100%;
-
   font-size: 14px;
   text-align: center;
   display: flex;
@@ -88,6 +87,10 @@
   margin: 14px 14px 0 14px;
   padding-bottom: 14px;
   cursor: pointer;
+}
+
+.container .layer2 h3:hover{
+  color: #0acf83
 }
 
 .markGreen {
@@ -100,7 +103,7 @@
   background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   z-index: 16;
   top: 0;
   left: 0
