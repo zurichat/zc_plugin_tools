@@ -14,7 +14,7 @@ module.exports = () => {
   router.use(githubRouter());
 
   // Handle Invalid API routes
-  router.use((req, res, next) => {
+  router.use("*", (req, res, next) => {
     next(new NotFoundError());
   });
 
