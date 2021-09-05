@@ -7,9 +7,9 @@ const common = {
   PORT: env.PORT || 3600,
   GIPHY_API_KEY: env.GIPHY_API_KEY,
   GOOGLE_DRIVE_KEYS: {
-    CLIENT_ID: env.CLIENT_ID,
-    CLIENT_SECRET: env.CLIENT_SECRET,
-    REFRESH_TOKEN: env.REFRESH_TOKEN,
+    CLIENT_ID: env.GOOGLE_CLIENT_ID,
+    CLIENT_SECRET: env.GOOGLE_CLIENT_SECRET,
+    REFRESH_TOKEN: env.GOOGLE_REFRESH_TOKEN,
     REDIRECT_URI: "https://developers.google.com/oauthplayground",
   },
 };

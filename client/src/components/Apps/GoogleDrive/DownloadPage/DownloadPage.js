@@ -12,13 +12,13 @@ function DownloadPage() {
   };
 
   return (
-    <div className=" flex w-full">
+    <div className=" flex w-full mt-6">
       <div className=" flex flex-col w-3/12  px-4">
-        <div className=" flex justify-center w-full bg-white self-center py-6">
+        <div className=" flex justify-center rounded-md w-full bg-white self-center py-16 mb-4">
           <img
             src="https://th.bing.com/th/id/R.0791e494a09baaf7535695412b321278?rik=QfFNx0%2b43QLAJw&pid=ImgRaw&r=0"
             alt=""
-            className="h-44 "
+            className="h-28 "
           />
         </div>
         <button className="bg-green-500 py-2 my-2" onClick={openModal}>Add to Zuri</button>
