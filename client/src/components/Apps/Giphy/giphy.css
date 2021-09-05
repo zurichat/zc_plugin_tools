@@ -19,3 +19,20 @@
 .backBtn a:hover {
     color: black;
 }
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    width: 5px;
+    background: rgba(229, 231, 235, 1);
+}
+::-webkit-scrollbar-track-piece{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: #DADADA;
+    width: 5px;
+    border-radius: 10px;
+}

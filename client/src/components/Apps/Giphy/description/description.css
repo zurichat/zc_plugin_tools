@@ -9,6 +9,37 @@
     padding-bottom: 1em;
 }
 
+.giphy-description .description-links-wrapper{
+    margin-left: 1em;
+    width: 100%;
+    border-bottom: 1px solid #C1C1C1;
+}
+.giphy-description .description-links-wrapper ul {
+    display: flex;
+    margin-left: -1em;
+}
+
+.giphy-description .description-links-wrapper ul li {
+    margin: 0 1em ;
+    padding: 1em 0;
+}
+.active {
+    border-bottom: 3px solid #009B69;
+}
+
+.giphy-description .description-links-wrapper ul li a {
+    color: #767676;
+}
+
+.giphy-description .description-text {
+    padding: 1em;
+}
+
+.giphy-description .description-text p {
+    color: #2A2A2A;
+    line-height: 2;
+}
+
 @media screen and (max-width: 600px) {
     .giphy-description {
       width: 100%;

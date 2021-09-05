@@ -1,11 +1,29 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
+
 import './description.css'
 
 const Description = () => {
     return (
         <div className="giphy-description">
             <h2>Giphy</h2>
-            <p>Pluigin Description Tab goes here</p>
+            <div className="description-links-wrapper">
+                <ul>
+                    <li className="active">
+                        <Link>Description</Link>
+                    </li>
+                    <li>
+                        <Link>Permission</Link>
+                    </li>
+                    <li>
+                        <Link>Security & Compliance</Link>
+                    </li>
+                </ul>
+            </div>
+            <div className="description-text">
+                <p>
+                Giphy lets you search the world’s library of  animated GIFs, making it easy to find and share them on the web. This integration will enable the giphy slash command for your team. Example: typing “giphy cats will display a cat GIF in your channel.
+                </p>
+            </div>
         </div>
     )
 }
