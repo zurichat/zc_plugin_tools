@@ -1,7 +1,7 @@
 
 .tool_box{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 19rem));
     grid-gap: 1.3rem;
     margin: 1rem 0rem;
 }
