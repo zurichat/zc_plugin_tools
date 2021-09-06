@@ -22,7 +22,7 @@
 	font-size: 15px;
 	font-weight: 700;
 }
-.welcome-info p {
+.welcome-info p, .download-size {
 	color: #999999;
 	font-size: 18px;
 }
@@ -56,26 +56,48 @@
 	justify-content: center;
 }
 
-.second-imfo {
-	display: flex;
-	padding: 20px;
-	align-items: flex-end;
-	margin-top: 30px;
+.logo-tag {
+	font-size: 25px;
+	font-weight: 700;
 }
 
-.second-imfo img {
+.second-info {
+	display: flex;
+	margin: 33px;
+	align-items: center;
+}
+
+.second-info p {
+	margin-left: 10px;
+}
+
+.second-info img {
 	width: 67px;
 	border-radius: 8px;
 }
+
 .info-img-section {
 	display: flex;
 	flex-direction: column;
 	padding-left: 105px;
+	width: 75vw;
 }
+
 .info-img-section img {
 	margin-top: 4px;
-	width: 700px;
+	width: 800px;
+	border-radius: 7px;
 }
+
+.info-img-section p {
+	margin-top: 15px;
+}
+
+ul {
+	list-style-type: disc;
+	margin-top: 10px;
+}
+
 .info-img-section h5 {
 	position: relative;
 }
