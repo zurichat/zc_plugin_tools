@@ -41,8 +41,10 @@ class GoogleDriveController {
     }
   }
   async getData(req, res) {
-    res.send(fetch("Data Info returned successfully"));
-  } 
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const json = await res.json();
+    res.send(response("Data info returned successfully", json);
+  }
 }
 
 module.exports = new GoogleDriveController();
