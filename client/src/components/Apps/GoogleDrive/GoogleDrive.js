@@ -7,13 +7,11 @@ import googleDriveLogo from './assets/logos_google-drive.png'
 import arrowDown from './assets/arrow down.png'
 
 const GoogleDrive = () => {
-  const [page, setPage] = useState("messages");
-  const [display, setDisplay] = useState("main");
+  const [page, setPage] = useState("download");
 
 
   return (
     <>
-      {display === 'main' ?
       <div className={styles.container}>
         <div className={styles.layer1}>
           <div className={styles.logoWrapper}>
@@ -26,6 +24,12 @@ const GoogleDrive = () => {
         </div>
           <div className={styles.layer2}>
             <div className={styles.rightLayer2}>
+            <h3
+                className={page === "download" ? styles.markGreen : null}
+                onClick={() => setPage("download")}>
+                Download
+              </h3>
+
               <h3 className={page === "messages" ? styles.markGreen : null}
                 onClick={() => setPage("messages")}>
                 Messages
@@ -35,24 +39,15 @@ const GoogleDrive = () => {
                 onClick={() => setPage("about")}>
                 About
               </h3>
-            </div>
-            <div className={styles.leftLayer2}>
-              <button onClick={() => setDisplay('downloadPage')}>Show download page</button>
+              
             </div>
            </div>   
           <>
             {page === "messages" ? <Messages /> : null}
             {page === "about" ? <About /> : null}
+            {page === "download" ? <DownloadPage /> : null}
           </>
       </div>
-        
-        :
-        <div className={styles.container}>
-          <DownloadPage />
-        </div>
-       
-      }
-      
         
     </>
   );

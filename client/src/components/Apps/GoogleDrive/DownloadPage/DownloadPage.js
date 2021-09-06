@@ -1,27 +1,28 @@
-import { useState } from 'react'
-import Modal from '../Modal/index'
+import { useState } from "react";
+import Modal from "../Modal/index";
 
 function DownloadPage() {
-
   const [clicked, setClicked] = useState("desc");
 
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
-    setShowModal(prev => !prev);
+    setShowModal((prev) => !prev);
   };
 
   return (
-    <div className=" flex w-full">
-      <div className=" flex flex-col w-3/12  px-4">
-        <div className=" flex justify-center w-full bg-white self-center py-6">
+    <div className=" flex flex-wrap w-full mt-6">
+      <div className=" flex flex-col w-11/12 md:w-3/12  px-4">
+        <div className=" flex justify-center rounded-md w-full bg-white self-center py-16 mb-4">
           <img
             src="https://th.bing.com/th/id/R.0791e494a09baaf7535695412b321278?rik=QfFNx0%2b43QLAJw&pid=ImgRaw&r=0"
             alt=""
-            className="h-44 "
+            className="h-28 "
           />
         </div>
-        <button className="bg-green-500 py-2 my-2" onClick={openModal}>Add to Zuri</button>
+        <button className="bg-green-500 py-2 my-2" onClick={openModal}>
+          Add to Zuri
+        </button>
         <Modal showModal={showModal} setShowModal={setShowModal} />
         <div className="w-full border  mb-6"></div>
 
@@ -30,65 +31,69 @@ function DownloadPage() {
         <p className="font-bold">Pricing</p>
         <p className="mb-4">Free</p>
         <p className="font-bold">Categories</p>
-        <button className=" w-1/3 bg-white border p-1 text-gray-400 text-xs my-1 rounded-md">
-          Productivity
-        </button>
-        <button className=" w-1/2 bg-white border p-1 text-gray-400 text-xs my-1 rounded-md">
-          Communication
-        </button>
-        <button className=" w-1/2 bg-white border p-1 text-gray-400 text-xs my-1 rounded-md">
-          Developer Tools
-        </button>
+        <div className="">
+          <button className="  bg-white border p-1 text-gray-400 text-xs my-1 rounded-md block">
+            Productivity
+          </button>
+          <button className="  bg-white border p-1 text-gray-400 text-xs my-1 rounded-md block">
+            Communication
+          </button>
+          <button className="  bg-white border p-1 text-gray-400 text-xs my-1 rounded-md block">
+            Developer Tools
+          </button>
+        </div>
       </div>
-      <div className=" w-9/12 mb-2 px-8">
+      <div className=" w-full md:w-9/12 mb-2 px-8">
         <h1 className="font-extrabold text-2xl  mb-5">Google Drive</h1>
         <div className=" border-b w-full flex mb-4">
           <button
             onClick={() => setClicked("desc")}
-            className={`mr-6  border-b  px-2 ${clicked == "desc"
-              ? "text-black border-green-600"
-              : "text-gray-500"
-              }`}
+            className={`mr-6  border-b  px-2 ${
+              clicked == "desc"
+                ? "text-black border-green-600"
+                : "text-gray-500"
+            }`}
           >
             Description
           </button>
           <button
             onClick={() => setClicked("feat")}
-            className={`mr-6  border-b  px-2 ${clicked == "feat"
-              ? "text-black border-green-600"
-              : "text-gray-500"
-              }`}
+            className={`mr-6  border-b  px-2 ${
+              clicked == "feat"
+                ? "text-black border-green-600"
+                : "text-gray-500"
+            }`}
           >
             Features
           </button>
           <button
             onClick={() => setClicked("perm")}
-            className={`mr-6  border-b  px-2 ${clicked == "perm"
-              ? "text-black border-green-600"
-              : "text-gray-500"
-              }`}
+            className={`mr-6  border-b  px-2 ${
+              clicked == "perm"
+                ? "text-black border-green-600"
+                : "text-gray-500"
+            }`}
           >
             Permission
           </button>
           <button
             onClick={() => setClicked("sec")}
-            className={`mr-6  border-b  px-2 ${clicked == "sec"
-              ? "text-black border-green-600"
-              : "text-gray-500"
-              }`}
+            className={`mr-6  border-b  px-2 ${
+              clicked == "sec" ? "text-black border-green-600" : "text-gray-500"
+            }`}
           >
             {" "}
-            Security and Compliance
+            Security
           </button>
         </div>
         {clicked === "desc" ? (
-          <div className=" w-full bg-blue-500 rounded-md px-14 py-10">
+          <div className=" w-full bg-blue-500 rounded-md px-4 md:px-14 py-4 md:py-10">
             <h1 className=" text-2xl mb-2 text-white text-center">
               Get notified as soon as someone makes a comment or suggestion
             </h1>
-            <div className=" relative bg-white rounded-md w-10/12 m-auto px-32 py-5">
+            <div className=" relative bg-white rounded-md w-10/12 m-auto pl-14 md:px-32 py-3 md:py-5">
               <img
-                className="absolute h-8 w-8 left-20 top-5"
+                className="absolute h-8 w-8 left-3 md:left-20 top-5 "
                 src="https://th.bing.com/th/id/R.0791e494a09baaf7535695412b321278?rik=QfFNx0%2b43QLAJw&pid=ImgRaw&r=0"
                 alt=""
               />
@@ -137,7 +142,7 @@ function DownloadPage() {
         ) : null}
       </div>
     </div>
-  )
+  );
 }
 
-export default DownloadPage
+export default DownloadPage;
