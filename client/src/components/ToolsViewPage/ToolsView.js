@@ -54,11 +54,11 @@ const setViewToolPage = async (text, reason) => {
 }
 
 const shuffleInstalledTools = (text) => {
-  return tools.filter((item) => item.installed  && item.name.toLocaleLowerCase().search(text) != -1)
+  return tools.filter((item) => item.installed  && item.name.toLowerCase().search(text.toLowerCase()) != -1)
  }
 
 const shuffleRecommendTools = (text) => {
-  return tools.filter((item) => item.installed === false && item.name.toLocaleLowerCase().search(text) != -1)
+  return tools.filter((item) => item.installed === false && item.name.toLowerCase().search(text.toLowerCase()) != -1)
  }
 
  const showInstallOrNoInstall = (check) => {
