@@ -4,11 +4,8 @@ const googleDriveApi = require("./googledrive");
 const sideBarRouter = require("./sidebar");
 const giphy = require("./giphy");
 const githubRouter = require("./github");
-<<<<<<< HEAD
 const figmaRouter = require("./figma")
-=======
 const { NotFoundError } = require("../lib/errors");
->>>>>>> origin/dev
 
 module.exports = () => {
   router.use(pluginInfoRouter());
