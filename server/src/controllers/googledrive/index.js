@@ -40,6 +40,12 @@ class GoogleDriveController {
       });
     }
   }
+  
+  async getData(req, res) {
+    const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const json = await resp.json();
+    res.send(response("Data info returned successfully", json));
+  }
 }
 
 module.exports = new GoogleDriveController();
