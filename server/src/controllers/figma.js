@@ -4,7 +4,6 @@ const axios = require("axios");
 class FigmaController {
 
 
-
   async teamProject(req, res) {
     try {
       const { user } = req.params;
