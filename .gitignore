@@ -4,3 +4,4 @@ build
 .yarn
 # Local Netlify folder
 .netlify
+.gitignore
