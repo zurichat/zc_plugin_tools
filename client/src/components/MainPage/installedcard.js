@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import ModalComponent from "../Modal/Modal";
-import Modal from "react-bootstrap/Modal";
+// import Modal from "react-bootstrap/Modal";
 import { useHistory, Link } from "react-router-dom";
 
 const InstallToolsCard = ({ name, image, description, linkName }) => {
@@ -78,7 +78,7 @@ const InstallToolsCard = ({ name, image, description, linkName }) => {
   };
   return (
     <div>
-      <Link to={`/${linkName}`}>
+      <Link to={`/${linkName}`} className="no-underline">
         <div className="flex ">
           <div className="bg-white flex w-full p-3 justify-center items-center space-x-4 rounded-lg cursor-pointer">
             <div className=" p-1 border border-gray-300 rounded-lg ">
