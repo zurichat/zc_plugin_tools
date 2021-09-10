@@ -17,7 +17,7 @@ class PluginInfoController {
         template_url: "https://externaltools.zuri.chat/github",
         sidebar_uri: "https://externaltools.zuri.chat/api/sidebar",
         install_url: "https://externaltools.zuri.chat/api/github/install",
-        icon_url: "https://cloudinary.com/zurichat/github.png"
+        icon_url: "https://cloudinary.com/zurichat/github.png",
       },
       {
         name: "Google Drive",
@@ -25,7 +25,7 @@ class PluginInfoController {
         template_url: "https://externaltools.zuri.chat/googledrive",
         sidebar_uri: "https://externaltools.zuri.chat/api/sidebar",
         install_url: "https://externaltools.zuri.chat/api/googledrive/install",
-        icon_url: "https://cloudinary.com/zurichat/googledrive.png"
+        icon_url: "https://cloudinary.com/zurichat/googledrive.png",
       },
       {
         name: "Figma",
@@ -33,7 +33,7 @@ class PluginInfoController {
         template_url: "https://externaltools.zuri.chat/figma",
         sidebar_uri: "https://externaltools.zuri.chat/api/sidebar",
         install_url: "https://externaltools.zuri.chat/api/figma/install",
-        icon_url: "https://cloudinary.com/zurichat/figma.png"
+        icon_url: "https://cloudinary.com/zurichat/figma.png",
       },
       {
         name: "Gmail",
@@ -41,7 +41,7 @@ class PluginInfoController {
         template_url: "https://externaltools.zuri.chat/gmail",
         sidebar_uri: "https://externaltools.zuri.chat/api/sidebar",
         install_url: "https://externaltools.zuri.chat/api/gmail/install",
-        icon_url: "https://cloudinary.com/zurichat/gmail.png"
+        icon_url: "https://cloudinary.com/zurichat/gmail.png",
       },
       {
         name: "Giphy",
@@ -49,18 +49,21 @@ class PluginInfoController {
         template_url: "https://externaltools.zuri.chat/giphy",
         sidebar_uri: "https://externaltools.zuri.chat/api/sidebar",
         install_url: "https://externaltools.zuri.chat/api/giphy/install",
-        icon_url: "https://cloudinary.com/zurichat/giphy.png"
-      }
+        icon_url: "https://cloudinary.com/zurichat/giphy.png",
+      },
     ];
 
     try {
-      plugins.forEach(async plugin => {
-        const {data} = await axios.post("https://core.zuri.chat/plugin/register", plugin);
-        if(data) {
+      plugins.forEach(async (plugin) => {
+        const { data } = await axios.post(
+          "https://core.zuri.chat/plugin/register",
+          plugin
+        );
+        if (data) {
           //create plugin in Hobbes database
         }
-      })
-    } catch (error) {
+      });
+    } catch (e) {
       res.send(response(e.message, null, false));
     }
   }
