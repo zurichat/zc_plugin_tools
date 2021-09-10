@@ -19,9 +19,7 @@ const common = {
 // environmental variables for development
 const development = {
   NODE_ENV: "development",
-  // DB_URI: "mongodb://localhost:27017/hobbes",
-  DB_URI:
-    "mongodb+srv://davien21:6jiQ4e6B2e5-QZy@cluster0.edjkd.mongodb.net/zuri_externaltools",
+  DB_URI: "mongodb://localhost:27017/hobbes",
   ...common,
 };
 
