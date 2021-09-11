@@ -6,11 +6,7 @@ import "../style/GithubHome.css";
 const GithubHome = () => {
   return (
     <section className='github_home github_home_padding'>
-<<<<<<< HEAD
-      <div className={`github_home_main`}>
-=======
-      <div className={`github_home_main min-h-screen`}>
->>>>>>> origin/development
+      <div className={`github_home_main min-h-screen `}>
         <section className={`github_home_main-section1`}>
           <div className={`flex flex-col gap-4`}>
             <div
