@@ -6,10 +6,14 @@ import React, { useState } from "react";
 import "./Gmail.css";
 import gmailLayout from "../../../assets/gmailLayout.png";
 import gmailLogo from "../../../assets/gmailLogo.png";
+import About_Messages from "./About_Messages/About_Messages";
 
 const Gmail = () => {
   const [clicked, setClicked] = useState("desc");
-  return (
+  return <>
+    {clicked == "about_messages" ? (
+      <About_Messages />
+    ) : 
     <div className="container mt-9">
       <div className="container-left flex flex-col">
         <div className="flex flex-col self-baseline mb-3">
@@ -18,7 +22,9 @@ const Gmail = () => {
             <button className="btn text-white bg-green-600 hover:bg-green-500 font-extrabold text-sm p-3">
               Add to Zuri
             </button>
-            <button className="btn mt-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-extrabold text-sm p-3">
+            <button className="btn mt-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-extrabold text-sm p-3"
+            onClick={() => setClicked("about_messages")}
+            >
               Learn More
             </button>
           </div>
@@ -212,7 +218,8 @@ const Gmail = () => {
         ) : null}
       </div>
     </div>
-  );
+    }
+  </>
 };
 
 export default Gmail;
