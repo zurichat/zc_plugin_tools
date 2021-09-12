@@ -26,10 +26,16 @@
   border-radius: 3px;
   font-size: 15px;
   font-weight: 900;
+  transition: all 0.5s;
 }
 
 .left_content button:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.left_content button:hover {
+  background-color: #009b69;
+  color: #fff;
 }
 
 .right_content {

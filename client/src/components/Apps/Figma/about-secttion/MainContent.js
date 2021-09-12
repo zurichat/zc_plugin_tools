@@ -27,7 +27,7 @@ function MainContent() {
           <li>someone replies to one of your comments</li>
           <li>You’re tagged in a file</li>
           <li>You’re invited to a new file</li>
-          <li>New comments are</li>
+          <li>New comments are made to a file you subscribed to</li>
         </ul>
       </div>
     </div>
