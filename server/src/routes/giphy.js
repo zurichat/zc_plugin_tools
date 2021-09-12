@@ -9,4 +9,4 @@ module.exports = function () {
   router.get("/giphy/search", giphy.searchGifs);
 
   return router;
-}
+};
