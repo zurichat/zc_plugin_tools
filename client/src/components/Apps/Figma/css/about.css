@@ -22,12 +22,11 @@
 .banner-section .banner-image-container button {
   padding: 5px 20px;
   background-color: #f0efef;
-  border: 1px solid #009b69;
+  border: 1px solid #cfcfcf;
   margin-top: 5px;
   border-radius: 5px;
   font-size: 15px;
   font-weight: 900;
-  color: #009b69;
 }
 
 .banner-section .description {

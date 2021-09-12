@@ -8,62 +8,65 @@ import "./css/Figma.css";
 // import ToolsHeader from "../../toolsheader/toolsheader";
 
 const initialState = {
-	page: "about",
+  page: "about",
 };
 class Figma extends Component {
-	constructor() {
-		super();
-		this.state = initialState;
-	}
+  constructor() {
+    super();
+    this.state = initialState;
+  }
 
-	render() {
-		return (
-			<>
-				{/* <ToolsHeader /> */}
-				<div className="Start-title">
-					<div className="figmalogo-container">
-						<img src={logo} />
-					</div>
-					<h4 className="Logo-tag">Figma</h4>
-					<div className="arrow-down">^</div>
-				</div>
+  render() {
+    return (
+      <>
+        {/* <ToolsHeader /> */}
+        <div className="Start-title">
+          <div className="figmalogo-container">
+            <img src={logo} />
+          </div>
+          <h4 className="Logo-tag">Figma</h4>
+          <div className="arrow-down">^</div>
+        </div>
 
-				<div className="welcome-nav">
-					<h4
-						onClick={() => {
-							this.setState({ page: "messages" });
-						}}
-						className={
-							this.state.page === "about" || "download" ? "" : "selected"
-						}>
-						Messages
-					</h4>
+        <div className="welcome-nav">
+          <h4
+            onClick={() => {
+              this.setState({ page: "messages" });
+            }}
+            className={
+              this.state.page === "about" || "download" ? "" : "selected"
+            }
+          >
+            Messages
+          </h4>
 
-					<h4
-						onClick={() => {
-							this.setState({ page: "about" });
-						}}
-						className={this.state.page === "about" ? "selected" : ""}>
-						About
-					</h4>
-					<h4
-						onClick={() => {
-							this.setState({ page: "download" });
-						}}
-						className={this.state.page === "download" ? "selected" : ""}>
-						Download
-					</h4>
-				</div>
-				{this.state.page == "about" ? (
-					<FigmaAbout />
-				) : this.state.page == "download" ? (
-					<FigmaDownload />
-				) : (
-					<FigmaMessages />
-				)}
-			</>
-		);
-	}
+          <h4
+            onClick={() => {
+              this.setState({ page: "about" });
+            }}
+            className={this.state.page === "about" ? "selected" : ""}
+          >
+            About
+          </h4>
+          <h4
+            onClick={() => {
+              this.setState({ page: "download" });
+            }}
+            className={this.state.page === "download" ? "selected" : ""}
+          >
+            Download
+          </h4>
+        </div>
+        {this.state.page == "about" ? (
+          <FigmaAbout />
+        ) : this.state.page == "download" ? (
+          <FigmaDownload />
+        ) : (
+          <FigmaMessages />
+        )}
+      </>
+    );
+  }
 }
 
 export default Figma;
