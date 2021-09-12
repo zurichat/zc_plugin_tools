@@ -39,8 +39,8 @@ paths:
       tags:
         - C [Giphy]
       parameters:
-        - in: query
-          name: s
+        - in: query 
+          name: search
           type: string
           required: true
       responses:
