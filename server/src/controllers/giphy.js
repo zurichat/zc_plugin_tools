@@ -24,4 +24,15 @@ const trendingGifs = async (req, res) => {
   res.send(response('Trending GIFs', data))
 }
 
-module.exports = { randomGif, trendingGifs }
+const searchGifs = async (req, res) => {
+  const q = req.query.s
+
+  const r = await fetch(
+    `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${q}`,
+  )
+  const { data } = await JSON.parse(r.body)
+
+  res.send(response('Search GIFs', data))
+}
+
+module.exports = { randomGif, trendingGifs, searchGifs }

@@ -32,6 +32,23 @@ paths:
         200:
           description: Status and message and data
 
+  /giphy/search:
+    get:
+      summary: Get Search GIFs
+      description: gets data
+      tags:
+        - C [Giphy]
+      parameters:
+        - in: query
+          name: s
+          type: string
+          required: true
+      responses:
+        200:
+          description: Status and message and data
+
+ 
+
   /post-example:
     post:
       summary: Example Post
