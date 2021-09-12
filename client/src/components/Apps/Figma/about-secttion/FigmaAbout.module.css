@@ -63,3 +63,34 @@
 .right_content ul {
   margin-left: 15px;
 }
+
+.screenshots_title {
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 23px 0;
+}
+
+.screenshots_title h4 {
+  padding-left: 26px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.screenshots_container {
+  margin-top: 40px;
+  display: flex;
+  padding-left: 22px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 50px;
+}
+
+.screenshots_container img {
+  width: 190px;
+  height: 120px;
+  border-radius: 8px;
+}
+
+.screenshots_container img:not(:last-child) {
+  margin-right: 32px;
+}
