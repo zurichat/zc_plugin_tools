@@ -23,14 +23,14 @@ const trendingGifs = async (req, res) => {
 };
 
 const searchGifs = async (req, res) => {
-  const q = req.query.search
+  const q = req.query.search;
 
   const r = await fetch(
-    `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${q}`,
-  )
-  const { data } = await JSON.parse(r.body)
+    `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${q}`
+  );
+  const { data } = await JSON.parse(r.body);
 
-  res.send(response('Search GIFs', data))
-}
+  res.send(response("Search GIFs", data));
+};
 
-module.exports = { randomGif, trendingGifs, searchGifs }
+module.exports = { randomGif, trendingGifs, searchGifs };
