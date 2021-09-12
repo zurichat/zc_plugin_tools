@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Githubgivepermission from "./containers/Githubgivepermission";
 // import ToolsHeader from "../../toolsheader/toolsheader";
 import GithubHome from "./containers/GithubHome";
-import GithubInstalled from "./containers/GithubInstalled";
+import GitMessage from "./containers/GitMessage";
 
 const Github = () => {
   return (
@@ -15,8 +15,8 @@ const Github = () => {
           <Route exact path='/github' component={GithubHome} />
           <Route
             exact
-            path='/github/github-installed'
-            component={GithubInstalled}
+            path='/github/github-message'
+            component={GitMessage}
           />
         </Switch>
       </Router>
