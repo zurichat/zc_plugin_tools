@@ -1,25 +1,23 @@
 paths:
-  /get-example:
+  /googledrive:
     get:
-      summary: Example Get
-      description: gets data
+      summary: Google Drive
+      description: Info on Team Hobbes Google Drive App
       tags:
-        - E
-      parameters:
-        - in: query
-          name: page
-          type: integer
-          required: true
+        - E [Google Drive]
+      produces:
+        - application/json
       responses:
         200:
           description: Status and message and data
+
 
   /post-example:
     post:
       summary: Example Post
       description: Posts data
       tags:
-        - E
+        - E [Google Drive]
       produces:
         - application/json
       parameters:

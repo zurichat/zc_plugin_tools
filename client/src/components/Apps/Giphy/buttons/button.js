@@ -12,7 +12,7 @@ export const GreenBtn = (props)=>{
 
 export const WhiteBtn = (props)=>{
     return (
-            <button className="giphyButton whiteBtn">
+            <button className="whiteBtn">
                 {props.children}
             </button>
     )
