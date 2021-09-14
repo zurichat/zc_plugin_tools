@@ -11,7 +11,6 @@ const SearchBar = ({showRecoSec}) => {
   // }
 
   const checkInput = () => {
-    const inputTextVal = inputTextRef.current.value
     inputText.length > 0 && showRecoSec(inputText, true)
     inputText.length === 0 && showRecoSec(inputText, false)
     // toolList.map((item) => item.installed && item.name.toLocaleLowerCase().search(inputText) != -1 ? showNoInstall(false) : showNoInstall(true))

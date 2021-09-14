@@ -4,8 +4,8 @@
     grid-template-columns: repeat(auto-fit, minmax(18rem, 19rem));
     grid-gap: 1.3rem;
     margin: 1rem 0rem;
-    justify-content: space-between;
-}
+    justify-content: space-evenly;
+}   
 
 @media only screen and (max-width:39em){
   .tool_box{
@@ -23,6 +23,7 @@
     flex-direction: column;
     cursor: pointer;
     transition: all .3s;
+    border: .1rem solid rgba(153, 153, 153, 0.5);
 }
 
 .tool_box .tool:hover{
