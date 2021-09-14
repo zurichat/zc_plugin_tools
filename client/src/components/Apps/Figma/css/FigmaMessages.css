@@ -5,13 +5,123 @@
 }
 
 .figma-msgs {
-  @apply h-full lg:p-5;
+  @apply h-full py-5 md:py-5;
 }
 
 .figma-msgs_intro {
-  @apply lg:w-1/2;
+  @apply w-full;
+  @apply flex flex-col md:flex-row gap-2 px-5 mb-4 md:mb-10;
 }
 
+.figma-msgs_intro-mobile {
+  @apply flex flex-col md:hidden;
+}
+.figma-msgs_intro-mobile_header {
+  @apply flex flex-row items-center gap-1;
+  @apply text-xl font-bold;
+}
+.figma-msgs_intro-mobile_circle {
+  @apply h-2 w-2;
+  @apply rounded-full  border border-black;
+  @apply flex items-center justify-center;
+}
+.figma-msgs_intro-mobile_txt {
+  @apply text-base;
+}
+.figma-msgs_intro-desktop {
+  @apply hidden md:flex flex-col lg:gap-1;
+}
+.figma-msgs_intro-desktop > * {
+  @apply md:h-1/2 lg:h-auto flex items-start;
+}
+.figma-msgs_intro-desktop_header {
+  @apply text-base font-semibold;
+}
+.figma-msgs_intro-desktop_txt {
+  color: #999999;
+  @apply flex flex-row gap-1;
+  @apply text-lg font-medium;
+}
+.figma-msgs_intro-desktop_txt i,
+.figma-msgs_intro-mobile_txt i {
+  @apply not-italic cursor-pointer;
+  color: #1d9bd1;
+}
+
+.figma-msgs_time {
+  @apply relative;
+  @apply w-full h-20;
+  @apply flex items-center justify-center;
+}
+.figma-msgs_time_line {
+  @apply absolute inset-x-0 inset-y-1/2;
+  @apply flex;
+  @apply h-px w-full;
+  @apply bg-figma-lineBg;
+}
+
+.figma-msgs_time_day {
+  @apply relative z-50;
+  @apply py-2 px-8 md:px-32 md:py-3 lg:px-20 lg:py-2;
+  @apply border border-figma-lineBg rounded-full;
+  @apply bg-gray-200;
+  @apply text-figma-dayText font-black text-base;
+}
+
+.figma-msgs_msg-container {
+  @apply p-5;
+  @apply flex flex-row flex-nowrap gap-2;
+}
+
+.figma-msgs_msg-container_logo {
+  @apply flex-shrink-0;
+}
+
+.figma-msgs_msg-container_main {
+  @apply flex flex-col flex-nowrap gap-4;
+}
+
+.figma-msgs_msg-container_main-header {
+  @apply flex flex-col gap-2;
+}
+.figma-msgs_msg-container_main-header_stamp {
+  @apply flex flex-row flex-nowrap items-center gap-1;
+  @apply font-bold text-lg md:text-2xl;
+}
+.figma-msgs_msg-container_main-header_stamp-app {
+  background: #a2a2a2;
+  @apply text-white font-semibold text-xs;
+}
+.figma-msgs_msg-container_main-header_stamp-time {
+  color: #a2a2a2;
+  @apply font-medium text-xs;
+}
+.figma-msgs_msg-container_main-header_txt {
+  @apply text-sm md:text-xl;
+}
+.figma-msgs_msg-container_hero {
+  @apply flex flex-col gap-4;
+}
+.figma-msgs_msg-container_hero-size {
+  color: #999999;
+  @apply hidden md:flex flex-row gap-2 items-center;
+  @apply md:text-xl;
+}
+.figma-msgs_msg-container_hero-arrow-down {
+  @apply w-0 h-0 border-l-4 border-r-4 border-t-8;
+  border-top-color: #1d9bd1;
+}
+.figma-msgs_msg-container_hero-img {
+  @apply w-full md:w-4/5 lg:w-3/5 rounded-lg overflow-hidden;
+}
+.figma-msgs_msg-container_hero-desc {
+  @apply flex flex-col gap-2;
+  @apply text-sm md:text-base;
+  @apply w-full md:w-4/5 lg:w-3/5;
+}
+.figma-msgs_msg-container_hero-desc li {
+  @apply list-inside;
+}
 .messages img {
   width: 67px;
   border-radius: 8px;
@@ -116,7 +226,7 @@ ul {
   left: 65px;
 }
 
-/* Media Queries - Ipad and Desktop Screens */
+/* Media Queries - Ipad and Desktoptop Screens */
 @media (min-width: 721px) {
   .messages-welcome {
     max-width: 80%;
