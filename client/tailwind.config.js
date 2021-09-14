@@ -18,6 +18,8 @@ module.exports = {
         figma: {
           dayText: "#242424",
           lineBg: "#c1c1c1",
+          connectGreen: "#0ACF83",
+          textIcons: "#999999",
         },
 
         googledrive: {

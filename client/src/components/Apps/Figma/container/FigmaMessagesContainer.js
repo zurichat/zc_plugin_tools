@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import FigmaTextBar from "../components/FigmaTextBar";
 import FigmaMessageConnectAccount from "../components/FigmaMessageConnectAccount";
 
 const FigmaMessagesContainer = ({ hero, logo, localHostUrl, deployedUrl }) => {
@@ -28,7 +27,6 @@ const FigmaMessagesContainer = ({ hero, logo, localHostUrl, deployedUrl }) => {
             deployedUrl={deployedUrl}
           />
         )}
-        <FigmaTextBar />
       </div>
     </section>
   );

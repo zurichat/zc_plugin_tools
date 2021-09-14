@@ -66,7 +66,7 @@ const Figma = () => {
           <Route exact path={`/figma/about`} component={FigmaAbout} />
           <Route path={`/figma/download`} component={FigmaDownload} />
           <Route path={`/figma/messages`} component={FigmaMessages} />
-          <Route path={`/*`} component={FigmaDownload} />
+          <Route path={`/*`} component={FigmaAbout} />
         </Switch>
       </Router>
       {/* {this.state.page == "about" ? (

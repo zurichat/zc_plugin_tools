@@ -56,18 +56,17 @@ const FigmaMessageConnectAccount = ({
               <li>New comments are made to a file you subscribed to</li>
             </ul>
           </div>
-          <div className='mt-6 fig-connect-btn'>
-            <a
-              className='px-4 py-2  bg-white font-extrabold  rounded-sm'
-              href={
-                window.location.hostname == "localhost"
-                  ? localHostUrl
-                  : deployedUrl
-              }
-            >
-              Connect your account
-            </a>
-          </div>
+
+          <a
+            className='figma-msgs_msg-container_connect'
+            href={
+              window.location.hostname == "localhost"
+                ? localHostUrl
+                : deployedUrl
+            }
+          >
+            Connect your account
+          </a>
         </div>
       </div>
     </div>
