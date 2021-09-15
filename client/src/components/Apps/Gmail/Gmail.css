@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1.2fr 4fr;
   column-gap: 1rem;
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
 .selected-items:focus {
@@ -35,6 +35,9 @@
 }
 
 @media (max-width: 700px) {
+  .gmail-container {
+    padding: 1rem;
+  }
   .hidden-text-1 {
     text-align: center;
   }

@@ -7,6 +7,7 @@ import "./Gmail.css";
 import gmailLayout from "../../../assets/gmailLayout.png";
 import gmailLogo from "../../../assets/gmailLogo.png";
 import About_Messages from "./About_Messages/About_Messages";
+import { FaCaretRight, FaAngleDown, FaUser } from "react-icons/fa";
 
 const Gmail = () => {
   const [clicked, setClicked] = useState("desc");
@@ -21,14 +22,14 @@ const Gmail = () => {
               <img
                 src={gmailLogo}
                 alt="Gmail Logo"
-                className="gmail-logo w-60 rounded-2xl"
+                className="gmail-logo w-60 rounded-2xl shadow-sm"
               />
               <h1 className="hidden-text-1 text-4xl font-black mt-4 hidden">
                 Gmail
               </h1>
               <div className="flex flex-col mt-4">
                 <button className="btn text-white bg-green-600 hover:bg-green-500 font-extrabold text-sm p-3 duration-300 ease-in-out">
-                  Add to Zuri
+                  Add to Zuri Chat
                 </button>
                 <button
                   className="btn mt-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-extrabold text-sm p-3 duration-300 ease-in-out"
@@ -37,33 +38,31 @@ const Gmail = () => {
                   Learn More
                 </button>
               </div>
-              <div className="mt-7 h-px bg-gray-400"></div>
             </div>
 
-            <p className="font-bold">Supported Languages</p>
+            <h3 className="font-bold">Supported Languages</h3>
             <p className="mb-4 text-sm">English</p>
-            <p className="font-bold">Pricing</p>
-            <p className="mb-4 text-sm">Free</p>
-            <p className="font-bold">Categories</p>
+            <h3 className="font-bold">Pricing</h3>
+            <p className="mb-4 text-sm">Currently Free</p>
+            <h3 className="font-bold">Categories</h3>
             <div className="pt-3 flex flex-wrap mb-4">
-              <button className="p-6 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
+              <button className="p-6 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold mr-2 hover:underline">
                 Productivity
               </button>
               <button className="p-4 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold mr-2 hover:underline">
-                Project Management
+                Design
               </button>
               <button className="p-4 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold hover:underline">
-                Other Tools
+                Office Tools
               </button>
             </div>
-            <div className="hidden-text-2 my-3 h-px bg-gray-400"></div>
           </div>
           <div className="gmail-container-r">
             <h1 className="hidden-text-2 text-4xl font-black mb-5">Gmail</h1>
             <div className="border-b border-gray-300 w-full flex mb-1">
               <button
                 onClick={() => setClicked("desc")}
-                className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
+                className={`mr-4 sm:px-3 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
                   clicked == "desc" ? "text-black border-green-600" : ""
                 }`}
               >
@@ -71,7 +70,7 @@ const Gmail = () => {
               </button>
               <button
                 onClick={() => setClicked("perm")}
-                className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
+                className={`mr-4 sm:px-3 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
                   clicked == "perm" ? "text-black border-green-600" : ""
                 }`}
               >
@@ -79,7 +78,7 @@ const Gmail = () => {
               </button>
               <button
                 onClick={() => setClicked("sec")}
-                className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
+                className={`mr-4 sm:px-3 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
                   clicked == "sec" ? "text-black border-green-600" : ""
                 }`}
               >
@@ -169,9 +168,11 @@ const Gmail = () => {
             {clicked === "sec" ? (
               <div className="mt-4">
                 <div className="flex spa">
-                  <div className="bg-white w-full py-4 px-4 flex justify-between rounded items-center h-30">
-                    <p>Download security and compliance information</p>
-                    <button className="btn p-7 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
+                  <div className="bg-white w-full py-4 px-4 flex flex-wrap justify-between rounded items-center h-30">
+                    <p className="mr-2 mb-2">
+                      Download security and compliance information
+                    </p>
+                    <button className="btn p-3 border-1 border-gray-400 py-2 font-bold text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
                       Download CSV
                     </button>
                   </div>
@@ -182,32 +183,35 @@ const Gmail = () => {
                     Review the details to better understand this app’s security
                     practices. To learn more about assessing apps for your
                     workspace visit our{" "}
-                    <a href="/home" className="text-green-600">
+                    <a
+                      href="/home"
+                      className="text-green-600 hover:text-green-600 hover:underline"
+                    >
                       Help Center
                     </a>
                     <div className="link mt-9">
-                      <div className="mt-3">
+                      <div className="mt-3 flex justify-between cursor-pointer">
                         <h3 className="font-extrabold">General</h3>
-                        {/* <i className="fa fa-angle-right"></i> */}
+                        <FaCaretRight class="text-xl text-gray-600" />
                       </div>
                       <div className="mt-3 h-px bg-gray-300"></div>
-                      <div className="mt-3">
+                      <div className="mt-3 flex justify-between cursor-pointer">
                         <h3 className="font-extrabold">
                           Privacy & data governance
                         </h3>
-                        {/* <i className="fa fa-angle-right"></i> */}
+                        <FaCaretRight class="text-xl text-gray-600" />
                       </div>
                       <div className="mt-3 h-px bg-gray-300"></div>
-                      <div className="mt-3">
+                      <div className="mt-3 flex justify-between cursor-pointer">
                         <h3 className="font-extrabold">
                           Certifications & compliance
                         </h3>
-                        {/* <i className="fa fa-angle-right"></i> */}
+                        <FaCaretRight class="text-xl text-gray-600" />
                       </div>
                       <div className="mt-3 h-px bg-gray-300"></div>
-                      <div className="mt-3">
+                      <div className="mt-3 flex justify-between cursor-pointer">
                         <h3 className="font-extrabold">Security</h3>
-                        {/* <i className="fa fa-angle-right"></i> */}
+                        <FaCaretRight class="text-xl text-gray-600" />
                       </div>
                     </div>
                   </p>
@@ -215,7 +219,15 @@ const Gmail = () => {
                 <div className="mt-5"></div>
                 <div className="bg-white w-full py-4 px-4 rounded items-center">
                   <h3 className="font-extrabold mb-3">Scopes</h3>
-                  <p>ZuriChat for Gmail has 8 User Token Scopes</p>
+                  <div className="flex justify-between cursor-pointer">
+                    <div className="nawa flex items-center">
+                      <FaUser class="text-xl text-gray-600 mr-8" />
+                      <p className="">
+                        ZuriChat for Gmail has 8 User Token Scopes
+                      </p>
+                    </div>
+                    <FaCaretRight class="text-xl text-gray-600" />
+                  </div>
                 </div>
               </div>
             ) : null}
