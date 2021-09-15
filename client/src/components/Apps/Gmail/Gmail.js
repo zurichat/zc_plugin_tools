@@ -70,14 +70,6 @@ const Gmail = () => {
                 Description
               </button>
               <button
-                onClick={() => setClicked("feat")}
-                className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
-                  clicked == "feat" ? "text-black border-green-600" : ""
-                }`}
-              >
-                Features
-              </button>
-              <button
                 onClick={() => setClicked("perm")}
                 className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
                   clicked == "perm" ? "text-black border-green-600" : ""
