@@ -2,9 +2,10 @@
 .tool_box{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 19rem));
-    grid-gap: 1.3rem;
+    grid-gap: 1.4rem;
+    grid-column-gap: 1.68rem;
     margin: 1rem 0rem;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }   
 
 @media only screen and (max-width:39em){
@@ -24,6 +25,7 @@
     cursor: pointer;
     transition: all .3s;
     border: .1rem solid rgba(153, 153, 153, 0.5);
+    width: 100%;
 }
 
 .tool_box .tool:hover{
@@ -44,19 +46,25 @@
 
 
 .tool_box .tool .icon_title_box .img_box{
-   height: 3.5rem;
-   width: 4.5rem;
-   padding: .3rem;
+   height: 3.7rem;
+   width:  7rem;
+   padding: .2rem;
    border: .05rem solid rgba(0,0,0, .1);
    border-radius: .2rem;
    margin-right: .8rem;  
 }
 
+@media only screen and (max-width: 39em){
+    .tool_box .tool .icon_title_box .img_box{
+        width: 5.5rem;
+    }
+}
+
 .tool_box .tool .icon_title_box .img_box .img{
-    object-fit: cover;
     height: 100%;
     width: 100%;
     display: block;
+    object-fit: contain;
 }
 
 .tool_box .tool .icon_title_box .title_box .title{
