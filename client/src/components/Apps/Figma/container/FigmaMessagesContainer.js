@@ -5,8 +5,6 @@ const FigmaMessagesContainer = ({ hero, logo, localHostUrl, deployedUrl }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentTime, setCurrentTime] = useState(null);
 
-  console.log(currentTime);
-
   useEffect(() => {
     const time = new Date();
     if (currentTime === null)

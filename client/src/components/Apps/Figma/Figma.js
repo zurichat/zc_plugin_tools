@@ -28,7 +28,6 @@ const Figma = () => {
         <h4 className='Logo-tag'>Figma</h4>
         <div className='arrow-down'>^</div>
       </div>
-
       <Router>
         <div className='welcome-nav'>
           <Link to={`${url}/messages`}>
@@ -41,7 +40,7 @@ const Figma = () => {
               Messages
             </h4>
           </Link>
-          <Link to={`${url}/about`}>
+          <Link to={`${url}`}>
             <h4
               onClick={() => {
                 setPage(`about`);
@@ -62,20 +61,13 @@ const Figma = () => {
             </h4>
           </Link>
         </div>
+
         <Switch>
-          <Route exact path={`/figma/about`} component={FigmaAbout} />
-          <Route path={`/figma/download`} component={FigmaDownload} />
-          <Route path={`/figma/messages`} component={FigmaMessages} />
-          <Route path={`/*`} component={FigmaAbout} />
+          <Route exact path={`${path}/messages`} component={FigmaMessages} />
+          <Route exact path={`${path}/download`} component={FigmaDownload} />
+          <Route path={`${path}`} component={FigmaAbout} />
         </Switch>
       </Router>
-      {/* {this.state.page == "about" ? (
-          <FigmaAbout />
-        ) : this.state.page == "download" ? (
-          <FigmaDownload />
-        ) : (
-          <FigmaMessages />
-        )} */}
     </>
   );
 };

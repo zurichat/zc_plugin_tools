@@ -133,23 +133,31 @@
   @apply p-5;
 }
 .figma-msgs_text-bar {
+  @apply flex flex-row md:flex-col gap-1;
   @apply p-3 shadow;
   @apply border border-figma-lineBg;
 }
 .figma-msgs_text-bar_tools {
-  @apply flex flex-row flex-nowrap gap-6 items-center;
+  @apply hidden;
+  @apply md:flex flex-row flex-nowrap gap-4 items-center;
 }
 .figma-msgs_text-bar_tools_tool-container {
   @apply flex flex-row gap-4 items-center;
 }
 .figma-msgs_text-bar_tools_tool-container_2 {
   @apply ml-auto;
-  @apply border-r;
+  @apply border-r-2 flex-shrink-0 pr-3 border-figma-textIcons;
 }
 .figma-msgs_text-bar_tools_tool {
   @apply text-figma-textIcons;
   @apply cursor-pointer;
 }
 .figma-msgs_text-bar_tools_tool-lightning {
-  @apply flex-shrink-0 pr-6 border-r-2 border-figma-textIcons;
+  @apply flex-shrink-0 pr-4 border-r-2 border-figma-textIcons;
+}
+.figma-msgs_text-bar_input {
+  @apply w-full bg-transparent py-2 pr-2 outline-none;
+}
+.figma-msgs_text-bar_tools_mobile {
+  @apply flex flex-row items-center gap-2 md:hidden;
 }

@@ -5,9 +5,11 @@ import {
   AiOutlineItalic,
   AiOutlineUnorderedList,
   AiOutlineSmile,
+  AiOutlineCamera,
 } from "react-icons/ai";
 import { BiLink, BiSend, BiChevronDown } from "react-icons/bi";
 import { ImAttachment } from "react-icons/im";
+import { IoDocumentAttachOutline } from "react-icons/io5";
 
 const FigmaTextBar = () => {
   return (
@@ -18,6 +20,17 @@ const FigmaTextBar = () => {
           className={`figma-msgs_text-bar_input`}
           placeholder={`Send a message to Figma`}
         />
+        <div className={`figma-msgs_text-bar_tools_mobile`}>
+          <div className={`figma-msgs_text-bar_tools_tool-container`}>
+            <BsLightning />
+          </div>
+          <div className={`figma-msgs_text-bar_tools_tool-container`}>
+            <AiOutlineCamera />
+          </div>
+          <div className={`figma-msgs_text-bar_tools_tool-container`}>
+            <IoDocumentAttachOutline />
+          </div>
+        </div>
         <div className={`figma-msgs_text-bar_tools`}>
           <div
             className={`figma-msgs_text-bar_tools_tool figma-msgs_text-bar_tools_tool-lightning`}
