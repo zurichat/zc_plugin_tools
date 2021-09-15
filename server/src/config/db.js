@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const env = require("./env");
 const logger = require("./logger");
-const { withUnderScore } = require("../utils/logFormatter");
+// const { withUnderScore } = require("../utils/logFormatter");
 
 const db = env.DB_URI;
 
@@ -14,7 +14,7 @@ module.exports = () => {
       useCreateIndex: true,
     })
     .then(() => {
-      logger.info(`Connected to ${withUnderScore(db)}`);
+      logger.info(`Connected to ${db}`);
     })
     .catch((err) => {
       return logger.error(err.message);
