@@ -15,16 +15,23 @@ const Gmail = () => {
       {clicked == "about_messages" ? (
         <About_Messages />
       ) : (
-        <div className="container mt-9">
-          <div className="container-left flex flex-col">
+        <div className="gmail-container max-w-screen-xl mt-5 pt-5 p-8">
+          <div className="gmail-container-l flex flex-col">
             <div className="flex flex-col self-baseline mb-3">
-              <img src={gmailLogo} alt="Gmail Logo" className="w-60" />
+              <img
+                src={gmailLogo}
+                alt="Gmail Logo"
+                className="gmail-logo w-60 rounded-2xl"
+              />
+              <h1 className="hidden-text-1 text-4xl font-black mt-4 hidden">
+                Gmail
+              </h1>
               <div className="flex flex-col mt-4">
-                <button className="btn text-white bg-green-600 hover:bg-green-500 font-extrabold text-sm p-3">
+                <button className="btn text-white bg-green-600 hover:bg-green-500 font-extrabold text-sm p-3 duration-300 ease-in-out">
                   Add to Zuri
                 </button>
                 <button
-                  className="btn mt-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-extrabold text-sm p-3"
+                  className="btn mt-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-extrabold text-sm p-3 duration-300 ease-in-out"
                   onClick={() => setClicked("about_messages")}
                 >
                   Learn More
@@ -38,57 +45,50 @@ const Gmail = () => {
             <p className="font-bold">Pricing</p>
             <p className="mb-4 text-sm">Free</p>
             <p className="font-bold">Categories</p>
-            <div className="pt-3">
+            <div className="pt-3 flex flex-wrap mb-4">
               <button className="p-6 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
                 Productivity
               </button>
-              <button className="p-4 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
+              <button className="p-4 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold mr-2 hover:underline">
                 Project Management
               </button>
-              <button className="p-4 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold">
+              <button className="p-4 border-1 border-gray-500 py-2 text-gray-800 text-sm my-1 rounded hover:text-black hover:font-extrabold hover:underline">
                 Other Tools
               </button>
             </div>
+            <div className="hidden-text-2 my-3 h-px bg-gray-400"></div>
           </div>
-          <div className="container-right">
-            <h1 className="text-4xl font-black mb-5">Gmail</h1>
-            <div className=" border-b w-full flex mb-4">
+          <div className="gmail-container-r">
+            <h1 className="hidden-text-2 text-4xl font-black mb-5">Gmail</h1>
+            <div className="border-b border-gray-300 w-full flex mb-1">
               <button
                 onClick={() => setClicked("desc")}
-                className={`mr-4  border-b  px-2 hover:text-green-600 ${
-                  clicked == "desc"
-                    ? "text-black border-green-600"
-                    : "text-gray-500"
+                className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
+                  clicked == "desc" ? "text-black border-green-600" : ""
                 }`}
               >
                 Description
               </button>
               <button
                 onClick={() => setClicked("feat")}
-                className={`mr-4  border-b  px-2 hover:text-green-600 text-sm ${
-                  clicked == "feat"
-                    ? "text-black border-green-600"
-                    : "text-gray-500"
+                className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
+                  clicked == "feat" ? "text-black border-green-600" : ""
                 }`}
               >
                 Features
               </button>
               <button
                 onClick={() => setClicked("perm")}
-                className={`mr-4  border-b  px-2 hover:text-green-600 text-sm ${
-                  clicked == "perm"
-                    ? "text-black border-green-600"
-                    : "text-gray-500"
+                className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
+                  clicked == "perm" ? "text-black border-green-600" : ""
                 }`}
               >
                 Permission
               </button>
               <button
                 onClick={() => setClicked("sec")}
-                className={`mr-4  border-b  px-2 hover:text-green-600 text-sm ${
-                  clicked == "sec"
-                    ? "text-black border-green-600"
-                    : "text-gray-500"
+                className={`mr-4 px-2 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${
+                  clicked == "sec" ? "text-black border-green-600" : ""
                 }`}
               >
                 {" "}
@@ -97,7 +97,11 @@ const Gmail = () => {
             </div>
             {clicked === "desc" ? (
               <div className=" w-full rounded-md pt-2">
-                <img src={gmailLayout} alt="Gmail Layout illustration" />
+                <img
+                  className="header-image"
+                  src={gmailLayout}
+                  alt="Gmail Layout illustration"
+                />
               </div>
             ) : null}
             {clicked === "desc" ? (
