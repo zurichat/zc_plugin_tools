@@ -5,6 +5,12 @@
   padding: 2rem 1rem;
 }
 
+.selected-items:focus {
+  border-bottom: 2px solid #059669;
+  margin-bottom: -1px;
+  transition: 0.1s cubic-bezier(1, 0, 1, 1);
+}
+
 @media (max-width: 1000px) {
   .gmail-container {
     grid-template-columns: 1fr;
