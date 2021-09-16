@@ -8,6 +8,7 @@ import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import './giphy.css'
 
+
 const Giphy = () => {
   return (
       <div className="giphy-plugin-page bg-gray-200">

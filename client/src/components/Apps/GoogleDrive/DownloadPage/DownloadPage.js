@@ -43,12 +43,12 @@ function DownloadPage() {
           </button>
         </div>
       </div>
-      <div className=" w-full md:w-9/12 mb-2 px-8">
-        <h1 className="font-extrabold text-2xl  mb-5">Google Drive</h1>
+      <div className=" w-full md:w-9/12 mb-2 px-4 md:px-8">
+        <h1 className="font-extrabold text-2xl mt-4 md:mt-0 mb-2 md:mb-5">Google Drive</h1>
         <div className=" border-b w-full flex mb-4">
           <button
             onClick={() => setClicked("desc")}
-            className={`mr-6  border-b  px-2 ${
+            className={`mr-1 md:mr-6  border-b text-xs md:text-base px-1 md:px-2 ${
               clicked == "desc"
                 ? "text-black border-green-600"
                 : "text-gray-500"
@@ -58,7 +58,7 @@ function DownloadPage() {
           </button>
           <button
             onClick={() => setClicked("feat")}
-            className={`mr-6  border-b  px-2 ${
+            className={` mr-1 md:mr-6  border-b text-xs md:text-base px-1 md:px-2 ${
               clicked == "feat"
                 ? "text-black border-green-600"
                 : "text-gray-500"
@@ -68,7 +68,7 @@ function DownloadPage() {
           </button>
           <button
             onClick={() => setClicked("perm")}
-            className={`mr-6  border-b  px-2 ${
+            className={`mr-1 md:mr-6  border-b text-xs md:text-base  px-1 md:px-2 ${
               clicked == "perm"
                 ? "text-black border-green-600"
                 : "text-gray-500"
@@ -78,7 +78,7 @@ function DownloadPage() {
           </button>
           <button
             onClick={() => setClicked("sec")}
-            className={`mr-6  border-b  px-2 ${
+            className={` mr-1 md:mr-6  border-b text-xs md:text-base  px-1 md:px-2 ${
               clicked == "sec" ? "text-black border-green-600" : "text-gray-500"
             }`}
           >
@@ -87,8 +87,8 @@ function DownloadPage() {
           </button>
         </div>
         {clicked === "desc" ? (
-          <div className=" w-full bg-blue-500 rounded-md px-4 md:px-14 py-4 md:py-10">
-            <h1 className=" text-2xl mb-2 text-white text-center">
+          <div className=" w-full bg-blue-500 rounded-md px-2 md:px-14 py-4 md:py-10">
+            <h1 className=" text-base md:text-2xl mb-2 text-white text-center">
               Get notified as soon as someone makes a comment or suggestion
             </h1>
             <div className=" relative bg-white rounded-md w-10/12 m-auto pl-14 md:px-32 py-3 md:py-5">
