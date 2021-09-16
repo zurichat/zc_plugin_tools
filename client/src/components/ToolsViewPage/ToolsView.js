@@ -19,7 +19,8 @@ const ToolsView = () => {
      const instTools = await getInstall() 
      const recoTools = await getRecommend()
    setInstallTools(instTools)
-   setRecommendTools(recoTools)
+   console.log(recoTools);
+  //  setRecommendTools(recoTools)
     }
 
     getInstalledAndRecommendTools()
@@ -29,8 +30,12 @@ const ToolsView = () => {
     return tools.filter((tool) => tool.installed === true)
 }
   
-  const getRecommend = () => {
-    return tools.filter((tool) => tool.installed === false)
+  const getRecommend = async () => {
+     const res = await fetch('https://externaltools.zuri.chat/api/tools')
+     const data = await res.json()
+     console.log(data);
+    //  return tools.filter((tool) => tool.installed === false);
+
 }
 
 const setViewToolPage = async (text, reason) => {
@@ -71,7 +76,7 @@ const handleShowAvailableTools = () => {
 }
 
   return (
-    <div style={{ padding: "12px 2rem" }}>
+    <div style={{ padding: "12px 2rem"}}>
       {/* insert your component for those working on the company tools view page */}
       <TitleBox title="tools" text="tool directory" link={true} icon={true} />
       <div>

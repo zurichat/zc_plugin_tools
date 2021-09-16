@@ -16,7 +16,7 @@ import ToolsDirectoryLayout from "./components/allroutes/toolsDirectoryLayout";
 
 function App() {
   return (
-    <div className="flex flex-grow min-h-screen">
+    <div className="flex flex-grow min-h-screen ">  
       <div className="flex-grow bg-gray-200">
         {/* <BrowserRouter>
           <Switch>

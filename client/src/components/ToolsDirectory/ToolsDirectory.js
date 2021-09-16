@@ -69,7 +69,7 @@ const ToolsDirectory = () => {
       return list;
     };
   return (
-    <div style={{ padding: "12px 2rem" }}>
+    <div style={{ padding: "12px 2rem"}}>
       {/* insert your component for those working on the company tools directory page */}
       {/* <ToolsMainPage /> */}
       <SearchFieldTools sendInputText={upDateInputText} />
@@ -79,7 +79,7 @@ const ToolsDirectory = () => {
       <TitleBox title="daily tools" link={false} icon={false} />
       <DailyTools list={dailyList} text={inputText} />
       <TitleBox title="brilliant bots" link={false} icon={false} />
-      <BotTools list={botList} text={inputText}/>
+      <BotTools list={botList} text={inputText} />
     </div>
   );
 };

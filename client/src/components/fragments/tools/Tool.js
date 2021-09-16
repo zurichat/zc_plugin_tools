@@ -6,6 +6,7 @@ const Tool = ({icon, title, text, btn, pad}) => {
     return (
         <div className={styles.tool}>
             <div className={styles.icon_title_box}>
+            {/* <figure className={styles.img_box}><link rel="icon" type="image/svg+xml" className={styles.img} href={icon} sizes="any"></figure> */}
                 <figure className={styles.img_box}><img src={icon} alt="" className={styles.img} /></figure>
                 <div className={styles.title_box}>
                <h3 className = {styles.title} >{title}</h3>
