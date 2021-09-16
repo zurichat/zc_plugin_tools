@@ -1,11 +1,4 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Link,
-  Route,
-  useRouteMatch,
-} from "react-router-dom";
 import "./../../searchbar.component";
 import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
@@ -16,7 +9,6 @@ import "./css/Figma.css";
 
 const Figma = () => {
   const [page, setPage] = useState(`about`);
-  let { path, url } = useRouteMatch();
 
   return (
     <>
@@ -28,46 +20,43 @@ const Figma = () => {
         <h4 className='Logo-tag'>Figma</h4>
         <div className='arrow-down'>^</div>
       </div>
-      <Router>
-        <div className='welcome-nav'>
-          <Link to={`${url}/messages`}>
-            <h4
-              onClick={() => {
-                setPage(`messages`);
-              }}
-              className={page === "about" || "download" ? "" : "selected"}
-            >
-              Messages
-            </h4>
-          </Link>
-          <Link to={`${url}`}>
-            <h4
-              onClick={() => {
-                setPage(`about`);
-              }}
-              className={page === "about" ? "selected" : ""}
-            >
-              About
-            </h4>
-          </Link>
-          <Link to={`${url}/download`}>
-            <h4
-              onClick={() => {
-                setPage(`download`);
-              }}
-              className={page === "download" ? "selected" : ""}
-            >
-              Download
-            </h4>
-          </Link>
+      <div className='welcome-nav'>
+        <div>
+          <h4
+            onClick={() => {
+              setPage(`messages`);
+            }}
+            className={page === "messages" ? "selected" : ""}
+          >
+            Messages
+          </h4>
         </div>
-
-        <Switch>
-          <Route exact path={`${path}/messages`} component={FigmaMessages} />
-          <Route exact path={`${path}/download`} component={FigmaDownload} />
-          <Route path={`${path}`} component={FigmaAbout} />
-        </Switch>
-      </Router>
+        <div>
+          <h4
+            onClick={() => {
+              setPage(`about`);
+            }}
+            className={page === "about" ? "selected" : ""}
+          >
+            About
+          </h4>
+        </div>
+        <div>
+          <h4
+            onClick={() => {
+              setPage(`download`);
+            }}
+            className={page === "download" ? "selected" : ""}
+          >
+            Download
+          </h4>
+        </div>
+      </div>
+      <>
+        {page === "messages" && <FigmaMessages />}
+        {page === "download" && <FigmaDownload />}
+        {page === "about" && <FigmaAbout />}
+      </>
     </>
   );
 };
