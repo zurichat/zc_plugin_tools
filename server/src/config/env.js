@@ -21,7 +21,7 @@ const common = {
 const development = {
   NODE_ENV: "development",
   DB_URI: "mongodb://localhost:27017/hobbes",
-  referrer: "http://localhost",
+  referrer: "https://externaltools.zuri.chat",
   ...common,
 };
 
