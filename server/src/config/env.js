@@ -14,12 +14,14 @@ const common = {
       "1//040xryRuASjorCgYIARAAGAQSNwF-L9IrRM5-vWODhY8Q5hsZWjvybdznK8IFB5Gc02ZRwGzm8lWHwxfzZkXWInykgh1WdhGHBE8",
     REDIRECT_URI: "https://developers.google.com/oauthplayground",
   },
+  PLUGIN_ID: "614246a19fd1f4f655d445f3",
 };
 
 // environmental variables for development
 const development = {
   NODE_ENV: "development",
   DB_URI: "mongodb://localhost:27017/hobbes",
+  referrer: "http://localhost",
   ...common,
 };
 
@@ -27,6 +29,7 @@ const development = {
 const production = {
   NODE_ENV: "production",
   DB_URI: env.DB_URI,
+  referrer: "https://externaltools.zuri.chat",
   ...common,
 };
 
