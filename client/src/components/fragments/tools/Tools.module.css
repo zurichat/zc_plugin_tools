@@ -2,17 +2,25 @@
 .tool_box{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 19rem));
-    grid-gap: 1.4rem;
-    grid-column-gap: 1.68rem;
+    grid-gap: 1.3rem;
     margin: 1rem 0rem;
     justify-content: flex-start;
 }   
+
+@media only screen and (min-width: 75em){
+  .tool_box_b{
+    justify-content: space-between;
+  }
+}
 
 @media only screen and (max-width:39em){
   .tool_box{
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     justify-content: center; 
   }
+   /* .tool_box_b{
+    justify-content: center;
+  } */
 }
 
 .tool_box .tool{
@@ -89,4 +97,3 @@
     margin-top: .7rem;
     padding: .3rem;
 } */
-

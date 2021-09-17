@@ -11,8 +11,20 @@ const ToolsView = () => {
   const [showHero, setShowHero] = useState(true);
   const [showRecoTool, setShowRecoTool] = useState(false)
   const [textpresent, setTextPresent] = useState('')
+  // installed tools list and conditions
   const [installTools, setInstallTools] = useState([])
+  const [installLoading, setInstallLoading] = useState(true);
+  const [installError, setInstallError] = useState(false);
+  const [installNetwork, setInstallNetwork] = useState(false);
+  const [noInstallFound, setNoInstallFound] = useState(false)
+  const [noInstallItemFetch, setNoInstallItemFetch] = useState(false)
+  // all tools list and conditions
   const [recommendTools, setRecommendTools] = useState([])
+  const [recoLoading, setRecoLoading] = useState(true)
+  const [recoError, setRecoError] = useState(false)
+  const [recoNetwork, setRecoNetwork] = useState(false)
+  const [noRecommendFound, setNoRecommendFound] = useState(false);
+
 
   useEffect(() => {
     const getInstalledAndRecommendTools = async () => {
@@ -25,16 +37,66 @@ const ToolsView = () => {
     getInstalledAndRecommendTools()
   }, [])
 
-  const getInstall = () => {
-    return tools.filter((tool) => tool.installed === true)
+  const getInstall = async () => {
+    const res = await fetch('https://externaltools.zuri.chat/api/tools/recommended')
+     const status = res.status;
+     const data = await res.json();
+     if(status >= 200 && status <= 299){
+     const list = data.data;
+     if(list.length > 0){
+       setInstallError(false);
+       setInstallLoading(false);
+       setInstallNetwork(false);
+       setNoInstallItemFetch(false)
+       return list;
+     }
+     else{
+       setInstallError(false);
+       setInstallLoading(false);
+       setInstallNetwork(false);
+       setNoInstallItemFetch(true);}
+     }
+     else if(status >= 500){
+       setInstallError(false)
+       setInstallLoading(false)
+       setInstallNetwork(true)
+     }
+     else{
+       setInstallNetwork(false)
+       setInstallLoading(false)
+       setInstallError(true)
+     }
+    // return tools.filter((tool) => tool.installed === true)
 }
   
-  const getRecommend = () => {
-    return tools.filter((tool) => tool.installed === false)
+  const getRecommend = async () => {
+     const res = await fetch('https://externaltools.zuri.chat/api/tools')
+     const status = res.status
+     const data = await res.json()
+     if(status >= 200 && status <= 299){
+     setRecoLoading(false);
+     setRecoNetwork(false);
+     setRecoError(false)
+     const list = data.data;
+     return list;
+     }
+     else if(status >= 500){
+            setRecoLoading(false);
+     setRecoNetwork(true);
+     setRecoError(false)
+     }
+     else{
+     setRecoLoading(false);
+     setRecoError(true);
+     setRecoNetwork(false);
+     }
+     
+     console.log(data);
+    //  return tools.filter((tool) => tool.installed === false);
 }
 
+// search filter function 
 const setViewToolPage = async (text, reason) => {
-    
   if(reason){
     const instList = await shuffleInstalledTools(text)
     const recoList = await shuffleRecommendTools(text)
@@ -53,12 +115,47 @@ const setViewToolPage = async (text, reason) => {
   }
 }
 
+// search function for installed section
 const shuffleInstalledTools = (text) => {
-  return tools.filter((item) => item.installed  && item.name.toLowerCase().search(text.toLowerCase()) != -1)
+  const list = installTools.filter(
+    (item) =>
+      item.installed && item.name.toLowerCase().search(text.toLowerCase()) != -1
+  );
+   if (list.length > 0) {
+     setInstallLoading(true);
+     setTimeout(() => {
+       setInstallLoading(false);
+       setNoInstallFound(false);
+       return list;
+     }, 1500);
+   } else {
+     setInstallLoading(true);
+     setTimeout(() => {
+       setInstallLoading(false);
+       setNoInstallFound(true);
+     }, 1500);
+   }
  }
 
 const shuffleRecommendTools = (text) => {
-  return tools.filter((item) => item.installed === false && item.name.toLowerCase().search(text.toLowerCase()) != -1)
+ const list = recommendTools.filter(
+    (item) =>
+      item.installed && item.name.toLowerCase().search(text.toLowerCase()) != -1
+  );
+   if (list.length > 0) {
+     setRecoLoading(true);
+     setTimeout(() => {
+       setRecoLoading(false);
+       setNoRecommendFound(false);
+       return list;
+     }, 1500);
+   } else {
+     setRecoLoading(true);
+     setTimeout(() => {
+       setRecoLoading(false);
+       setNoRecommendFound(true);
+     }, 1500);
+   }
  }
 
  const showInstallOrNoInstall = (check) => {
@@ -98,9 +195,21 @@ const handleShowAvailableTools = () => {
         list={installTools}
         showAvailableTools={handleShowAvailableTools}
         text={textpresent}
+        loading={installLoading}
+        error={installError}
+        network={installNetwork}
+        noSearch={noInstallFound}
+        noInstallItem={noInstallItemFetch}
       />
       {showRecoTool && (
-        <RecommendTools list={recommendTools} text={textpresent} />
+        <RecommendTools 
+        list={recommendTools} 
+        text={textpresent}
+        loading={recoLoading}
+        error={recoError}
+        network={recoNetwork}
+        noSearch={noRecommendFound}
+        />
       )}
     </div>
   );
