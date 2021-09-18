@@ -5,7 +5,7 @@
 }
 
 .github_home_padding {
-  @apply p-2 sm:p-4 lg:p-6 xl:p-8 2xl:p-10;
+  @apply p-4 sm:p-6 lg:p-6 xl:p-8 2xl:p-10;
 }
 
 .top_nav {
@@ -25,7 +25,7 @@
 
 .github_btn_container-btn {
   border-color: #009b69;
-  @apply border-2 p-4 md:p-4 lg:p-1 xl:p-2 2xl:p-3  text-lg lg:text-base xl:text-lg 2xl:text-xl font-semibold rounded;
+  @apply border-2 p-4 md:p-4 lg:p-1 xl:p-2 2xl:p-3 text-lg lg:text-base xl:text-lg 2xl:text-xl font-semibold rounded text-center;
 }
 .github_home-desc {
   @apply text-lg lg:text-base xl:text-lg 2xl:text-xl;
@@ -41,9 +41,9 @@
 }
 
 .github_home_nav-link {
-  @apply py-4 border-b-2 cursor-pointer text-lg lg:text-base xl:text-lg 2xl:text-xl;
+  @apply flex-shrink-0 py-4 border-b-2 cursor-pointer text-lg lg:text-base xl:text-lg 2xl:text-xl min-w-max w-1/6 lg:w-auto lg:min-w-max list-none;
 }
 .github_home_nav-active {
-  @apply border-b-2;
+  @apply border-b-2 font-bold;
   border-color: #009b69;
 }

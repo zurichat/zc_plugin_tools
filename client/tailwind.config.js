@@ -14,6 +14,22 @@ module.exports = {
         githubGrey: "#C4C4C4",
         githubTextGrey: "#A1A1A1",
         githubBlue: "#3C89FC",
+
+        figma: {
+          dayText: "#242424",
+          lineBg: "#c1c1c1",
+          connectGreen: "#0ACF83",
+          textIcons: "#999999",
+        },
+
+        googledrive: {
+          header: "#242424",
+          body: "#3A3A3A",
+          backg: "#F0EFEF",
+          base: "#E5E5E5",
+          bdr: "#E7E7E7",
+          grn: "#009B69",
+        },
       },
     },
   },

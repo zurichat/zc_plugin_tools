@@ -5,39 +5,48 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/gmail.png",
-    category: "enterpriseApp",
+    categoryClass: "enterpriseApp",
+    linkName: "gmail",
     installed: true,
+    daily: true,
   },
   {
     name: "Figma",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/figma.png",
-    category: "enterpriseApp",
+    categoryClass: "enterpriseApp",
+    linkName: "figma",
     installed: true,
+    daily: true,
   },
   {
     name: "Github",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/github.png",
-    category: "billiantBots",
+    categoryClass: "billiantBots",
+    linkName: "github",
     installed: true,
+    daily: true,
   },
   {
     name: "Google Drive",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/googleDrive.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "googledrive",
     installed: true,
+    daily: true,
   },
   {
     name: "Giphy",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/giphy.png",
-    category: "billiantBots",
+    categoryClass: "billiantBots",
+    linkName: "giphy",
     installed: true,
   },
   {
@@ -45,15 +54,18 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/facebook.png",
-    category: "enterpriseApp",
+    categoryClass: "enterpriseApp",
+    linkName: "test",
     installed: false,
+    daily: true,
   },
   {
     name: "UnSplash",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/unsplash.png",
-    category: "dailyTools",
+    categoryClass: "dailyTools",
+    linkName: "test",
     installed: false,
   },
   {
@@ -61,7 +73,8 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/medium.png",
-    category: "dailyTools",
+    categoryClass: "dailyTools",
+    linkName: "test",
     installed: false,
   },
   {
@@ -69,7 +82,8 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/pinterest.png",
-    category: "dailyTools",
+    categoryClass: "dailyTools",
+    linkName: "test",
     installed: false,
   },
   {
@@ -77,7 +91,8 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/hangout.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
   },
   {
@@ -85,7 +100,8 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/dribble.png",
-    category: "billiantBots",
+    categoryClass: "billiantBots",
+    linkName: "test",
     installed: false,
   },
   {
@@ -93,31 +109,38 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/dropbox.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
+    enterprise: true,
   },
   {
     name: "Behance",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/behance.png",
-    category: "billiantBots",
+    categoryClass: "billiantBots",
+    linkName: "test",
     installed: false,
+    enterprise: true,
   },
   {
     name: "Twitter",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/twitter1.png",
-    category: "enterpriseApp",
+    categoryClass: "enterpriseApp",
+    linkName: "test",
     installed: false,
+    daily: true,
   },
   {
     name: "LinkedIn",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/linkedin.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
   },
   {
@@ -125,39 +148,48 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/trello.png",
-    category: "dailyTools",
+    categoryClass: "dailyTools",
+    linkName: "test",
     installed: false,
+    enterprise: true,
   },
   {
     name: "Google Calendar",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/calender.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
+    daily: true,
   },
   {
     name: "Hubspot",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/hubspot.png",
-    category: "billiantBots",
+    categoryClass: "billiantBots",
+    linkName: "test",
     installed: false,
+    bot: true,
   },
   {
     name: "Box",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/box.png",
-    category: "dailyTools",
+    categoryClass: "dailyTools",
+    linkName: "test",
     installed: false,
+    enterprise: true,
   },
   {
     name: "Zoom",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/zoom.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
   },
   {
@@ -165,7 +197,8 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/outlook.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
   },
   {
@@ -173,7 +206,8 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/pool.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
   },
   {
@@ -181,15 +215,18 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/toast.png",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
+    bot: true,
   },
   {
     name: "Google Keep",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/keep.png",
-    category: "enterpriseApp",
+    categoryClass: "enterpriseApp",
+    linkName: "test",
     installed: false,
   },
   {
@@ -197,15 +234,18 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/salesforce.png",
-    category: "billiantBots",
+    categoryClass: "billiantBots",
+    linkName: "test",
     installed: false,
+    bot: true,
   },
   {
     name: "Google Meet",
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/meet.png",
-    category: "enterpriseApp",
+    categoryClass: "enterpriseApp",
+    linkName: "test",
     installed: false,
   },
   {
@@ -213,7 +253,8 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/photos.png",
-    category: "enterpriseApp",
+    categoryClass: "enterpriseApp",
+    linkName: "test",
     installed: false,
   },
   {
@@ -221,7 +262,8 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/office",
-    category: "workFromHome",
+    categoryClass: "workFromHome",
+    linkName: "test",
     installed: false,
   },
   {
@@ -229,7 +271,9 @@ export const tools = [
     description:
       "Get access to the organization tools without leaving the zuri chat",
     image: "./apps/snapchat.png",
-    category: "billiantBots",
+    categoryClass: "billiantBots",
+    linkName: "test",
     installed: false,
+    daily: true,
   },
 ];

@@ -1,0 +1,271 @@
+[
+  {
+    "id": "def22b64-d4d2-4e09-b677-5f4c96cadf50",
+    "name": "Gmail",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Get access to the organization’s mail without leaving Zuri Chat",
+    "icon": "/apps/gmail.svg",
+    "url": "/gmail"
+  },
+  {
+    "id": "fdf55db4-0bda-406d-8105-ac54ad5701be",
+    "name": "Zoom",
+    "collection": "Daily Tools",
+    "categories": ["Voice and Video"],
+    "description": "Make conference calls with your team from Zuri Chat",
+    "icon": "/apps/zoom.svg"
+  },
+  {
+    "id": "765bbc71-bba5-42a6-9646-08239855a21f",
+    "name": "Google Calendar",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Connect your google account and schedule right from Zurichat",
+    "icon": "/apps/calender.svg",
+    "url": ""
+  },
+  {
+    "id": "b5e7c3d0-568f-414c-9f93-4148d40af2a3",
+    "name": "Outlook",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Access your emails from Outlook right from Zuri Chat",
+    "icon": "/apps/outlook.svg",
+    "url": ""
+  },
+  {
+    "id": "c16eb6d6-15be-4194-a0a8-1b3100761be4",
+    "name": "Figma",
+    "collection": "Daily Tools",
+    "categories": ["Productivity"],
+    "description": "Get updates about the organisation's figma files",
+    "icon": "/apps/figma.svg",
+    "url": "/figma"
+  },
+  {
+    "id": "25eda39c-d107-4751-a704-4af27365293a",
+    "name": "Google drive",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Get access to the organization’s files that are available on google",
+    "icon": "/apps/google-drive.svg",
+    "url": "/google-drive"
+  },
+  {
+    "id": "aba207b1-6275-4d86-9d39-e249d036ef1a",
+    "name": "Twitter",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Connect your twitter account and tweet right from Zurichat",
+    "icon": "/apps/twitter.svg",
+    "url": ""
+  },
+  {
+    "id": "729adc53-afd2-4bbe-8af6-8a3d488892e5",
+    "name": "Github",
+    "collection": "Daily Tools",
+    "categories": ["Productivity"],
+    "description": "Get access to the organization tools without leaving the zuri chat",
+    "icon": "/apps/github.svg",
+    "url": "/github"
+  },
+  {
+    "id": "8507847d-6769-455d-8e56-94e8f94f5e03",
+    "name": "Giphy",
+    "collection": "Daily Tools",
+    "categories": ["Fun", "Communication"],
+    "description": "View and share interesting gifs with your team on zuri chat",
+    "icon": "/apps/giphy.svg",
+    "url": "/giphy"
+  },
+  {
+    "id": "57618459-1e10-438b-93e9-a9ca37dbeef9",
+    "name": "Facebook",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Surf your Facebook timeline without leaving Zuri Chat",
+    "icon": "/apps/facebook.svg",
+    "url": ""
+  },
+  {
+    "id": "9b6c08bd-308f-458f-bd42-41d8c8130097",
+    "name": "Unsplash",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Get nice photos from Unsplash without leaving Zuri chat",
+    "icon": "/apps/unsplash.svg",
+    "url": ""
+  },
+  {
+    "id": "e5183126-e948-4125-987e-65fdea198077",
+    "name": "Deviant Art",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Access your Deviant Art account right from Zuri Chat",
+    "icon": "/apps/deviant.svg",
+    "url": ""
+  },
+  {
+    "id": "8baac5c0-0050-4121-b326-297f38827304",
+    "name": "Medium",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Gain access to most of Medium, right from Zuri Chat",
+    "icon": "/apps/medium.svg",
+    "url": ""
+  },
+  {
+    "id": "2bfaa249-d9a6-4843-8eae-f0571154c5a3",
+    "name": "Pinterest",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Create your moodboard on Pinterest, without leaving Zuri Chat",
+    "icon": "/apps/pinterest.svg",
+    "url": ""
+  },
+  {
+    "id": "7977d474-6868-461b-adfe-1d649fa22033",
+    "name": "Google Hangouts",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Access google hangouts and send messages right here on Zuri Chat",
+    "icon": "/apps/hangout.svg",
+    "url": ""
+  },
+  {
+    "id": "20b33a8e-dd4d-400b-8cb2-e9b5ae111eea",
+    "name": "Dribble",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Get access to your Dribble account Right in Zuri Chat",
+    "icon": "/apps/dribble.svg",
+    "url": ""
+  },
+  {
+    "id": "843e2cae-8847-4e48-b075-01a3db79fddd",
+    "name": "Asana",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Coordinate and manage your work from Zuri chat",
+    "icon": "/apps/asana.svg",
+    "url": ""
+  },
+  {
+    "id": "b08d1e21-a9c0-4383-9814-4cef4251e3a2",
+    "name": "DropBox",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Get access to your DropBox account without leaving Zuri Chat",
+    "icon": "/apps/dropbox.svg",
+    "url": ""
+  },
+  {
+    "id": "c8462a82-aace-4dc3-bb8c-9dc38bcee359",
+    "name": "Behance",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Get access to content from world’s best designers, right from Zuri chat",
+    "icon": "/apps/dropbox.svg",
+    "url": ""
+  },
+  {
+    "id": "7c1673a1-dbd1-4f79-8552-bf77bac98d57",
+    "name": "LinkedIn",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Connect your LinkedIn account and use it right from Zuri Chat",
+    "icon": "/apps/linkedin.svg",
+    "url": ""
+  },
+  {
+    "id": "946b6fc4-a468-48ff-89cd-aa4b589a7f39",
+    "name": "Trello",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Get access to your Trello workspace without leaving Zuri Chat",
+    "icon": "/apps/trello.svg",
+    "url": ""
+  },
+  {
+    "id": "da44e1c7-6ea8-457c-a9f7-e443b12dc83e",
+    "name": "Jira Cloud",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "With the Jira Cloud Integration, you can preview Jira tickets...",
+    "icon": "/apps/jira.svg",
+    "url": ""
+  },
+  {
+    "id": "13eeeffc-df39-47c5-bb3f-0e7ed89c306e",
+    "name": "Hubspot",
+    "collection": "Daily Tools",
+    "categories": ["Communication"],
+    "description": "Create tasks and tickets and add information like contacts, and...",
+    "icon": "/apps/calender.svg",
+    "url": ""
+  },
+  {
+    "id": "b43937d8-236a-4251-8245-3acd5e06a7fc",
+    "name": "Box",
+    "collection": "Enterprise-ready apps",
+    "categories": ["File Management"],
+    "description": "",
+    "icon": "/apps/box.svg",
+    "url": ""
+  },
+  {
+    "id": "32930e9c-a9c0-4ae5-9b8d-c9cad5d66e2c",
+    "name": "Brex",
+    "collection": "Enterprise-ready apps",
+    "categories": ["Finance"],
+    "description": "",
+    "icon": "/apps/brex.svg",
+    "url": ""
+  },
+  {
+    "id": "16d78ce1-d671-4283-8811-c00fd7dcbb7a",
+    "name": "LingVanex",
+    "collection": "Enterprise-ready apps",
+    "categories": ["Customer support"],
+    "description": "",
+    "icon": "/apps/ling.svg",
+    "url": ""
+  },
+  {
+    "id": "5384ef30-c24d-4fce-9b22-69bab05f5791",
+    "name": "Simple Poll",
+    "collection": "Brilliant Bots",
+    "categories": ["Customer support"],
+    "description": "",
+    "icon": "/apps/poll.svg",
+    "url": ""
+  },
+  {
+    "id": "0e8d4188-d128-45f4-885b-b8faf49d4321",
+    "name": "QuikQuiz",
+    "collection": "Brilliant Bots",
+    "categories": ["News and Noteworthy"],
+    "description": "",
+    "icon": "/apps/quik-quiz.svg",
+    "url": ""
+  },
+  {
+    "id": "c861c80c-d355-4c20-b885-3a0d5656dbc9",
+    "name": "Toast for Github",
+    "collection": "Brilliant Bots",
+    "categories": ["Developers Tool"],
+    "description": "",
+    "icon": "/apps/github-toast.svg",
+    "url": ""
+  },
+  {
+    "id": "f0eaae35-0489-407e-9705-e1564936e878",
+    "name": "One Bar",
+    "collection": "Brilliant Bots",
+    "categories": ["Productivity"],
+    "description": "",
+    "icon": "/apps/one-bar.svg",
+    "url": ""
+  }
+]
