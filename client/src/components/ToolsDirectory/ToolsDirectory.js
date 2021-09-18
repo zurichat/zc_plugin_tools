@@ -44,7 +44,7 @@ const ToolsDirectory = () => {
   }, [])
 
   const enterpriseFetchList = async () => {
-     const url = `https://externaltools.zuri.chat/api/tools`;
+     const url = "https://externaltools.zuri.chat/api/tools?sortBy=collections";
      const res = await fetch(url);
      const status = res.status;
      const data = await res.json();
@@ -52,14 +52,14 @@ const ToolsDirectory = () => {
        setEnterpriseLoading(false);
        setEnterpriseNetwork(false);
        setEnterpriseError(false);
-       const list = data.data;
+       const list = data.data["Enterprise-ready apps"] ;
        return list;
      }
-    //   else if (status >= 500) {
-    //    setEnterpriseLoading(false);
-    //    setEnterpriseNetwork(true);
-    //    setEnterpriseError(false);
-    //  } 
+     else if (status >= 500) {
+      setEnterpriseLoading(false);
+      setEnterpriseNetwork(true);
+      setEnterpriseError(false);
+     } 
      else {
        setEnterpriseLoading(false);
        setEnterpriseError(true);
@@ -69,7 +69,7 @@ const ToolsDirectory = () => {
   };
   // daily tool fetch
   const dailyFetchList = async () => {
-     const url = `https://externaltools.zuri.chat/api/tools`;
+     const url = `https://externaltools.zuri.chat/api/tools?sortBy=collections`;
      const res = await fetch(url);
      const status = res.status;
      const data = await res.json();
@@ -77,14 +77,14 @@ const ToolsDirectory = () => {
        setDailyLoading(false);
        setDailyNetwork(false);
        setDailyError(false);
-       const list = data.data;
+       const list = data.data["Daily Tools"] ;
        return list;
      } 
-    //  else if (status >= 500) {
-    //    setDailyLoading(false);
-    //    setDailyNetwork(true);
-    //    setDailyError(false);
-    //  } 
+     else if (status >= 500) {
+      setDailyLoading(false);
+       setDailyNetwork(true);
+      setDailyError(false);
+     } 
      else {
        setDailyLoading(false);
        setDailyError(true);
@@ -94,7 +94,7 @@ const ToolsDirectory = () => {
   }
   // bot fetch
   const botFetchList = async () => {
-    const url = `https://externaltools.zuri.chat/api/tools`
+    const url = `https://externaltools.zuri.chat/api/tools?sortBy=collections`
      const res = await fetch(url);
      const status = res.status;
      const data = await res.json();
@@ -102,7 +102,7 @@ const ToolsDirectory = () => {
        setBotLoading(false);
        setBotNetwork(false);
        setBotError(false);
-       const list = data.data;
+       const list = data.data["Brilliant Bots"] ;
        return list;
      } else if (status >= 500) {
        setBotLoading(false);
@@ -127,27 +127,28 @@ const ToolsDirectory = () => {
       setBotList(botList)
   }
   const shuffleEnterpriseList = (text) => {
-    const list = enterpriseList.filter((item) => item.enterprise && item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1)
+    const list = enterpriseList.filter((item) => item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1)
      if (list.length > 0) {
         setEnterpriseLoading(true);
         setTimeout(() => {
           setEnterpriseLoading(false);
           setNoEnterpriseFound(false);
           return list;
-        }, 1500);
+        }, 1000);
+return list;
       } else {
         setEnterpriseLoading(true);
         setTimeout(() => {
           setEnterpriseLoading(false);
           setNoEnterpriseFound(true);
-        }, 1500);
+        }, 1000);
+return list;
       }
   }
   // shuffle daily tols on search
    const shuffleDailyList = (text) => {
      const list = dailyList.filter(
        (item) =>
-         item.daily &&
          item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1
      );
       if (list.length > 0) {
@@ -156,20 +157,21 @@ const ToolsDirectory = () => {
           setDailyLoading(false);
           setNoDailyFound(false);
           return list;
-        }, 1500);
+        }, 1000);
+return list;
       } else {
         setDailyLoading(true);
         setTimeout(() => {
           setDailyLoading(false);
           setNoDailyFound(true);
-        }, 1500);
+        }, 1000);
+return list;
       }
    };
   //  shuffle bot tools on search
     const shuffleBotList = (text) => {
       const list = botList.filter(
         (item) =>
-          item.bot &&
           item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1
       );
        if (list.length > 0) {
@@ -178,13 +180,15 @@ const ToolsDirectory = () => {
            setBotLoading(false);
            setNoBotFound(false);
          return list;
-         }, 1500);
+         }, 1000);
+return list;
        } else {
          setBotLoading(true);
          setTimeout(() => {
            setBotLoading(false);
            setNoBotFound(true);
-         }, 1500);
+         }, 1000);
+return list;
        }
     };
   return (
