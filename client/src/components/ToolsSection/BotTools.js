@@ -19,7 +19,7 @@ const BotTools = ({list, text, loading, error, network, noSearch}) => {
     }
     return (
       <div style={{ width: "100%", margin: "1rem 0rem 2rem 0rem" }}>
-        {noSearch === false > 0 ? (
+        {noSearch === false ? (
           <Tools list={list}>
             {list.map(({name, id, description, icon}) => (
               <Tool
