@@ -11,7 +11,11 @@ const Github = () => {
       {/* <ToolsHeader /> */}
       <Router>
         <Switch>
-          <Route exact path='/github/githubgivepermission' component={Githubgivepermission} />
+          <Route
+            exact
+            path='/github/githubgivepermission'
+            component={Githubgivepermission}
+          />
           <Route exact path='/github' component={GithubHome} />
           <Route
             exact

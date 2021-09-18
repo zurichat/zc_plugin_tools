@@ -8,6 +8,7 @@
     align-items: center;
     padding: .5rem;
     margin: 1rem 0rem;
+    border: .1rem solid rgba(153, 153, 153, 0.5);
 }
 
 .search_box .icon{

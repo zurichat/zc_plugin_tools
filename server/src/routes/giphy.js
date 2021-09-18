@@ -6,5 +6,7 @@ module.exports = function () {
 
   router.get("/giphy/trending", giphy.trendingGifs);
 
+  router.get("/giphy/search", giphy.searchGifs);
+
   return router;
 };

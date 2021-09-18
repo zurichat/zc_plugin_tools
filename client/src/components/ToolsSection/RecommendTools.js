@@ -3,7 +3,7 @@ import Tools from '../fragments/tools/Tools';
 import Tool from '../fragments/tools/Tool';
 import TitleBox from '../fragments/TitleBox';
 
-const RecommendTools = ({list}) => {
+const RecommendTools = ({list, text}) => {
     return (
         <div style={{width: "100%" , margin: "3rem 0rem"}}>
             <TitleBox title="available tools" text="filter" link = {false}/>
@@ -18,7 +18,7 @@ const RecommendTools = ({list}) => {
                     btn = "add"
                     pad = {true}
                     />)
-                 ) : ( <p>No result found for available tools</p>)
+                 ) : ( `No result of  "${text}"  found for available tools`)
                    
                 }
             </Tools>
