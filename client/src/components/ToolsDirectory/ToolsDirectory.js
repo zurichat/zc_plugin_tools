@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ToolsMainPage from "../MainTools/ToolsMain";
 import { tools } from "../../data/tools.data";
 import TitleBox from "../fragments/TitleBox";
@@ -14,6 +14,8 @@ const ToolsDirectory = () => {
   const [dailyList, setDailyList] = useState([]);
   const [botList, setBotList] = useState([]);
   const [inputText, setInputText] = useState("");
+  const [allCategories, setAllCategories] = useState([]);
+  const [allCategoriesContainer, setAllCategoriesContainer] = useState([]);
 
   useEffect(() => {
     const getFetchList = async () => {
@@ -27,15 +29,20 @@ const ToolsDirectory = () => {
 
     getFetchList();
   }, []);
-  // Categories filter function start
-  // useEffect(() => {
-  //   effect;
-  //   return () => {
-  //     cleanup;
-  //   };
-  // }, [input]);
+  // Categories filter function start //
+  const handleContainerRefArr = (ref) => {
+    setAllCategoriesContainer((oldRef) => {
+      return [...oldRef, ref];
+    });
+  };
+  const updateAllCategories = useCallback((category) => {
+    return setAllCategories((oldCategory) => {
+      let newCategory = [...oldCategory, category];
+      return newCategory;
+    });
+  }, []);
   const handleCategoriesFilter = (category) => {};
-  // Categories filter function end
+  // Categories filter function end //
   const enterpriseFetchList = async () => {
     const list = tools.filter((item) => item.enterprise);
     return list;
@@ -49,6 +56,9 @@ const ToolsDirectory = () => {
     return list;
   };
   const upDateInputText = async (text) => {
+    allCategoriesContainer.map((category) =>
+      category.removeAttribute("hidden")
+    );
     setInputText(text);
     const enterpriseList = shuffleEnterpriseList(text);
     setEnterpriseList(enterpriseList);
@@ -86,7 +96,10 @@ const ToolsDirectory = () => {
       {/* insert your component for those working on the company tools directory page */}
       {/* <ToolsMainPage /> */}
       <SearchFieldTools sendInputText={upDateInputText} />
-      <CategoriesSection />
+      <CategoriesSection
+        categories={allCategories}
+        categoriesContainer={allCategoriesContainer}
+      />
       {botList.length === 0 &&
         enterpriseList.length === 0 &&
         dailyList.length === 0 && (
@@ -97,16 +110,40 @@ const ToolsDirectory = () => {
       <Container
         title={`enterprise-ready apps`}
         toolsLength={enterpriseList.length}
+        updateRefArr={handleContainerRefArr}
       >
-        <TitleBox title='enterprise-ready apps' link={false} icon={false} />
+        <TitleBox
+          updateAllCategories={updateAllCategories}
+          title='enterprise-ready apps'
+          link={false}
+          icon={false}
+        />
         <EnterpriseTools list={enterpriseList} text={inputText} />
       </Container>
-      <Container title={`daily tools`} toolsLength={dailyList.length}>
-        <TitleBox title='daily tools' link={false} icon={false} />
+      <Container
+        title={`daily tools`}
+        toolsLength={dailyList.length}
+        updateRefArr={handleContainerRefArr}
+      >
+        <TitleBox
+          updateAllCategories={updateAllCategories}
+          title='daily tools'
+          link={false}
+          icon={false}
+        />
         <DailyTools list={dailyList} text={inputText} />
       </Container>
-      <Container title={`brilliant bots`} toolsLength={botList.length}>
-        <TitleBox title='brilliant bots' link={false} icon={false} />
+      <Container
+        title={`brilliant bots`}
+        toolsLength={botList.length}
+        updateRefArr={handleContainerRefArr}
+      >
+        <TitleBox
+          updateAllCategories={updateAllCategories}
+          title='brilliant bots'
+          link={false}
+          icon={false}
+        />
         <BotTools list={botList} text={inputText} />
       </Container>
     </div>

@@ -1,13 +1,19 @@
 import React, { useRef, useEffect } from "react";
 
-const Container = ({ className, children, title, toolsLength }) => {
+const Container = ({
+  className,
+  children,
+  title,
+  toolsLength,
+  updateRefArr,
+}) => {
   const containerRef = useRef(false);
   const { current } = containerRef;
   useEffect(() => {
     if (current) {
-      set;
+      updateRefArr(current);
     }
-  }, [containerRef]);
+  }, [current]);
   return (
     <div
       className={`${className} ${toolsLength === 0 && `hidden`}`}
