@@ -119,42 +119,46 @@ const setViewToolPage = async (text, reason) => {
 const shuffleInstalledTools = (text) => {
   const list = installTools.filter(
     (item) =>
-      item.installed && item.name.toLowerCase().search(text.toLowerCase()) != -1
+      item.name.toLowerCase().search(text.toLowerCase()) != -1
   );
    if (list.length > 0) {
      setInstallLoading(true);
      setTimeout(() => {
        setInstallLoading(false);
        setNoInstallFound(false);
-       return list;
-     }, 1500);
+       
+     }, 1000);
+return list;
    } else {
      setInstallLoading(true);
      setTimeout(() => {
        setInstallLoading(false);
        setNoInstallFound(true);
-     }, 1500);
+     }, 1000);
+return list;
    }
  }
 
 const shuffleRecommendTools = (text) => {
  const list = recommendTools.filter(
     (item) =>
-      item.installed && item.name.toLowerCase().search(text.toLowerCase()) != -1
+      item.name.toLowerCase().search(text.toLowerCase()) != -1
   );
    if (list.length > 0) {
      setRecoLoading(true);
      setTimeout(() => {
        setRecoLoading(false);
        setNoRecommendFound(false);
-       return list;
-     }, 1500);
+       
+     }, 1000);
+return list;
    } else {
      setRecoLoading(true);
      setTimeout(() => {
        setRecoLoading(false);
        setNoRecommendFound(true);
-     }, 1500);
+     }, 1000);
+return list;
    }
  }
 
