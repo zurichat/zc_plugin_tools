@@ -10,13 +10,11 @@ const Tool = ({ icon, title, text, btn, pad, item }) => {
     if (editUrl === "/google-drive") {
       editUrl = editUrl.replace("-", "");
     }
-    console.log(editUrl);
   } else {
     editUrl = item.url;
     if (editUrl === "/google-drive") {
       editUrl = newUrl.replace("-", "");
     }
-    console.log(editUrl);
   }
   const url = editUrl && editUrl.length > 0 && editUrl;
   return (

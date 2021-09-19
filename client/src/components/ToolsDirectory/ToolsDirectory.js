@@ -65,6 +65,9 @@ const ToolsDirectory = () => {
   };
   // function filter seaarch on bot daily and ent tools
   const upDateInputText = async (text) => {
+    allCategoriesContainer.map((category) =>
+      category.removeAttribute("hidden")
+    );
     setInputText(text);
     const enterpriseList = await shuffleEnterpriseList(text);
     setEnterpriseList(enterpriseList);
@@ -151,7 +154,7 @@ const ToolsDirectory = () => {
       return newCategory;
     });
   }, []);
-  const handleCategoriesFilter = (category) => {};
+
   // Categories filter function end //
   return (
     <div style={{ padding: "12px 2rem" }}>
