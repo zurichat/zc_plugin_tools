@@ -5,15 +5,17 @@ import { Link } from "react-router-dom";
 
 const Tool = ({ icon, title, text, btn, pad, item }) => {
   let editUrl;
-  if (item.url && window.location.href.includes("localhost")) {
+  if (item && item.url && window.location.href.includes("localhost")) {
     editUrl = item.url.replace("https://externaltools.zuri.chat", "");
     if (editUrl === "/google-drive") {
       editUrl = editUrl.replace("-", "");
     }
   } else {
-    editUrl = item.url;
-    if (editUrl === "/google-drive") {
-      editUrl = newUrl.replace("-", "");
+    if (item) {
+      editUrl = item.url;
+      if (editUrl === "/google-drive") {
+        editUrl = newUrl.replace("-", "");
+      }
     }
   }
   const url = editUrl && editUrl.length > 0 && editUrl;
