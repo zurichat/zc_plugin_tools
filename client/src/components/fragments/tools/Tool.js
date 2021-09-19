@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from "./Tools.module.css"
 
-const Tool = ({icon, title, text, btn, pad}) => {
+const Tool = ({icon, title, text, btn, pad, filterBy}) => {
     return (
         <div className={styles.tool}>
             <div className={styles.icon_title_box}>
@@ -22,6 +22,7 @@ const Tool = ({icon, title, text, btn, pad}) => {
                 marginTop: ".7rem",
                 padding: `${pad && ".3rem"}`
             }}>{btn}</button>
+            <p>{filterBy}</p>
         </div>
     )
 }

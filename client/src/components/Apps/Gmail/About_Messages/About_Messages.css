@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap");
+
+* {
+	font-family: "Lato", sans-serif;
+}
+.Start-title {
+	display: flex;
+	padding: 20px 0 20px 20px;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+    margin-left: 10px;
+}
+
+.Start-title h4 {
+	font-size: 25px;
+	margin-left: 5px;
+	font-weight: 700;
+}
+
+.Start-title .arrow-down {
+	transform: rotate(180deg) translateX(-5px);
+	font-size: 15px;
+}
+
+.gmaillogo-container {
+	width: 44px;
+}
+
+.gmaillogo-container img {
+	border-radius: 8px;
+}
+
+.welcome-nav {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: auto;
+	width: 100%;
+	border-top: 0.7px solid #cfcfcf;
+	border-bottom: 0.7px solid #cfcfcf;
+	padding-left: 20px;
+}
+.welcome-nav h4 {
+	padding: 10px;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.selected {
+	border-bottom: 1px solid #0acf83;
+}
+
+.welcome-nav h4:hover {
+	border-bottom: 1px solid #0acf83;
+}
+
+
+/* 
+  ###########################################################################################
+                    ABOUT SECTION
+#############################################################################################
+*/
+
+.gmail-about-section-infoblock {
+    display: grid;
+    grid-template-columns: 270px auto;
+    padding: 35px;
+}
+
+.gmail-about-section-banner {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.gmail-about-section-banner img {
+    width : 251px;
+}
+.gmail-about-section-banner button {
+    width: 250px;
+    border: 1.5px solid #0acf83;
+    height: 48px;
+    margin-top: 15px;
+    font-weight: 700;
+    color: #0acf83;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.gmail-about-section-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.gmail-about-section-text h3 {
+    font-size: 21px;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+
+.gmail-screenshots-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    border-bottom: .7px solid #cfcfcf;
+    padding-left: 20px;
+}
+
+.gmail-screenshots-heading-container h4 {
+    padding: 30px 20px 5px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border-top: .7px solid #cfcfcf;
+    border-bottom: .7px solid #cfcfcf;
+    margin-left: 5px;
+
+}
+
+.gmail-screenshots-container {
+    display: flex;
+    padding: 35px;
+}
+.gmail-screenshots-container img {
+    width: 233px;
+    margin-right: 40px;
+}
+
+.gmail-screenshots-container img.purple-bg {
+     border : 20px solid #340B43;
+     border-radius: 10px;
+}
+
+.gmail-screenshots-container img.gray-bg {
+    border : 20px solid #DDDBDB;
+    border-radius: 10px;
+}
+
+/* ABOUT SECTION MEDIA QUERIES */
+
+@media screen and (max-width : 768px){
+    
+.gmail-screenshots-container {
+   padding: 0;
+   flex-wrap: wrap;
+}
+
+.gmail-screenshots-container img {
+    margin-right: 0;
+    margin-top: 20px;
+}
+}
+
+@media screen and (max-width : 640px){
+    .gmail-about-section-infoblock  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .gmail-about-section-banner img {
+        width: 100%;
+    } 
+
+    .gmail-about-section-banner button {
+        width: 100%;
+    }
+        .gmail-screenshots-container {
+            flex-direction: column;
+        }
+
+        .gmail-about-section-text {
+            margin-top: 30px;
+        }
+    }

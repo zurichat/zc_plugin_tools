@@ -16,8 +16,8 @@ import ToolsDirectoryLayout from "./components/allroutes/toolsDirectoryLayout";
 
 function App() {
   return (
-    <div className="flex flex-grow min-h-screen">
-      <div className="flex-grow bg-gray-200">
+    <div className='flex flex-grow min-h-screen'>
+      <div className='flex-grow bg-gray-200'>
         {/* <BrowserRouter>
           <Switch>
             <Route exact path="/" component={ToolsView} />
@@ -33,22 +33,22 @@ function App() {
         <BrowserRouter>
           <Switch>
             {/* <Layout> */}
-            <HomeLayoutRoutes exact path="/" component={ToolsView} />
+            <HomeLayoutRoutes exact path='/' component={ToolsView} />
             <ToolsDirectoryLayout
               exact
-              path="/tools"
+              path='/tools'
               component={ToolsDirectory}
             />
             {/* <ToolsHeader /> */}
-            <AppLayoutRoutes path="/gmail" component={Gmail} />
+            <AppLayoutRoutes path='/gmail' component={Gmail} />
             <AppLayoutRoutes
-              path="/figma/:subroute"
+              path='/figma/:subroute'
               component={FigmaSubRoutes}
             />
-            <AppLayoutRoutes path="/figma" component={Figma} />
-            <AppLayoutRoutes path="/github" component={Github} />
-            <AppLayoutRoutes path="/giphy" component={Giphy} />
-            <AppLayoutRoutes path="/googledrive" component={GoogleDrive} />
+            <AppLayoutRoutes path='/figma' component={Figma} />
+            <AppLayoutRoutes path='/github' component={Github} />
+            <AppLayoutRoutes path='/giphy' component={Giphy} />
+            <AppLayoutRoutes path='/googledrive' component={GoogleDrive} />
             {/* </ToolsHeader> */}
             {/* </Layout> */}
           </Switch>
