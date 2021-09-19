@@ -8,7 +8,6 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "gmail",
     installed: true,
-    path: "/gmail",
     daily: true,
   },
   {
@@ -19,7 +18,6 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "figma",
     installed: true,
-    path: "/figma",
     daily: true,
   },
   {
@@ -30,7 +28,6 @@ export const tools = [
     categoryClass: "billiantBots",
     linkName: "github",
     installed: true,
-    path: "/github",
     daily: true,
   },
   {
@@ -41,7 +38,6 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "googledrive",
     installed: true,
-    path: "/googledrive",
     daily: true,
   },
   {
@@ -52,7 +48,6 @@ export const tools = [
     categoryClass: "billiantBots",
     linkName: "giphy",
     installed: true,
-    path: "/giphy",
   },
   {
     name: "Facebook",

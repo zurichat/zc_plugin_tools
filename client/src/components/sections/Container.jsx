@@ -1,28 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React from 'react'
 
-const Container = ({
-  className,
-  children,
-  title,
-  toolsLength,
-  updateRefArr,
-}) => {
-  const containerRef = useRef(false);
-  const { current } = containerRef;
-  useEffect(() => {
-    if (current) {
-      updateRefArr(current);
-    }
-  }, [current]);
-  return (
-    <div
-      className={`${className} ${toolsLength === 0 && `hidden`}`}
-      id={title}
-      ref={containerRef}
-    >
-      {children}
-    </div>
-  );
-};
+const Container = ({ className, children }) => {
+    return <div className={className}>{children}</div>
+}
 
-export default Container;
+export default Container

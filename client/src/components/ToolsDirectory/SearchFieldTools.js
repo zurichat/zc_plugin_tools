@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, {useState, useRef} from 'react'
 import styles from "./SearchFieldTools.module.css";
 import SearchIcon from "../../assets/search-icon.svg";
 
@@ -9,11 +9,11 @@ const SearchFieldTools = ({ sendInputText }) => {
   };
   return (
     <div className={styles.search_box}>
-      <img src={SearchIcon} className={styles.icon} alt='search-icon' />
+      <img src={SearchIcon} className={styles.icon} alt="" />
       <input
-        type='text'
+        type="text"
         className={styles.input}
-        placeholder='Search Tools'
+        placeholder="Search Tools"
         onChange={(e) => setInputText(e.currentTarget.value)}
         onKeyUp={sendInputTextToDirectory}
       />
@@ -21,4 +21,4 @@ const SearchFieldTools = ({ sendInputText }) => {
   );
 };
 
-export default SearchFieldTools;
+export default SearchFieldTools
