@@ -22,7 +22,7 @@ const Tool = ({icon, title, text, btn, pad, filterBy}) => {
                 marginTop: ".7rem",
                 padding: `${pad && ".3rem"}`
             }}>{btn}</button>
-            <p>{filterBy}</p>
+            
         </div>
     )
 }

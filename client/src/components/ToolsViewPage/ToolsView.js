@@ -81,6 +81,7 @@ const ToolsView = () => {
      setRecoNetwork(false);
      setRecoError(false)
      const list = data.data;
+     console.log(data)
      return list;
      }
      else if(status >= 500){

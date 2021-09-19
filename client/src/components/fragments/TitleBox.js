@@ -4,8 +4,12 @@ import DoubleRightArrow from "../../assets/tool-icon.svg";
 import { Link } from "react-router-dom";
 import FilterPane from "./Filterpane";
 
-const TitleBox = ({ title, text, link, icon, filter}) => {
+const TitleBox = ({ title, text, link, icon, filter, clicked}) => {
   const [expandState, setExpandState] = useState(false);
+
+  const onCloseFilterPane = () => {
+    setExpandState(!expandState)
+  }
 
   return (
     <div className={`${styles.title_box} relative`}>
@@ -18,12 +22,12 @@ const TitleBox = ({ title, text, link, icon, filter}) => {
         )}
         <div
           className={styles.directory_text}
-          onClick={() => setExpandState(!expandState)}
+          onClick={onCloseFilterPane}
         >
           {text}
         </div>
       </Link>
-      {filter ? <FilterPane expand={expandState} />  : null}
+      {filter ? <FilterPane expand={expandState} closepane={onCloseFilterPane} clicked={clicked}/>  : null}
     </div>
   );
 };
