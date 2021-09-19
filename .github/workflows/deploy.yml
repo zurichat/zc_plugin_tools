@@ -60,6 +60,7 @@ jobs:
             remotePath: 'zc_plugin_tools/client/build'
     
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: executing remote ssh commands on server
