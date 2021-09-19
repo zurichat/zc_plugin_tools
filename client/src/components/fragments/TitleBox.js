@@ -16,7 +16,7 @@ const TitleBox = ({ title, text, link, icon, filter, clicked}) => {
       <p className={styles.title}>{title}</p>
       <Link to={`${link ? "/tools" : ""}`} className={styles.directory_box}>
         {icon && (
-          <div className={styles.icon}>
+          <div className={styles.icon} onClick={onCloseFilterPane}>
             <img src={DoubleRightArrow} alt="double_arrow-icon" />
           </div>
         )}
