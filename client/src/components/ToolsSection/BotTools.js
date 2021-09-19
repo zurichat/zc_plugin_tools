@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react'
 import Tools from "../fragments/tools/Tools";
 import Tool from "../fragments/tools/Tool";
 
-const BotTools = ({ list, text }) => {
-  return (
-    <div style={{ width: "100%", margin: "1rem 0rem 2rem 0rem" }}>
-      {list.length > 0 && (
-        <Tools>
+const BotTools = ({list, text}) => {
+    return (
+        <div style={{ width: "100%", margin: "1rem 0rem 2rem 0rem" }}>
+        {
+            list.length > 0 ? (
+                <Tools>
           {list.map((item, index) => (
             <Tool
               key={index}
@@ -14,13 +15,13 @@ const BotTools = ({ list, text }) => {
               title={item.name}
               text={item.description}
               pad={false}
-              item={item}
             />
           ))}
         </Tools>
-      )}
-    </div>
-  );
-};
+            ) : (`No result of  "${text}"  found for bot tools`)
+        }
+      </div>
+    )
+}
 
-export default BotTools;
+export default BotTools
