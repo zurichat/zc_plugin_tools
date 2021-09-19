@@ -43,8 +43,8 @@ jobs:
               cd zc_plugin_tools
               git stash
               git fetch --all
-              git reset --hard origin/develop
-              git pull origin develop
+              git reset --hard origin/dev
+              git pull origin dev
               cd server
               yarn install
             
