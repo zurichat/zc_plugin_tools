@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSlidersH, faPlus } from "@fortawesome/free-solid-svg-icons";
 import InstallToolsCard from "./installedcard";
 // import { tools } from "../../data/tools.data";
+import LoaderGif from "../fragments/LoaderGif";
 import { useHistory } from "react-router-dom";
 
 const InstalledTools = ({list ,noInstallItem, showAvailableTools, text, loading, error, network, noSearch}) => {
@@ -13,7 +14,7 @@ const InstalledTools = ({list ,noInstallItem, showAvailableTools, text, loading,
   // };
   if(loading){
     return(
-      <h2>Loading...</h2>
+     <LoaderGif />
     )
   }
   if (error) {

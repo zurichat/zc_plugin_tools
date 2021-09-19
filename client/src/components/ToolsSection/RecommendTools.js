@@ -2,10 +2,11 @@ import React from 'react'
 import Tools from '../fragments/tools/Tools';
 import Tool from '../fragments/tools/Tool';
 import TitleBox from '../fragments/TitleBox';
+import LoaderGif from '../fragments/LoaderGif';
 
 const RecommendTools = ({list, text, loading, error, network, noSearch}) => {
     if(loading){
-        return(<h2>Loading...</h2>)
+        return <LoaderGif />;
     }
   if (error) {
     return <h2>Failed to load tools, client error!!!</h2>;

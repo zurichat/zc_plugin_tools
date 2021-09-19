@@ -1,10 +1,11 @@
 import React from 'react'
 import Tools from "../fragments/tools/Tools";
 import Tool from '../fragments/tools/Tool';
+import LoaderGif from '../fragments/LoaderGif';
 
 const EnterpriseTools = ({list, text, loading, error, network, noSearch }) => {
   if (loading) {
-     return <h2>Loading...</h2>;
+     return <LoaderGif />;
    }
    if (error) {
      return <h2>Failed to load tools, client error!!!</h2>;
@@ -18,7 +19,7 @@ const EnterpriseTools = ({list, text, loading, error, network, noSearch }) => {
    }
     return (
       <div style={{ width: "100%", margin: "1rem 0rem 2rem 0rem" }}>
-        {noSearch === false > 0 ? (
+        {noSearch === false ? (
           <Tools list={list}>
             {list.map(({ name, id, description, icon }) => (
               <Tool

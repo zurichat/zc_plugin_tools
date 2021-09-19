@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import ToolsMainPage from "../MainTools/ToolsMain";
-import { tools } from "../../data/tools.data";
 import TitleBox from "../fragments/TitleBox";
 import EnterpriseTools from "../ToolsSection/EnterpriseTools";
 import DailyTools from "../ToolsSection/DailyTools";
@@ -9,182 +8,132 @@ import SearchFieldTools from "./SearchFieldTools";
 import CategoriesSection from "../fragments/CategoriesSection";
 
 const ToolsDirectory = () => {
+  const [allList, setAllList] = useState([])
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+  const [isNetwork, setIsNetwork] = useState(false);
   //  enterprise list and states
   const [enterpriseList, setEnterpriseList] = useState([]);
-  const [enterpriseLoading, setEnterpriseLoading] = useState(true);
-  const [enterpriseError, setEnterpriseError] = useState(false);
-  const [enterpriseNetwork, setEnterpriseNetwork] = useState(false);
   const [noEnterpriseFound, setNoEnterpriseFound] = useState(false);
   // daily tools list and states
   const [dailyList, setDailyList] = useState([])
-  const [dailyLoading, setDailyLoading] = useState(true);
-  const [dailyError, setDailyError] = useState(false);
-  const [dailyNetwork, setDailyNetwork] = useState(false);
   const [noDailyFound, setNoDailyFound] = useState(false);
   // bot tools list and states
   const [botList, setBotList] = useState([])
-  const [botLoading, setBotLoading] = useState(true);
-  const [botError, setBotError] = useState(false);
-  const [botNetwork, setBotNetwork] = useState(false);
   const [noBotFound, setNoBotFound] = useState(false);
 
   const [inputText, setInputText] = useState('')
 
   useEffect(() => {
     const getFetchList = async () => {
-      const enterpriseFetch = await enterpriseFetchList();
-      setEnterpriseList(enterpriseFetch);
-      const dailyFetch = await dailyFetchList();
-      setDailyList(dailyFetch)
-      const botFetch = await botFetchList();
-      setBotList(botFetch)
+      const allList = await fetchAllList();
+      setAllList(allList)
+      // const enterpriseFetch = await enterpriseFetchList();
+      setEnterpriseList(allList["Enterprise-ready apps"]);
+      // const dailyFetch = await dailyFetchList();
+      setDailyList(allList["Daily Tools"]);
+      // const botFetch = await botFetchList();
+      setBotList(allList["Brilliant Bots"]);
     };
 
     getFetchList();
   }, [])
-
-  const enterpriseFetchList = async () => {
-     const url = `https://externaltools.zuri.chat/api/tools`;
+  const fetchAllList = async () => {
+     const url = `https://externaltools.zuri.chat/api/tools?sortBy=collections`;
      const res = await fetch(url);
      const status = res.status;
-     const data = await res.json();
-     if (status >= 200 && status <= 299) {
-       setEnterpriseLoading(false);
-       setEnterpriseNetwork(false);
-       setEnterpriseError(false);
+     const data = await res.json(); if (status >= 200 && status <= 299) {
+       setIsLoading(false);
+       setIsNetwork(false);
+       setIsError(false);
        const list = data.data;
        return list;
      }
-    //   else if (status >= 500) {
-    //    setEnterpriseLoading(false);
-    //    setEnterpriseNetwork(true);
-    //    setEnterpriseError(false);
-    //  } 
-     else {
-       setEnterpriseLoading(false);
-       setEnterpriseError(true);
-       setEnterpriseNetwork(false);
-     }
-     console.log(data);
-  };
-  // daily tool fetch
-  const dailyFetchList = async () => {
-     const url = `https://externaltools.zuri.chat/api/tools`;
-     const res = await fetch(url);
-     const status = res.status;
-     const data = await res.json();
-     if (status >= 200 && status <= 299) {
-       setDailyLoading(false);
-       setDailyNetwork(false);
-       setDailyError(false);
-       const list = data.data;
-       return list;
+      else if (status >= 500) {
+       setIsLoading(false);
+       setIsNetwork(true);
+       setIsError(false);
      } 
-    //  else if (status >= 500) {
-    //    setDailyLoading(false);
-    //    setDailyNetwork(true);
-    //    setDailyError(false);
-    //  } 
      else {
-       setDailyLoading(false);
-       setDailyError(true);
-       setDailyNetwork(false);
+       setIsLoading(false);
+       setIsError(true);
+       setIsNetwork(false);
      }
-     console.log(data);
-  }
-  // bot fetch
-  const botFetchList = async () => {
-    const url = `https://externaltools.zuri.chat/api/tools`
-     const res = await fetch(url);
-     const status = res.status;
-     const data = await res.json();
-     if (status >= 200 && status <= 299) {
-       setBotLoading(false);
-       setBotNetwork(false);
-       setBotError(false);
-       const list = data.data;
-       return list;
-     } else if (status >= 500) {
-       setBotLoading(false);
-       setBotNetwork(true);
-       setBotError(false);
-     } else {
-       setBotLoading(false);
-       setBotError(true);
-       setBotNetwork(false);
-     }
-
-     console.log(data);
   }
   // function filter seaarch on bot daily and ent tools
   const  upDateInputText = async (text) => {
       setInputText(text)
-      const enterpriseList = shuffleEnterpriseList(text)
+      const enterpriseList = await shuffleEnterpriseList(text)
       setEnterpriseList(enterpriseList)
-       const dailyList = shuffleDailyList(text)
+       const dailyList = await shuffleDailyList(text)
       setDailyList(dailyList)
-       const botList = shuffleBotList(text)
+       const botList = await shuffleBotList(text);
       setBotList(botList)
   }
   const shuffleEnterpriseList = (text) => {
-    const list = enterpriseList.filter((item) => item.enterprise && item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1)
+    const list = allList["Enterprise-ready apps"].filter(
+      (item) =>
+        item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1
+    );
      if (list.length > 0) {
-        setEnterpriseLoading(true);
+        setIsLoading(true);
         setTimeout(() => {
-          setEnterpriseLoading(false);
+          setIsLoading(false);
           setNoEnterpriseFound(false);
+          console.log(list);
+        }, 1000);
           return list;
-        }, 1500);
       } else {
-        setEnterpriseLoading(true);
+        setIsLoading(true);
         setTimeout(() => {
-          setEnterpriseLoading(false);
+          setIsLoading(false);
           setNoEnterpriseFound(true);
-        }, 1500);
+        }, 1000);
+          return list;
       }
   }
   // shuffle daily tols on search
    const shuffleDailyList = (text) => {
-     const list = dailyList.filter(
+     const list = allList["Daily Tools"].filter(
        (item) =>
-         item.daily &&
          item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1
      );
       if (list.length > 0) {
-        setDailyLoading(true);
+        setIsLoading(true);
         setTimeout(() => {
-          setDailyLoading(false);
+          setIsLoading(false);
           setNoDailyFound(false);
+        }, 1000);
           return list;
-        }, 1500);
       } else {
-        setDailyLoading(true);
+        setIsLoading(true);
         setTimeout(() => {
-          setDailyLoading(false);
+          setIsLoading(false);
           setNoDailyFound(true);
-        }, 1500);
+        }, 1000);
+          return list;
       }
    };
   //  shuffle bot tools on search
     const shuffleBotList = (text) => {
-      const list = botList.filter(
+      const list = allList["Brilliant Bots"].filter(
         (item) =>
-          item.bot &&
           item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1
       );
        if (list.length > 0) {
-         setBotLoading(true);
+         setIsLoading(true);
          setTimeout(() => {
-           setBotLoading(false);
+           setIsLoading(false);
            setNoBotFound(false);
-         return list;
-         }, 1500);
+         }, 1000);
+          return list;
        } else {
-         setBotLoading(true);
+         setIsLoading(true);
          setTimeout(() => {
-           setBotLoading(false);
+           setIsLoading(false);
            setNoBotFound(true);
-         }, 1500);
+         }, 1000);
+          return list;
        }
     };
   return (
@@ -198,18 +147,18 @@ const ToolsDirectory = () => {
       <EnterpriseTools 
       list={enterpriseList}
        text={inputText}
-        loading={enterpriseLoading}
-        error={enterpriseError}
-        network={enterpriseNetwork}
+        loading={isLoading}
+        error={isError}
+        network={isNetwork}
         noSearch={noEnterpriseFound} />
       {/* daily tools */}
       <TitleBox title="daily tools" link={false} icon={false} />
       <DailyTools 
       list={dailyList} 
       text={inputText}
-        loading={dailyLoading}
-        error={dailyError}
-        network={dailyNetwork}
+        loading={isLoading}
+        error={isError}
+        network={isNetwork}
         noSearch={noDailyFound}
          />
       {/* bot tools */}
@@ -217,9 +166,9 @@ const ToolsDirectory = () => {
       <BotTools
         list={botList}
         text={inputText}
-        loading={botLoading}
-        error={botError}
-        network={botNetwork}
+        loading={isLoading}
+        error={isError}
+        network={isNetwork}
         noSearch={noBotFound}
       />
     </div>

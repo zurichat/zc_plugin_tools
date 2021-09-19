@@ -4,10 +4,11 @@ import InstalledTools from "../MainPage/Instaledtoolssection";
 import SearchBar from "../SearchBar";
 import TitleBox from "../fragments/TitleBox";
 import RecommendTools from "../ToolsSection/RecommendTools";
-import { tools } from "../../data/tools.data";
 
 
 const ToolsView = () => {
+  const [installList, setInstallList] = useState([])
+  const [availableList, setAvailableList] = useState([])
   const [showHero, setShowHero] = useState(true);
   const [showRecoTool, setShowRecoTool] = useState(false)
   const [textpresent, setTextPresent] = useState('')
@@ -30,6 +31,8 @@ const ToolsView = () => {
     const getInstalledAndRecommendTools = async () => {
      const instTools = await getInstall() 
      const recoTools = await getRecommend()
+     setInstallList(instTools)
+     setAvailableList(recoTools)
    setInstallTools(instTools)
    setRecommendTools(recoTools)
     }
@@ -117,44 +120,44 @@ const setViewToolPage = async (text, reason) => {
 
 // search function for installed section
 const shuffleInstalledTools = (text) => {
-  const list = installTools.filter(
-    (item) =>
-      item.installed && item.name.toLowerCase().search(text.toLowerCase()) != -1
+  const list = installList.filter(
+    (item) => item.name.toLowerCase().search(text.toLowerCase()) != -1
   );
    if (list.length > 0) {
      setInstallLoading(true);
      setTimeout(() => {
        setInstallLoading(false);
        setNoInstallFound(false);
-       return list;
-     }, 1500);
+     }, 1000);
+          return list;
    } else {
      setInstallLoading(true);
      setTimeout(() => {
        setInstallLoading(false);
        setNoInstallFound(true);
-     }, 1500);
+     }, 1000);
+          return list;
    }
  }
 
 const shuffleRecommendTools = (text) => {
- const list = recommendTools.filter(
-    (item) =>
-      item.installed && item.name.toLowerCase().search(text.toLowerCase()) != -1
+ const list = availableList.filter(
+    (item) => item.name.toLowerCase().search(text.toLowerCase()) != -1
   );
    if (list.length > 0) {
      setRecoLoading(true);
      setTimeout(() => {
        setRecoLoading(false);
        setNoRecommendFound(false);
-       return list;
-     }, 1500);
+     }, 1000);
+          return list;
    } else {
      setRecoLoading(true);
      setTimeout(() => {
        setRecoLoading(false);
        setNoRecommendFound(true);
-     }, 1500);
+     }, 1000);
+          return list;
    }
  }
 
