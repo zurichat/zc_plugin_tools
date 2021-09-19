@@ -56,7 +56,7 @@ jobs:
             username: ${{ secrets.USERNAME }}
             host: ${{ secrets.HOST }}
             password: ${{ secrets.PASSWORD }}
-            localPath: '../client/build/'
+            localPath: 'client/build/'
             remotePath: 'zc_plugin_tools/client/build'
     
   deploy:
