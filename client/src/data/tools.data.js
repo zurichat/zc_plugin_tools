@@ -1,4 +1,5 @@
 // app data
+
 export const tools = [
   {
     name: "Gmail",
@@ -9,6 +10,8 @@ export const tools = [
     linkName: "gmail",
     installed: true,
     daily: true,
+    path: "/gmail",
+    office_tools: true,
   },
   {
     name: "Figma",
@@ -19,6 +22,8 @@ export const tools = [
     linkName: "figma",
     installed: true,
     daily: true,
+    path: "/figma",
+    design: true,
   },
   {
     name: "Github",
@@ -29,6 +34,9 @@ export const tools = [
     linkName: "github",
     installed: true,
     daily: true,
+    path: "/github",
+    office_tools: true,
+    productivity: true,
   },
   {
     name: "Google Drive",
@@ -39,6 +47,9 @@ export const tools = [
     linkName: "googledrive",
     installed: true,
     daily: true,
+    path: "/googledrive",
+    office_tools: true,
+    productivity: true,
   },
   {
     name: "Giphy",
@@ -47,6 +58,8 @@ export const tools = [
     image: "./apps/giphy.png",
     categoryClass: "billiantBots",
     linkName: "giphy",
+    path: "/giphy",
+    design: true,
     installed: true,
   },
   {
@@ -58,6 +71,7 @@ export const tools = [
     linkName: "test",
     installed: false,
     daily: true,
+    productivity: true,
   },
   {
     name: "UnSplash",
@@ -67,6 +81,7 @@ export const tools = [
     categoryClass: "dailyTools",
     linkName: "test",
     installed: false,
+    productivity: true,
   },
   {
     name: "Medium",
@@ -76,6 +91,8 @@ export const tools = [
     categoryClass: "dailyTools",
     linkName: "test",
     installed: false,
+    productivity: true,
+    office_tools: true,
   },
   {
     name: "Pinterest",
@@ -85,6 +102,8 @@ export const tools = [
     categoryClass: "dailyTools",
     linkName: "test",
     installed: false,
+    productivity: true,
+    design: true,
   },
   {
     name: "Google+ Hangout",
@@ -103,6 +122,7 @@ export const tools = [
     categoryClass: "billiantBots",
     linkName: "test",
     installed: false,
+    productivity: true,
   },
   {
     name: "DropBox",
@@ -123,6 +143,8 @@ export const tools = [
     linkName: "test",
     installed: false,
     enterprise: true,
+    productivity: true,
+    office_tools: true,
   },
   {
     name: "Twitter",
@@ -133,6 +155,8 @@ export const tools = [
     linkName: "test",
     installed: false,
     daily: true,
+    productivity: true,
+    others: true,
   },
   {
     name: "LinkedIn",
@@ -142,6 +166,8 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "test",
     installed: false,
+    office_tools: true,
+    productivity: true,
   },
   {
     name: "Trello",
@@ -152,6 +178,7 @@ export const tools = [
     linkName: "test",
     installed: false,
     enterprise: true,
+    office_tools: true,
   },
   {
     name: "Google Calendar",
@@ -162,6 +189,8 @@ export const tools = [
     linkName: "test",
     installed: false,
     daily: true,
+    office_tools: true,
+    productivity: true,
   },
   {
     name: "Hubspot",
@@ -172,6 +201,7 @@ export const tools = [
     linkName: "test",
     installed: false,
     bot: true,
+    office_tools: true,
   },
   {
     name: "Box",
@@ -182,6 +212,7 @@ export const tools = [
     linkName: "test",
     installed: false,
     enterprise: true,
+    office_tools: true,
   },
   {
     name: "Zoom",
@@ -191,6 +222,7 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "test",
     installed: false,
+    others: true,
   },
   {
     name: "Outlook for Zuri",
@@ -200,6 +232,8 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "test",
     installed: false,
+    office_tools: true,
+    others: true,
   },
   {
     name: "Simple Pool",
@@ -209,6 +243,7 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "test",
     installed: false,
+    others: true,
   },
   {
     name: "Toast for Github",
@@ -219,6 +254,7 @@ export const tools = [
     linkName: "test",
     installed: false,
     bot: true,
+    others: true,
   },
   {
     name: "Google Keep",
@@ -228,6 +264,7 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "test",
     installed: false,
+    others: true,
   },
   {
     name: "Sales Force",
@@ -238,6 +275,7 @@ export const tools = [
     linkName: "test",
     installed: false,
     bot: true,
+    others: true,
   },
   {
     name: "Google Meet",
@@ -247,6 +285,8 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "test",
     installed: false,
+    office_tools: true,
+    productivity: true,
   },
   {
     name: "Google Photos",
@@ -256,6 +296,8 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "test",
     installed: false,
+    design: true,
+    others: true,
   },
   {
     name: "Microsoft Office for Zuri",
@@ -265,6 +307,7 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "test",
     installed: false,
+    others: true,
   },
   {
     name: "Snapchat",
@@ -275,5 +318,6 @@ export const tools = [
     linkName: "test",
     installed: false,
     daily: true,
+    others: true,
   },
 ];
