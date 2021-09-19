@@ -3,14 +3,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSlidersH, faPlus } from "@fortawesome/free-solid-svg-icons";
 import InstallToolsCard from "./installedcard";
 // import { tools } from "../../data/tools.data";
+import LoaderGif from "../fragments/LoaderGif";
 import { useHistory } from "react-router-dom";
 
-const InstalledTools = ({list , showAvailableTools, text}) => {
+const InstalledTools = ({ list, noInstallItem, showAvailableTools, text, loading, error, network, noSearch }) => {
   const history = useHistory();
 
   // const handleClick = () => {
   //   history.push("/tools");
   // };
+  if (loading) {
+    return (
+      <LoaderGif />
+    )
+  }
+  if (error) {
+    return <h2>Failed to load tools, client error!!!</h2>;
+  }
+  if (network) {
+    return <h2>Failed to load tools,please check your network settings and reload page</h2>;
+  }
+  if (noInstallItem) {
+    return <h2>No tools installed, please click on browse tools or tools directory to install a tool</h2>
+  }
+
   return (
     <div className="flex flex-col mb-4">
       {/* <div className="flex mb-3">
@@ -27,18 +43,17 @@ const InstalledTools = ({list , showAvailableTools, text}) => {
           // tools &&
           //   tools
           //     .filter((tol) => tol.installed === true)
-          list.length > 0
-            ? list.map(({ name, image, description, linkName }) => {
-                return (
-                  <InstallToolsCard
-                    key={name}
-                    name={name}
-                    image={image}
-                    description={description}
-                    linkName={linkName}
-                  />
-                );
-              })
+          noSearch === false ? list.map(({ name, id, description, icon, url }) => {
+            return (
+              <InstallToolsCard
+                key={id}
+                name={name}
+                image={icon}
+                description={description}
+                linkName={url}
+              />
+            );
+          })
             : `No result of  "${text}"  found for installed tools`
         }
         <div className="flex cursor-pointer">

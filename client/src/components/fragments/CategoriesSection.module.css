@@ -58,6 +58,20 @@
       flex: 0 0 100%;
       margin-top: 0.5rem;
       justify-content: space-between;
+}
+
+.all_box .categories_box .box .icon{
+    margin-left: .5rem;
+}
+
+
+/* meida query for 38em */
+
+@media only screen and (max-width: 38em){
+    
+    .all_box .categories_box{
+        flex: 1;
+        justify-content: space-between;
     }
   
     .all_box .categories_box .box {
@@ -67,3 +81,4 @@
       margin-left: 0.2rem;
     }
   }
+}
