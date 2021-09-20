@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import HeroSection from "../HeroSection/HeroSection";
 import InstalledTools from "../MainPage/Instaledtoolssection";
 import SearchBar from "../SearchBar";
-import TitleBox from "../fragments/TitleBox";
+// import TitleBox from "../fragments/TitleBox";
 import RecommendTools from "../ToolsSection/RecommendTools";
 
 const ToolsView = () => {
@@ -168,7 +168,7 @@ const ToolsView = () => {
   return (
     <div style={{ padding: "12px 2rem" }}>
       {/* insert your component for those working on the company tools view page */}
-      <TitleBox title="tools" text="tool directory" link={true} icon={true} />
+      {/* <TitleBox title="tools" text="tool directory" link={true} icon={true} /> */}
       <div>
         {showHero && (
           <HeroSection
@@ -181,14 +181,14 @@ const ToolsView = () => {
         showRecoSec={setViewToolPage}
         showNoInstall={showInstallOrNoInstall}
       />
-      <TitleBox
+      {/* <TitleBox
         icon={true}
         title={`${
           textpresent.length > 0 ? "search result" : "installed tools"
         }`}
         text="filter"
         link={false}
-      />
+      /> */}
       <InstalledTools
         list={installTools}
         showAvailableTools={handleShowAvailableTools}
