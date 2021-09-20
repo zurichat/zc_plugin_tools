@@ -1,4 +1,3 @@
-
 .all_box{
     width: 100%;
     margin: 1rem 0rem 2rem 0rem;
@@ -37,15 +36,9 @@
 /* meida query for 38em */
 
 @media only screen and (max-width: 38em){
-    .all_box{
-        flex-direction: column;
-    }
-    .all_box .title{
-        align-self: flex-start;
-    }
+    
     .all_box .categories_box{
-        flex: 0 0 100%;
-        margin-top: .5rem;
+        flex: 1;
         justify-content: space-between;
     }
 

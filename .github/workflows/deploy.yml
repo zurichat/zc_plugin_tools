@@ -10,7 +10,57 @@ on:
 #       - main
 
 jobs:
+  build:
+      runs-on: ubuntu-latest
+      name: yarn build
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
+          # This job is to cache the node modules in order to reduce the time it would take to run
+        - name: Use cached node_modules
+          uses: c-hive/gha-yarn-cache@v2
+          with:
+            directory: server
+          
+          #this job installs intalls yarn dependencies on the github runner
+          #and also to build the static files that would be transferred to server later
+        - name: install Dependencies
+          run: |
+            cd client
+            export CI=false
+            yarn install
+            yarn build
+            
+          # in the server your normal workflow except omitting yarn build
+        - name: Git Pull on Server
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            password: ${{ secrets.PASSWORD }}
+            script: |
+              cd zc_plugin_tools
+              git stash
+              git fetch --all
+              git reset --hard origin/dev
+              git pull origin dev
+              cd server
+              yarn install
+            
+        
+          # this job copies the build folder from GitHub runners to the server with sftp, make sure the paths are correct      
+        - name: copy build to server
+          uses: Creepios/sftp-action@v1.0.1
+          with:
+            username: ${{ secrets.USERNAME }}
+            host: ${{ secrets.HOST }}
+            password: ${{ secrets.PASSWORD }}
+            localPath: 'client/build/'
+            remotePath: 'zc_plugin_tools/client/build'
+    
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: executing remote ssh commands on server
@@ -21,10 +71,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd zc_plugin_tools/
-            git clean -fd
-            git stash
-            git pull
-            cd server
-            yarn install
-            yarn build    
             pm2 restart all
