@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Image from "../assets/ZV_64LdGoao.jpg";
-import GithubLogo from "../assets/githublogo.jpg";
+// import githubLogo1 from "../assets/githubLogo1.png";
+// import githublogo from "../assets/githublogo.jpg";
+import github from "../assets/github.svg";
+import GitHubNew from "../assets/GitHubNew.jpg";
 import "../style/GithubHome.css";
 const GithubHome = () => {
   return (
@@ -12,7 +15,7 @@ const GithubHome = () => {
             <div
               className={`bg-white flex flex-row items-center justify-center py-6 rounded`}
             >
-              <img src={GithubLogo} alt="github logo" />
+              <img src={GitHubNew} alt="github logo" />
             </div>
             <div className={`github_btn_container flex flex-col gap-2`}>
               <Link

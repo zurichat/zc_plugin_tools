@@ -168,7 +168,7 @@ const ToolsView = () => {
   return (
     <div style={{ padding: "12px 2rem" }}>
       {/* insert your component for those working on the company tools view page */}
-      <TitleBox title="tools" text="tool directory" link={true} icon={true} />
+      {/* <TitleBox title="tools" text="tool directory" link={true} icon={true} /> */}
       <div>
         {showHero && (
           <HeroSection
