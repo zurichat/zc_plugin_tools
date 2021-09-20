@@ -1,27 +1,36 @@
-const fetch = require('got')
-const response = require('../utils/response')
-const env = require('../config/env')
+const fetch = require("got");
+const response = require("../utils/response");
+const env = require("../config/env");
 
-const { GIPHY_API_KEY } = env
+const { GIPHY_API_KEY } = env;
 
 const randomGif = async (req, res) => {
-  console.log('g')
-
   const r = await fetch(
-    `https://api.giphy.com/v1/gifs/random?api_key=${GIPHY_API_KEY}`,
-  )
-  const { data } = await JSON.parse(r.body)
+    `https://api.giphy.com/v1/gifs/random?api_key=${GIPHY_API_KEY}`
+  );
+  const { data } = await JSON.parse(r.body);
 
-  res.send(response('Random GIF', data))
-}
+  res.send(response("Random GIF", data));
+};
 
 const trendingGifs = async (req, res) => {
   const r = await fetch(
-    `https://api.giphy.com/v1/gifs/trending?api_key=${GIPHY_API_KEY}`,
-  )
-  const { data } = await JSON.parse(r.body)
+    `https://api.giphy.com/v1/gifs/trending?api_key=${GIPHY_API_KEY}`
+  );
+  const { data } = await JSON.parse(r.body);
 
-  res.send(response('Trending GIFs', data))
-}
+  res.send(response("Trending GIFs", data));
+};
 
-module.exports = { randomGif, trendingGifs }
+const searchGifs = async (req, res) => {
+  const q = req.query.search;
+
+  const r = await fetch(
+    `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${q}`
+  );
+  const { data } = await JSON.parse(r.body);
+
+  res.send(response("Search GIFs", data));
+};
+
+module.exports = { randomGif, trendingGifs, searchGifs };

@@ -1,69 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap");
 
-*{
-    font-family: 'Lato', sans-serif;
-   
+* {
+  font-family: "Lato", sans-serif;
 }
 .Start-title {
-    display: flex;
-    padding: 20px 0 20px 20px;
-    justify-content: flex-start;
-    align-items: center;
-    position :relative;
+  display: flex;
+  padding: 20px 0 20px 20px;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 .Start-title h4 {
-    font-size: 25px;
-    margin-left: 5px;
-    font-weight: 700;
+  font-size: 25px;
+  margin-left: 5px;
+  font-weight: 700;
 }
 
 .Start-title .arrow-down {
-    transform: rotate(180deg) translateX(-5px);
-    font-size: 15px;
+  transform: rotate(180deg) translateX(-5px);
+  font-size: 15px;
 }
 
 .figmalogo-container {
-    width: 44px;
-
+  width: 44px;
 }
 
 .figmalogo-container img {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 .welcome-nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    border-top: .7px solid #cfcfcf;
-    border-bottom: .7px solid #cfcfcf;
-    padding-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  border-top: 0.7px solid #cfcfcf;
+  border-bottom: 0.7px solid #cfcfcf;
+  padding-left: 20px;
 }
 .welcome-nav h4 {
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .selected {
-    border-bottom: 1px solid #0ACF83;
+  border-bottom: 1px solid #0acf83;
 }
 
 .welcome-nav h4:hover {
-    border-bottom: 1px solid #0ACF83;
-}
-
-.fig-connect-btn {
-    position: absolute;
-    top: 95px;
-    left: 180px;
-    
-}
-
-.fig-connect-btn a {
-    background-color: #0ACF83 ;
+  border-bottom: 1px solid #0acf83;
 }
