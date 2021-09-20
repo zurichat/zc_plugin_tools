@@ -4,12 +4,8 @@ import Tool from './Tool'
 
 
 const Tools = (props) => {
-
-    return (
-        <div className={styles.tool_box}>
-            {props.children}
-        </div>
-    )
+   const {list} = props
+    return <div className={`${styles.tool_box} ${list.length > 3 && styles.tool_box_b}`}>{props.children}</div>;
 }
 
 export default Tools
