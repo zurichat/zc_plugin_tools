@@ -13,13 +13,13 @@ const Github = () => {
         <Switch>
           <Route
             exact
-            path='/github/githubgivepermission'
+            path="/github/githubgivepermission"
             component={Githubgivepermission}
           />
-          <Route exact path='/github' component={GithubHome} />
+          <Route exact path="/github" component={GithubHome} />
           <Route
             exact
-            path='/github/github-installed'
+            path="/github/github-installed"
             component={GithubInstalled}
           />
         </Switch>
