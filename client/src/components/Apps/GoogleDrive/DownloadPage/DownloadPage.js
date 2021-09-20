@@ -11,12 +11,13 @@ function DownloadPage() {
   };
 
   return (
-    <div className=" flex flex-wrap w-full mt-6">
-      <div className=" flex flex-col w-11/12 md:w-3/12  px-4">
-        <div className=" flex justify-center rounded-md w-full bg-white self-center py-16 mb-4">
+    <div className="flex flex-wrap w-full mt-6">
+      <div className="flex flex-col w-11/12 md:w-3/12 px-4">
+        <div className="flex justify-center rounded-md w-full bg-white self-center py-16 mb-4">
           <img
             src="https://th.bing.com/th/id/R.0791e494a09baaf7535695412b321278?rik=QfFNx0%2b43QLAJw&pid=ImgRaw&r=0"
-            alt=""
+            // src=""
+            alt="tool logo"
             className="h-28 "
           />
         </div>
@@ -44,7 +45,9 @@ function DownloadPage() {
         </div>
       </div>
       <div className=" w-full md:w-9/12 mb-2 px-4 md:px-8">
-        <h1 className="font-extrabold text-2xl mt-4 md:mt-0 mb-2 md:mb-5">Google Drive</h1>
+        <h1 className="font-extrabold text-2xl mt-4 md:mt-0 mb-2 md:mb-5">
+          Google Drive
+        </h1>
         <div className=" border-b w-full flex mb-4">
           <button
             onClick={() => setClicked("desc")}
@@ -82,7 +85,6 @@ function DownloadPage() {
               clicked == "sec" ? "text-black border-green-600" : "text-gray-500"
             }`}
           >
-            {" "}
             Security
           </button>
         </div>
@@ -95,18 +97,17 @@ function DownloadPage() {
               <img
                 className="absolute h-8 w-8 left-3 md:left-20 top-5 "
                 src="https://th.bing.com/th/id/R.0791e494a09baaf7535695412b321278?rik=QfFNx0%2b43QLAJw&pid=ImgRaw&r=0"
-                alt=""
+                alt="logo image"
               />
               <h3 className="text-sm">
-                {" "}
-                <span className="font-bold mr-2">Google Drive</span>{" "}
+                <span className="font-bold mr-2">Google Drive</span>
                 <span className="bg-gray-200 text-xs text-gray-400 mr-2">
                   APP
-                </span>{" "}
+                </span>
                 <span className=" text-gray-400 text-sm">5:58 PM</span>
               </h3>
               <p>
-                Jane Lorenson <span className="text-blue-400">janel@</span>{" "}
+                Jane Lorenson <span className="text-blue-400">janel@</span>
                 commented on
               </p>
               <p className=" text-blue-500 font-bold">

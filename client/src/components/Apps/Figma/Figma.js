@@ -13,14 +13,14 @@ const Figma = () => {
   return (
     <>
       {/* <ToolsHeader /> */}
-      <div className='Start-title'>
-        <div className='figmalogo-container'>
+      <div className="Start-title">
+        <div className="figmalogo-container">
           <img src={logo} />
         </div>
-        <h4 className='Logo-tag'>Figma</h4>
-        <div className='arrow-down'>^</div>
+        <h4 className="Logo-tag">Figma</h4>
+        <div className="arrow-down">^</div>
       </div>
-      <div className='welcome-nav'>
+      <div className="welcome-nav">
         <div>
           <h4
             onClick={() => {
