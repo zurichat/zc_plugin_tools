@@ -93,13 +93,12 @@ const ToolsDirectory = () => {
     return list
   }
 
-
   const upDateSearchInputText = async (text) => {
     allStaffPicksContainer.map((pick) =>
       pick.removeAttribute("hidden")
     );
-
     setInputText(text)
+    const productivityList = shuffleProductivityList(text)
     setProductivityList(productivityList)
     const officeToolsList = shuffleOfficeToolsList(text)
     setOfficeToolsList(officeToolsList)
@@ -107,6 +106,12 @@ const ToolsDirectory = () => {
     setDesignList(designList)
     const othersList = shuffleOthersList(text)
     setOthersList(othersList)
+    // const enterpriseList = await shuffleEnterpriseList(text)
+    // setEnterpriseList(enterpriseList)
+    // const dailyList = await shuffleDailyList(text)
+    // setDailyList(dailyList)
+    // const botList = await shuffleBotList(text);
+    // setBotList(botList)
   }
   const fetchAllList = async () => {
     const url = `https://externaltools.zuri.chat/api/tools?sortBy=collections`;
@@ -131,16 +136,16 @@ const ToolsDirectory = () => {
     }
   }
   // function filter seaarch on bot daily and ent tools
-  const upDateInputText = async (text) => {
+  // const upDateInputText = async (text) => {
 
-    setInputText(text)
-    const enterpriseList = await shuffleEnterpriseList(text)
-    setEnterpriseList(enterpriseList)
-    const dailyList = await shuffleDailyList(text)
-    setDailyList(dailyList)
-    const botList = await shuffleBotList(text);
-    setBotList(botList)
-  }
+  //   setInputText(text)
+  //   const enterpriseList = await shuffleEnterpriseList(text)
+  //   setEnterpriseList(enterpriseList)
+  //   const dailyList = await shuffleDailyList(text)
+  //   setDailyList(dailyList)
+  //   const botList = await shuffleBotList(text);
+  //   setBotList(botList)
+  // }
   const shuffleEnterpriseList = (text) => {
     const list = allList["Enterprise-ready apps"].filter(
       (item) =>
@@ -264,7 +269,7 @@ const ToolsDirectory = () => {
     <div style={{ padding: "12px 2rem" }}>
       {/* insert your component for those working on the company tools directory page */}
       {/* <ToolsMainPage /> */}
-      <SearchFieldTools sendInputText={upDateInputText} inputText={upDateSearchInputText} />
+      <SearchFieldTools sendInputText={upDateSearchInputText} />
       <CategoriesSection
         picks={allStaffPicks}
         picksContainer={allStaffPicksContainer}
@@ -326,18 +331,17 @@ const ToolsDirectory = () => {
           icon={false} />
         <OtherTools list={othersList} text={inputText} />
       </Container>
-      <CategoriesSection />
       {/* enterprise tools */}
-      <TitleBox title="enterprise-ready apps" link={false} icon={false} />
+      {/* <TitleBox title="enterprise-ready apps" link={false} icon={false} />
       <EnterpriseTools
         list={enterpriseList}
         text={inputText}
         loading={isLoading}
         error={isError}
         network={isNetwork}
-        noSearch={noEnterpriseFound} />
+        noSearch={noEnterpriseFound} /> */}
       {/* daily tools */}
-      <TitleBox title="daily tools" link={false} icon={false} />
+      {/* <TitleBox title="daily tools" link={false} icon={false} />
       <DailyTools
         list={dailyList}
         text={inputText}
@@ -345,9 +349,9 @@ const ToolsDirectory = () => {
         error={isError}
         network={isNetwork}
         noSearch={noDailyFound}
-      />
+      /> */}
       {/* bot tools */}
-      <TitleBox title="brilliant bots" link={false} icon={false} />
+      {/* <TitleBox title="brilliant bots" link={false} icon={false} />
       <BotTools
         list={botList}
         text={inputText}
@@ -355,7 +359,7 @@ const ToolsDirectory = () => {
         error={isError}
         network={isNetwork}
         noSearch={noBotFound}
-      />
+      /> */}
     </div>
   );
 };
