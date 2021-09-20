@@ -3,9 +3,9 @@
 import GiphyHeader from "./GiphyHeader/GiphyHeader";
 import React from "react";
 import MainGiphyLayout from "./main-giphy-layout/MainGiphyLayout";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-// import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import "./giphy.css";
 
 const Giphy = () => {
@@ -13,10 +13,9 @@ const Giphy = () => {
     <div className="giphy-plugin-page bg-gray-200">
       <GiphyHeader />
       <div className="backBtn">
-        {/* <Link to="/tools">
-          {" "}
+        <Link to="/">
           <FontAwesomeIcon icon={faAngleLeft} className="" /> Back to Tools
-        </Link> */}
+        </Link>
       </div>
       <MainGiphyLayout />
     </div>

@@ -23,6 +23,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
+    "single-spa-react": "^4.4.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "web-vitals": "^1.0.1"
   },
