@@ -3,14 +3,7 @@ const morgan = require("morgan");
 const compression = require("compression");
 const cors = require("cors");
 const path = require("path");
-const frontendBase = path.join(
-  __dirname,
-  "..",
-  "..",
-  "..",
-  "client_new",
-  "build"
-);
+const frontendBase = path.join(__dirname, "..", "..", "..", "client", "build");
 const frontendIndex = path.join(frontendBase, "zuri-zuri-plugin-tools.js");
 
 const { NotFoundError } = require("../lib/errors");

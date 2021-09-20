@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 import React from "react";
 
-const HeroSection = ({ showHeroSection }) => {
+const HeroSection = ({ showHeroSection, setShowHeroSec }) => {
   return (
     <div className={styles.hero_section}>
-      <div className={styles.title_box}>
+      {/* <div className={styles.title_box}>
         <p className={styles.title}>tools</p>
         <Link to={"/toolsdirectory"} className={styles.directory_box}>
           <div className={styles.icon}>
@@ -16,10 +16,10 @@ const HeroSection = ({ showHeroSection }) => {
           </div>
           <div className={styles.directory_text}>Tool Directory</div>
         </Link>
-      </div>
+      </div> */}
       {/* end of title box */}
       <div className={styles.content_box}>
-        <span className={styles.cancel} onClick={showHeroSection}>
+        <span className={styles.cancel} onClick={setShowHeroSec}>
           &times;
         </span>
         <div className={styles.content_wrap}>

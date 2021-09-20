@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import HeroSection from "../HeroSection/HeroSection";
 import InstalledTools from "../MainPage/Instaledtoolssection";
 import SearchBar from "../SearchBar";
-// import TitleBox from "../fragments/TitleBox";
+import TitleBox from "../fragments/TitleBox";
 import RecommendTools from "../ToolsSection/RecommendTools";
+import { useHistory } from "react-router-dom";
 
 const ToolsView = () => {
   const [installList, setInstallList] = useState([]);
@@ -39,9 +40,13 @@ const ToolsView = () => {
   }, []);
 
   const getInstall = async () => {
-    const res = await fetch(
-      "https://externaltools.zuri.chat/api/tools/recommended"
-    );
+    const origin = window.location.origin;
+    let isLocal = origin.includes("localhost");
+    let apiBase = isLocal
+      ? "http://localhost:8500/api"
+      : "https://externaltools.zuri.chat/api";
+
+    const res = await fetch(`${apiBase}/tools/recommended`);
     const status = res.status;
     const data = await res.json();
     if (status >= 200 && status <= 299) {
@@ -71,7 +76,14 @@ const ToolsView = () => {
   };
 
   const getRecommend = async () => {
-    const res = await fetch("https://externaltools.zuri.chat/api/tools");
+    const origin = window.location.origin;
+    let isLocal = origin.includes("localhost");
+    let apiBase = isLocal
+      ? "http://localhost:8500/api"
+      : "https://externaltools.zuri.chat/api";
+
+    const res = await fetch(`${apiBase}/tools/recommended`);
+
     const status = res.status;
     const data = await res.json();
     if (status >= 200 && status <= 299) {
@@ -168,7 +180,7 @@ const ToolsView = () => {
   return (
     <div style={{ padding: "12px 2rem" }}>
       {/* insert your component for those working on the company tools view page */}
-      {/* <TitleBox title="tools" text="tool directory" link={true} icon={true} /> */}
+      <TitleBox title="tools" text="tool directory" link={true} icon={true} />
       <div>
         {showHero && (
           <HeroSection

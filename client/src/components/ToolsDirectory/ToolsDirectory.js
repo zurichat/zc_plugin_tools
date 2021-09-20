@@ -26,20 +26,30 @@ const ToolsDirectory = () => {
 
   useEffect(() => {
     const getFetchList = async () => {
-      const allList = await fetchAllList();
-      setAllList(allList);
-      // const enterpriseFetch = await enterpriseFetchList();
-      setEnterpriseList(allList["Enterprise-ready apps"]);
-      // const dailyFetch = await dailyFetchList();
-      setDailyList(allList["Daily Tools"]);
-      // const botFetch = await botFetchList();
-      setBotList(allList["Brilliant Bots"]);
+      try {
+        const allList = (await fetchAllList()) || {};
+        setAllList(allList);
+        // const enterpriseFetch = await enterpriseFetchList();
+        setEnterpriseList(allList["Enterprise-ready apps"]);
+        // const dailyFetch = await dailyFetchList();
+        setDailyList(allList["Daily Tools"]);
+        // const botFetch = await botFetchList();
+        setBotList(allList["Brilliant Bots"]);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     getFetchList();
   }, []);
   const fetchAllList = async () => {
-    const url = `https://externaltools.zuri.chat/api/tools?sortBy=collections`;
+    const origin = window.location.origin;
+    let isLocal = origin.includes("localhost");
+    let apiBase = isLocal
+      ? "http://localhost:8500/api"
+      : "https://externaltools.zuri.chat/api";
+
+    const url = `${apiBase}/tools?sortBy=collections`;
     const res = await fetch(url);
     const status = res.status;
     const data = await res.json();
