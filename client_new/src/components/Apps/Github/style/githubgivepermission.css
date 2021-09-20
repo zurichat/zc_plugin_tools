@@ -1,0 +1,106 @@
+.ggp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ggpSection {
+    width: 40%;
+    border-radius: 5px;
+    padding: 30px 30px 0px 30px;
+    background-color: #fff;
+}
+
+.ggpdiv {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ggpimg {
+    width: 30px;
+    height: 30px;
+    display: inline;
+    margin: 0 30px;
+}
+
+.ggpdiv .ggpP {
+    align-self: center;
+}
+
+.ggpdiv .ggpdiv2 {
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.ggpdiv .ggpdiv3 {
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.ggpP {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ggpbtn2 {
+    color: white;
+    background-color: #00B87C;
+    margin: 20px;
+    padding: 4px 13px;
+    border-style: solid;
+    border-color: #00B87C;
+    border-width: 1px;
+}
+
+.ggpbtn {
+    color: #00B87C;
+    background:none;
+    margin: 20px;
+    padding: 4px 13px;
+    border-style: solid;
+    border-color: #00B87C;
+    border-width: 1px;
+}
+
+.ggpFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ggpspan {
+    margin-left: 20px;
+    margin-right: 50px;
+    font-weight: 700;
+}
+
+.ggpspan2 {
+    margin-left: 35px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.ggpBold {
+    font-weight: 900;
+}
+
+.ggpMargintop {
+    margin-top: 20px;
+}
+
+.ggpSmallfont {
+    font-size: 80%;
+}
+
+.ggpLeft {
+    text-align: left;
+}
+
+@media only screen and (max-width:780px){
+	.ggpSection {
+        padding: 0 70px;
+    }
+}
