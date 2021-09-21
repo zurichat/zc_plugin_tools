@@ -57,6 +57,7 @@ const ToolsDirectory = () => {
     const res = await fetch(url);
     const status = res.status;
     const data = await res.json();
+    console.log(data);
     if (status >= 200 && status <= 299) {
       setIsLoading(false);
       setIsNetwork(false);

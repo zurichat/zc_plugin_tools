@@ -3,7 +3,7 @@ import styles from "../HeroSection/HeroSection.module.css";
 import DoubleRightArrow from "../../assets/tool-icon.svg";
 import { Link } from "react-router-dom";
 
-const TitleBox = ({ title, text, link, icon }) => {
+const TitleBox = ({ title, text, link, icon, updateAllCategories }) => {
   useEffect(() => {
     if (updateAllCategories) {
       updateAllCategories(title);
