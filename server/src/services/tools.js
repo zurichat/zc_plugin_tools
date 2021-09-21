@@ -8,9 +8,9 @@ const { v4: uuidv4 } = require("uuid");
 const env = require("../config/env");
 
 const handleBaseUrls = (tool) => {
-  if (tool.icon.includes(env.referrer)) return;
-  if (tool.url) tool.url = env.referrer + tool.url;
-  tool.icon = env.referrer + tool.icon;
+  if (tool.icon.includes(env.image_referrer)) return;
+  if (tool.url) tool.url = env.url_referrer + tool.url;
+  tool.icon = env.image_referrer + "/apps" + tool.icon;
 };
 
 class ToolsService {

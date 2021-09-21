@@ -1,5 +1,5 @@
 {
-  "name": "zurireact",
+  "name": "@zuri/zuri-plugin-tools",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,11 +23,12 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
+    "single-spa-react": "^4.4.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "set PORT=8500 && craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "craco-plugin-single-spa-application": "^1.0.8",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",

@@ -5,8 +5,8 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to the organization’s files that are available on google",
-    "icon": "/apps/google-drive.svg",
-    "url": "/google-drive"
+    "icon": "/google-drive.svg",
+    "url": "/googledrive"
   },
   {
     "id": "def22b64-d4d2-4e09-b677-5f4c96cadf50",
@@ -14,7 +14,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to the organization’s mail without leaving Zuri Chat",
-    "icon": "/apps/gmail.svg",
+    "icon": "/gmail.svg",
     "url": "/gmail"
   },
   {
@@ -23,7 +23,7 @@
     "collection": "Daily Tools",
     "categories": ["Fun", "Communication"],
     "description": "View and share interesting gifs with your team on zuri chat",
-    "icon": "/apps/giphy.png",
+    "icon": "/giphy.png",
     "url": "/giphy"
   },
   {
@@ -32,7 +32,7 @@
     "collection": "Daily Tools",
     "categories": ["Productivity"],
     "description": "Get updates about the organisation's figma files",
-    "icon": "/apps/figma.png",
+    "icon": "/figma.png",
     "url": "/figma"
   },
   {
@@ -41,7 +41,7 @@
     "collection": "Daily Tools",
     "categories": ["Productivity"],
     "description": "Get access to the organization tools without leaving the zuri chat",
-    "icon": "/apps/github.png",
+    "icon": "/github.png",
     "url": "/github"
   }
 ]

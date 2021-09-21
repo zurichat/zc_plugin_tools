@@ -5,7 +5,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to the organization’s mail without leaving Zuri Chat",
-    "icon": "/apps/gmail.svg",
+    "icon": "/gmail.svg",
     "url": "/gmail"
   },
   {
@@ -14,7 +14,7 @@
     "collection": "Daily Tools",
     "categories": ["Voice and Video"],
     "description": "Make conference calls with your team from Zuri Chat",
-    "icon": "/apps/zoom.svg"
+    "icon": "/zoom.svg"
   },
   {
     "id": "765bbc71-bba5-42a6-9646-08239855a21f",
@@ -22,7 +22,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Connect your google account and schedule right from Zurichat",
-    "icon": "/apps/calender.svg",
+    "icon": "/calender.svg",
     "url": ""
   },
   {
@@ -31,7 +31,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Access your emails from Outlook right from Zuri Chat",
-    "icon": "/apps/outlook.svg",
+    "icon": "/outlook.svg",
     "url": ""
   },
   {
@@ -40,7 +40,7 @@
     "collection": "Daily Tools",
     "categories": ["Productivity"],
     "description": "Get updates about the organisation's figma files",
-    "icon": "/apps/figma.svg",
+    "icon": "/figma.svg",
     "url": "/figma"
   },
   {
@@ -49,8 +49,8 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to the organization’s files that are available on google",
-    "icon": "/apps/google-drive.svg",
-    "url": "/google-drive"
+    "icon": "/google-drive.svg",
+    "url": "/googledrive"
   },
   {
     "id": "aba207b1-6275-4d86-9d39-e249d036ef1a",
@@ -58,7 +58,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Connect your twitter account and tweet right from Zurichat",
-    "icon": "/apps/twitter.svg",
+    "icon": "/twitter.svg",
     "url": ""
   },
   {
@@ -67,7 +67,7 @@
     "collection": "Daily Tools",
     "categories": ["Productivity"],
     "description": "Get access to the organization tools without leaving the zuri chat",
-    "icon": "/apps/github.svg",
+    "icon": "/github.svg",
     "url": "/github"
   },
   {
@@ -76,7 +76,7 @@
     "collection": "Daily Tools",
     "categories": ["Fun", "Communication"],
     "description": "View and share interesting gifs with your team on zuri chat",
-    "icon": "/apps/giphy.svg",
+    "icon": "/giphy.svg",
     "url": "/giphy"
   },
   {
@@ -85,7 +85,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Surf your Facebook timeline without leaving Zuri Chat",
-    "icon": "/apps/facebook.svg",
+    "icon": "/facebook.svg",
     "url": ""
   },
   {
@@ -94,7 +94,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get nice photos from Unsplash without leaving Zuri chat",
-    "icon": "/apps/unsplash.svg",
+    "icon": "/unsplash.svg",
     "url": ""
   },
   {
@@ -103,7 +103,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Access your Deviant Art account right from Zuri Chat",
-    "icon": "/apps/deviant.svg",
+    "icon": "/deviant-art.svg",
     "url": ""
   },
   {
@@ -112,7 +112,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Gain access to most of Medium, right from Zuri Chat",
-    "icon": "/apps/medium.svg",
+    "icon": "/medium.svg",
     "url": ""
   },
   {
@@ -121,7 +121,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Create your moodboard on Pinterest, without leaving Zuri Chat",
-    "icon": "/apps/pinterest.svg",
+    "icon": "/pinterest.svg",
     "url": ""
   },
   {
@@ -130,7 +130,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Access google hangouts and send messages right here on Zuri Chat",
-    "icon": "/apps/hangout.svg",
+    "icon": "/hangout.svg",
     "url": ""
   },
   {
@@ -139,7 +139,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to your Dribble account Right in Zuri Chat",
-    "icon": "/apps/dribble.svg",
+    "icon": "/dribble.svg",
     "url": ""
   },
   {
@@ -148,7 +148,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Coordinate and manage your work from Zuri chat",
-    "icon": "/apps/asana.svg",
+    "icon": "/asana.svg",
     "url": ""
   },
   {
@@ -157,7 +157,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to your DropBox account without leaving Zuri Chat",
-    "icon": "/apps/dropbox.svg",
+    "icon": "/dropbox.svg",
     "url": ""
   },
   {
@@ -166,7 +166,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to content from world’s best designers, right from Zuri chat",
-    "icon": "/apps/dropbox.svg",
+    "icon": "/dropbox.svg",
     "url": ""
   },
   {
@@ -175,7 +175,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Connect your LinkedIn account and use it right from Zuri Chat",
-    "icon": "/apps/linkedin.svg",
+    "icon": "/linkedin.svg",
     "url": ""
   },
   {
@@ -184,7 +184,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to your Trello workspace without leaving Zuri Chat",
-    "icon": "/apps/trello.svg",
+    "icon": "/trello.svg",
     "url": ""
   },
   {
@@ -193,7 +193,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "With the Jira Cloud Integration, you can preview Jira tickets...",
-    "icon": "/apps/jira.svg",
+    "icon": "/jira.svg",
     "url": ""
   },
   {
@@ -202,7 +202,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Create tasks and tickets and add information like contacts, and...",
-    "icon": "/apps/calender.svg",
+    "icon": "/calender.svg",
     "url": ""
   },
   {
@@ -211,7 +211,7 @@
     "collection": "Enterprise-ready apps",
     "categories": ["File Management"],
     "description": "",
-    "icon": "/apps/box.svg",
+    "icon": "/box.svg",
     "url": ""
   },
   {
@@ -220,7 +220,7 @@
     "collection": "Enterprise-ready apps",
     "categories": ["Finance"],
     "description": "",
-    "icon": "/apps/brex.svg",
+    "icon": "/brex.svg",
     "url": ""
   },
   {
@@ -229,7 +229,7 @@
     "collection": "Enterprise-ready apps",
     "categories": ["Customer support"],
     "description": "",
-    "icon": "/apps/ling.svg",
+    "icon": "/ling.svg",
     "url": ""
   },
   {
@@ -238,7 +238,7 @@
     "collection": "Brilliant Bots",
     "categories": ["Customer support"],
     "description": "",
-    "icon": "/apps/poll.svg",
+    "icon": "/poll.svg",
     "url": ""
   },
   {
@@ -247,7 +247,7 @@
     "collection": "Brilliant Bots",
     "categories": ["News and Noteworthy"],
     "description": "",
-    "icon": "/apps/quik-quiz.svg",
+    "icon": "/quik-quiz.svg",
     "url": ""
   },
   {
@@ -256,7 +256,7 @@
     "collection": "Brilliant Bots",
     "categories": ["Developers Tool"],
     "description": "",
-    "icon": "/apps/github-toast.svg",
+    "icon": "/github-toast.svg",
     "url": ""
   },
   {
@@ -265,7 +265,7 @@
     "collection": "Brilliant Bots",
     "categories": ["Productivity"],
     "description": "",
-    "icon": "/apps/one-bar.svg",
+    "icon": "/one-bar.svg",
     "url": ""
   }
 ]

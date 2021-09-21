@@ -1,10 +1,10 @@
 const express = require("express");
 const morgan = require("morgan");
 const compression = require("compression");
-// const cors = require("cors");
+const cors = require("cors");
 const path = require("path");
 const frontendBase = path.join(__dirname, "..", "..", "..", "client", "build");
-const frontendIndex = path.join(frontendBase, "index.html");
+const frontendIndex = path.join(frontendBase, "zuri-zuri-plugin-tools.js");
 
 const { NotFoundError } = require("../lib/errors");
 const errorMiddleware = require("../middlewares/error");
@@ -14,16 +14,19 @@ const routes = require("../routes/index")(router);
 module.exports = (app) => {
   app.use(compression());
   app.use(morgan("dev"));
-
-  app.use(express.static(frontendBase));
-
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
-  // app.use(cors());
+  app.use(cors());
 
   app.use("/api", routes);
 
+  app.use(express.static(frontendBase));
+
   app.get("*", (req, res, next) => {
+    res.sendFile(frontendIndex);
+  });
+
+  app.get("/zuri-zuri-plugin-tools.js", (req, res) => {
     res.sendFile(frontendIndex);
   });
 

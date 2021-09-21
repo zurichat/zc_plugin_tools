@@ -8,7 +8,7 @@ const BotTools = ({ list, text, loading, error, network, noSearch }) => {
     return <LoaderGif />;
   }
   if (error) {
-    return <h2>Failed to load tools, client error!!!</h2>;
+    return <h2>Something went wrong, please try again later.</h2>;
   }
   if (network) {
     return (
@@ -25,6 +25,7 @@ const BotTools = ({ list, text, loading, error, network, noSearch }) => {
             const { id, icon, name, description } = item;
             return (
               <Tool
+                j
                 key={id}
                 icon={icon}
                 title={name}

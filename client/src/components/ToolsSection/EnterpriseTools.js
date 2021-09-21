@@ -8,13 +8,11 @@ const EnterpriseTools = ({ list, text, loading, error, network, noSearch }) => {
     return <LoaderGif />;
   }
   if (error) {
-    return <h2>Failed to load tools, client error!!!</h2>;
+    return <h2>Something went wrong, please try again later.</h2>;
   }
   if (network) {
     return (
-      <h2>
-        Failed to load tools,please check your network settings and reload page
-      </h2>
+      <h2>Network error, please check your network settings and reload page</h2>
     );
   }
   return (
