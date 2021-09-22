@@ -17,10 +17,10 @@ class NameForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("A comment was submitted: " + this.state.value);
+    // alert("A comment was submitted: " + this.state.value);
     event.preventDefault();
     axios
-      .post("/addtool", {
+      .post("/tools/addtools", {
         comment: this.state.value,
         tool: "googledrive",
       })
