@@ -91,7 +91,7 @@
   {
     "id": "9b6c08bd-308f-458f-bd42-41d8c8130097",
     "name": "Unsplash",
-    "collection": "Daily Tools",
+    "collection": "Work From Home",
     "categories": ["Communication"],
     "description": "Get nice photos from Unsplash without leaving Zuri chat",
     "icon": "/unsplash.svg",
@@ -100,7 +100,7 @@
   {
     "id": "e5183126-e948-4125-987e-65fdea198077",
     "name": "Deviant Art",
-    "collection": "Daily Tools",
+    "collection": "Brilliant Bots",
     "categories": ["Communication"],
     "description": "Access your Deviant Art account right from Zuri Chat",
     "icon": "/deviant-art.svg",
@@ -109,7 +109,7 @@
   {
     "id": "8baac5c0-0050-4121-b326-297f38827304",
     "name": "Medium",
-    "collection": "Daily Tools",
+    "collection": "Work From Home",
     "categories": ["Communication"],
     "description": "Gain access to most of Medium, right from Zuri Chat",
     "icon": "/medium.svg",
@@ -136,7 +136,7 @@
   {
     "id": "20b33a8e-dd4d-400b-8cb2-e9b5ae111eea",
     "name": "Dribble",
-    "collection": "Daily Tools",
+    "collection": "Brilliant Bots",
     "categories": ["Communication"],
     "description": "Get access to your Dribble account Right in Zuri Chat",
     "icon": "/dribble.svg",
@@ -163,7 +163,7 @@
   {
     "id": "c8462a82-aace-4dc3-bb8c-9dc38bcee359",
     "name": "Behance",
-    "collection": "Daily Tools",
+    "collection": "Work From Home",
     "categories": ["Communication"],
     "description": "Get access to content from world’s best designers, right from Zuri chat",
     "icon": "/behance.svg",
@@ -181,7 +181,7 @@
   {
     "id": "946b6fc4-a468-48ff-89cd-aa4b589a7f39",
     "name": "Trello",
-    "collection": "Daily Tools",
+    "collection": "Work From Home",
     "categories": ["Communication"],
     "description": "Get access to your Trello workspace without leaving Zuri Chat",
     "icon": "/trello.svg",
@@ -199,10 +199,10 @@
   {
     "id": "13eeeffc-df39-47c5-bb3f-0e7ed89c306e",
     "name": "Hubspot",
-    "collection": "Daily Tools",
+    "collection": "Work From Home",
     "categories": ["Communication"],
     "description": "Create tasks and tickets and add information like contacts, and...",
-    "icon": "/calender.svg",
+    "icon": "/hubspot1.svg",
     "url": ""
   },
   {
