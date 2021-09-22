@@ -19,5 +19,38 @@
 }
 
 .people_div {
+  background-color: white;
   display: flex;
+  border-radius: 0.3rem;
+  align-items: center;
+  padding: 5px 5px;
+}
+.people_div > div {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 3px;
+}
+
+.people_div > div:not(:first-child) {
+  /* background-color: white; */
+  margin-left: -12px;
+  padding: 3px 3px;
+}
+
+.people_div > div:nth-child(1) {
+  z-index: 3;
+}
+
+.people_div > div:nth-child(2) {
+  z-index: 2;
+}
+
+.people_div > div:nth-child(3) {
+  z-index: 1;
+}
+
+.people_count {
+  padding: 0rem 0.75rem;
+  font-size: 1.2rem;
 }

@@ -67,7 +67,7 @@
     "collection": "Daily Tools",
     "categories": ["Productivity"],
     "description": "Get access to the organization tools without leaving the zuri chat",
-    "icon": "/github.png",
+    "icon": "/github.svg",
     "url": "/github"
   },
   {
@@ -145,7 +145,7 @@
   {
     "id": "843e2cae-8847-4e48-b075-01a3db79fddd",
     "name": "Asana",
-    "collection": "Daily Tools",
+    "collection": "Enterprise-ready apps",
     "categories": ["Communication"],
     "description": "Coordinate and manage your work from Zuri chat",
     "icon": "/asana.svg",
@@ -154,7 +154,7 @@
   {
     "id": "b08d1e21-a9c0-4383-9814-4cef4251e3a2",
     "name": "DropBox",
-    "collection": "Daily Tools",
+    "collection": "Enterprise-ready apps",
     "categories": ["Communication"],
     "description": "Get access to your DropBox account without leaving Zuri Chat",
     "icon": "/dropbox.svg",
@@ -190,7 +190,7 @@
   {
     "id": "da44e1c7-6ea8-457c-a9f7-e443b12dc83e",
     "name": "Jira Cloud",
-    "collection": "Daily Tools",
+    "collection": "Enterprise-ready apps",
     "categories": ["Communication"],
     "description": "With the Jira Cloud Integration, you can preview Jira tickets...",
     "icon": "/jira.svg",
