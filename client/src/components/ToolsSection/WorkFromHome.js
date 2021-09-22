@@ -3,7 +3,7 @@ import Tools from "../fragments/tools/Tools";
 import Tool from "../fragments/tools/Tool";
 import LoaderGif from "../fragments/LoaderGif";
 
-const BotTools = ({ list, text, loading, error, network, noSearch }) => {
+const WorkFromHome = ({ list, text, loading, error, network, noSearch }) => {
   if (loading) {
     return <LoaderGif />;
   }
@@ -32,10 +32,10 @@ const BotTools = ({ list, text, loading, error, network, noSearch }) => {
           ))}
         </Tools>
       ) : (
-        `No result of  "${text}"  found for bot tools`
+        `No result of  "${text}"  found for daily tools`
       )}
     </div>
   );
 };
 
-export default BotTools;
+export default WorkFromHome;

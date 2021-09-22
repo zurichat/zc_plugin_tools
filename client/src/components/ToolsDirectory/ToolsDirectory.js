@@ -6,6 +6,7 @@ import DailyTools from "../ToolsSection/DailyTools";
 import BotTools from "../ToolsSection/BotTools";
 import SearchFieldTools from "./SearchFieldTools";
 import CategoriesSection from "../fragments/CategoriesSection";
+import WorkFromHome from "../ToolsSection/WorkFromHome";
 
 const ToolsDirectory = () => {
   const [allList, setAllList] = useState([]);
@@ -18,6 +19,10 @@ const ToolsDirectory = () => {
   // daily tools list and states
   const [dailyList, setDailyList] = useState([]);
   const [noDailyFound, setNoDailyFound] = useState(false);
+
+  //work from home list and state
+  const [workFromHomeList, setWorkFromHomeList] = useState([]);
+  const [noWorkFound, setNoWorkFound] = useState(false);
   // bot tools list and states
   const [botList, setBotList] = useState([]);
   const [noBotFound, setNoBotFound] = useState(false);
@@ -33,6 +38,7 @@ const ToolsDirectory = () => {
         setEnterpriseList(allList["Enterprise-ready apps"]);
         // const dailyFetch = await dailyFetchList();
         setDailyList(allList["Daily Tools"]);
+        setWorkFromHomeList(allList["Work From Home"]);
         // const botFetch = await botFetchList();
         setBotList(allList["Brilliant Bots"]);
       } catch (error) {
@@ -76,6 +82,8 @@ const ToolsDirectory = () => {
     setEnterpriseList(enterpriseList);
     const dailyList = await shuffleDailyList(text);
     setDailyList(dailyList);
+    const workFromHomeList = await shuffleWorkFromHomeList(text);
+    setWorkFromHomeList(workFromHomeList);
     const botList = await shuffleBotList(text);
     setBotList(botList);
   };
@@ -119,6 +127,28 @@ const ToolsDirectory = () => {
       setTimeout(() => {
         setIsLoading(false);
         setNoDailyFound(true);
+      }, 1000);
+      return list;
+    }
+  };
+  // shuffle work from home tols on search
+  const shuffleWorkFromHomeList = (text) => {
+    const list = allList["Work From Home"].filter(
+      (item) =>
+        item.name.toLocaleLowerCase().search(text.toLocaleLowerCase()) != -1
+    );
+    if (list.length > 0) {
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        setNoWorkFound(false);
+      }, 1000);
+      return list;
+    } else {
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        setNoWorkFound(true);
       }, 1000);
       return list;
     }
@@ -171,6 +201,7 @@ const ToolsDirectory = () => {
         network={isNetwork}
         noSearch={noDailyFound}
       />
+
       {/* bot tools */}
       <TitleBox title="brilliant bots" link={false} icon={false} />
       <BotTools
@@ -180,6 +211,17 @@ const ToolsDirectory = () => {
         error={isError}
         network={isNetwork}
         noSearch={noBotFound}
+      />
+
+      {/* work from home toolss */}
+      <TitleBox title="Work From Home" link={false} icon={false} />
+      <WorkFromHome
+        list={workFromHomeList}
+        text={inputText}
+        loading={isLoading}
+        error={isError}
+        network={isNetwork}
+        noSearch={noWorkFound}
       />
     </div>
   );
