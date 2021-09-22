@@ -3,7 +3,7 @@ import FigmaMessagesContainer from "../container/FigmaMessagesContainer";
 import FigmaTextBar from "../components/FigmaTextBar";
 import Day from "../components/Day";
 import ss1 from "../images/ss1.png";
-import logo from "../images/Figma_logo.png";
+import logo from "../images/figma.svg";
 import "../css/FigmaMessages.css";
 
 const FigmaMessages = () => {

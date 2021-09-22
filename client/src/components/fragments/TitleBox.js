@@ -8,7 +8,7 @@ const TitleBox = ({ title, text, link, icon }) => {
     <div className={styles.title_box}>
       <p className={styles.title}>{title}</p>
       <Link
-        to={`${link ? "/toolsDirectory" : ""}`}
+        to={`${link ? "/toolsdirectory" : ""}`}
         className={styles.directory_box}
       >
         {icon && (

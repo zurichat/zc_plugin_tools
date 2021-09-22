@@ -1,0 +1,23 @@
+.header {
+  background-color: #00b87c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.header div:first-child {
+  cursor: pointer;
+}
+
+.route {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.people_div {
+  display: flex;
+}

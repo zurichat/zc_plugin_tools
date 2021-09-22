@@ -3,7 +3,8 @@ import "./../../searchbar.component";
 import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
 import FigmaDownload from "./downloads-section/FigmaDownload";
-import logo from "./images/fignaLogo.png";
+import logo from "./images/figma.svg";
+import downArrow from "./images/down-arrow-icon.svg";
 import "./css/Figma.css";
 // import ToolsHeader from "../../toolsheader/toolsheader";
 
@@ -17,8 +18,10 @@ const Figma = () => {
         <div className="figmalogo-container">
           <img src={logo} />
         </div>
-        <h4 className="Logo-tag">Figma</h4>
-        <div className="arrow-down">^</div>
+        <div class="flex items-center">
+          <h4 className="Logo-tag">Figma</h4>
+          <img style={{ padding: "5px 0px 0px 5px" }} src={downArrow} />
+        </div>
       </div>
       <div className="welcome-nav">
         <div>

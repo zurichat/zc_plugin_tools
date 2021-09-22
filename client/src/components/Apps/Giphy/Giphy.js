@@ -11,7 +11,6 @@ import "./giphy.css";
 const Giphy = () => {
   return (
     <div className="giphy-plugin-page bg-gray-200">
-      <GiphyHeader />
       <div className="backBtn">
         <Link to="/">
           <FontAwesomeIcon icon={faAngleLeft} className="" /> Back to Tools
