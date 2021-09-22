@@ -1,4 +1,4 @@
-// app data
+
 export const tools = [
   {
     name: "Gmail",
