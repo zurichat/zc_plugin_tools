@@ -41,9 +41,10 @@ const ToolsView = () => {
   const getInstall = async () => {
     const origin = window.location.origin;
     let isLocal = origin.includes("localhost");
-    let apiBase = isLocal
-      ? "http://localhost:8500/api"
-      : "https://externaltools.zuri.chat/api";
+    // let apiBase = isLocal
+    //   ? "http://localhost:8500/api"
+    //   : "https://externaltools.zuri.chat/api";
+    let apiBase = "https://externaltools.zuri.chat/api";
 
     try {
       const res = await fetch(`${apiBase}/tools/recommended`);
@@ -81,9 +82,10 @@ const ToolsView = () => {
   const getRecommend = async () => {
     const origin = window.location.origin;
     let isLocal = origin.includes("localhost");
-    let apiBase = isLocal
-      ? "http://localhost:8500/api"
-      : "https://externaltools.zuri.chat/api";
+    // let apiBase = isLocal
+    //   ? "http://localhost:8500/api"
+    //   : "https://externaltools.zuri.chat/api";
+    let apiBase = "https://externaltools.zuri.chat/api";
     try {
       const res = await fetch(`${apiBase}/tools`);
       const status = res.status;
@@ -93,7 +95,6 @@ const ToolsView = () => {
         setRecoNetwork(false);
         setRecoError(false);
         const list = data.data;
-        // console.log(data)
         return list;
       } else if (status >= 500) {
         setRecoLoading(false);
@@ -107,7 +108,6 @@ const ToolsView = () => {
     } catch (err) {
       console.error(err);
     }
-    // console.log(data);
 
     //  return tools.filter((tool) => tool.installed === false);
   };
@@ -186,7 +186,7 @@ const ToolsView = () => {
   return (
     <div style={{ padding: "12px 2rem" }}>
       {/* insert your component for those working on the company tools view page */}
-      <TitleBox title="tools" text="tool directory" link={true} icon={true} />
+      <TitleBox title='tools' text='tool directory' link={true} icon={true} />
       <div>
         {showHero && (
           <HeroSection
