@@ -4,7 +4,7 @@ import Image from "../assets/ZV_64LdGoao.jpg";
 // import githubLogo1 from "../assets/githubLogo1.png";
 // import githublogo from "../assets/githublogo.jpg";
 import github from "../assets/github.svg";
-import GitHubNew from "../assets/GitHubNew.jpg";
+import GitHubNew from "../assets/github.svg";
 import "../style/GithubHome.css";
 const GithubHome = () => {
   return (

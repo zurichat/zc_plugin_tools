@@ -41,7 +41,7 @@
     "collection": "Daily Tools",
     "categories": ["Productivity"],
     "description": "Get access to the organization tools without leaving the zuri chat",
-    "icon": "/github.png",
+    "icon": "/github.svg",
     "url": "/github"
   }
 ]

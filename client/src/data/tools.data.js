@@ -22,7 +22,7 @@ export const tools = [
     name: "Github",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "./apps/github.png",
+    image: "./apps/github.svg",
     categoryClass: "billiantBots",
     linkName: "github",
     installed: true,
