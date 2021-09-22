@@ -27,7 +27,6 @@ class GoogleDriveController {
     );
   }
   async getFilesList(req, res) {
-    console.log(REDIRECT_URI);
     try {
       const r = await drive.files.list();
       const { data } = r;
@@ -41,7 +40,7 @@ class GoogleDriveController {
     }
   }
   async getData(req, res) {
-    const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
     const json = await resp.json();
     res.send(response("Data info returned successfully", json));
   }
