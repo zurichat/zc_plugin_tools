@@ -213,7 +213,7 @@ const ToolsDirectory = () => {
         noSearch={noBotFound}
       />
 
-      {/* work from home tools */}
+      {/* work from home toolss */}
       <TitleBox title="Work From Home" link={false} icon={false} />
       <WorkFromHome
         list={workFromHomeList}

@@ -21,12 +21,12 @@ const WorkFromHome = ({ list, text, loading, error, network, noSearch }) => {
     <div style={{ width: "100%", margin: "1rem 0rem 2rem 0rem" }}>
       {noSearch === false ? (
         <Tools list={list}>
-          {list.map(({ name, id, description, icon }) => (
+          {list.map(({ name, id, description, icon, categories }) => (
             <Tool
               key={id}
               icon={icon}
               title={name}
-              text={description}
+              text={categories[0]}
               pad={false}
             />
           ))}

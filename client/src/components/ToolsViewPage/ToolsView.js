@@ -73,43 +73,42 @@ const ToolsView = () => {
         setInstallError(true);
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
     // return tools.filter((tool) => tool.installed === true)
   };
 
   const getRecommend = async () => {
-    const origin = window.location.origin
-    let isLocal = origin.includes("localhost")
-    let apiBase = isLocal ? "http://localhost:8500/api" : "https://externaltools.zuri.chat/api"
+    const origin = window.location.origin;
+    let isLocal = origin.includes("localhost");
+    let apiBase = isLocal
+      ? "http://localhost:8500/api"
+      : "https://externaltools.zuri.chat/api";
     try {
-      const res = await fetch(`${apiBase}/tools`)
-      const status = res.status
-      const data = await res.json()
-      if(status >= 200 && status <= 299){
-      setRecoLoading(false);
-      setRecoNetwork(false);
-      setRecoError(false)
-      const list = data.data;
-      console.log(data)
-      return list;
-      }
-      else if(status >= 500){
-             setRecoLoading(false);
-      setRecoNetwork(true);
-      setRecoError(false)
-      }
-      else{
-      setRecoLoading(false);
-      setRecoError(true);
-      setRecoNetwork(false);
+      const res = await fetch(`${apiBase}/tools`);
+      const status = res.status;
+      const data = await res.json();
+      if (status >= 200 && status <= 299) {
+        setRecoLoading(false);
+        setRecoNetwork(false);
+        setRecoError(false);
+        const list = data.data;
+        // console.log(data)
+        return list;
+      } else if (status >= 500) {
+        setRecoLoading(false);
+        setRecoNetwork(true);
+        setRecoError(false);
+      } else {
+        setRecoLoading(false);
+        setRecoError(true);
+        setRecoNetwork(false);
       }
     } catch (err) {
-      console.log(err)
+      console.error(err);
     }
     // console.log(data);
-    
-     
+
     //  return tools.filter((tool) => tool.installed === false);
   };
 
