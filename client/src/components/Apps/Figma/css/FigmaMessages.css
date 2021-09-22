@@ -57,7 +57,7 @@
   @apply absolute inset-x-0 inset-y-1/2;
   @apply flex;
   @apply h-px w-full;
-  @apply bg-figma-lineBg;
+  /* @apply bg-figma-lineBg; */
 }
 
 .figma-msgs_time_day {

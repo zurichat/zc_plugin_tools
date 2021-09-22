@@ -7,28 +7,29 @@ const { v4: uuidv4 } = require("uuid");
 
 const env = require("../config/env");
 
-const handleBaseUrls = (tool) => {
-  if (tool.icon.includes(env.referrer)) return;
-  if (tool.url) tool.url = env.referrer + tool.url;
-  tool.icon = env.referrer + tool.icon;
+const handleBaseUrls = (tool, origin) => {
+  if (origin.includes("localhost")) origin = origin.replace("9000", env.PORT);
+
+  if (!tool.icon.includes(origin)) tool.icon = origin + "apps" + tool.icon;
 };
 
 class ToolsService {
-  async getAll(query) {
+  async getAll(query, origin) {
     let tools = [...availableTools];
     tools.map((tool) => {
-      handleBaseUrls(tool);
+      handleBaseUrls(tool, origin);
       return tool;
     });
+    console.log(tools);
     if (query?.sortBy == "collections") tools = _.groupBy(tools, "collection");
 
     return tools;
   }
 
-  async getRecommendedTools() {
+  async getRecommendedTools(origin) {
     const tools = [...recommendedTools];
     recommendedTools.map((tool) => {
-      handleBaseUrls(tool);
+      handleBaseUrls(tool, origin);
       return tool;
     });
 

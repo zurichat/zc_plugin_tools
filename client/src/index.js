@@ -1,17 +1,39 @@
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import "./index.css";
+// import App from "./App";
+// import reportWebVitals from "./reportWebVitals";
+
+// const Root = () => {
+//   return (
+//     <React.StrictMode>
+//       <App />
+//     </React.StrictMode>
+//   );
+// };
+
+// export default Root;
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
+
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import singleSpaReact from "single-spa-react";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+const lifecycles = singleSpaReact({
+  React,
+  ReactDOM,
+  rootComponent: App,
+  errorBoundary(err, info, props) {
+    return <div>Error in my-app. Check browser console for details.</div>;
+  },
+});
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export const { bootstrap, mount, unmount } = lifecycles;

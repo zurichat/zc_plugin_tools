@@ -12,8 +12,8 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swagger.config));
 // require("./src/config/db")();
 require("./src/config/routing")(app);
 
-const PORT = env.PORT;
+const PORT = 8500 || env.PORT;
 
 app.listen(PORT, () => {
-  logger.info(`app listening at port 3600 in ${env.NODE_ENV} mode`);
+  logger.info(`app listening at port ${PORT} in ${env.NODE_ENV} mode`);
 });

@@ -1,22 +1,22 @@
-import React from 'react'
+import React from "react";
 import Tools from "../fragments/tools/Tools";
 import Tool from "../fragments/tools/Tool";
-import LoaderGif from '../fragments/LoaderGif';
+import LoaderGif from "../fragments/LoaderGif";
 
 const DailyTools = ({ list, text, loading, error, network, noSearch }) => {
-   if (loading) {
-     return <LoaderGif />;
-   }
-   if (error) {
-     return <h2>Failed to load tools, client error!!!</h2>;
-   }
-   if (network) {
-     return (
-       <h2>
-         Failed to load tools,please check your network settings and reload page
-       </h2>
-     );
-   }
+  if (loading) {
+    return <LoaderGif />;
+  }
+  if (error) {
+    return <h2>Something went wrong, please try again later.</h2>;
+  }
+  if (network) {
+    return (
+      <h2>
+        Failed to load tools,please check your network settings and reload page
+      </h2>
+    );
+  }
   return (
     <div style={{ width: "100%", margin: "1rem 0rem 2rem 0rem" }}>
       {noSearch === false ? (
@@ -38,4 +38,4 @@ const DailyTools = ({ list, text, loading, error, network, noSearch }) => {
   );
 };
 
-export default DailyTools
+export default DailyTools;

@@ -25,13 +25,11 @@ const InstalledTools = ({
     return <LoaderGif />;
   }
   if (error) {
-    return <h2>Failed to load tools, client error!!!</h2>;
+    return <h2>Something went wrong, please try again later.</h2>;
   }
   if (network) {
     return (
-      <h2>
-        Failed to load tools,please check your network settings and reload page
-      </h2>
+      <h2>Network error, please check your network settings and reload page</h2>
     );
   }
   if (noInstallItem) {
@@ -44,9 +42,9 @@ const InstalledTools = ({
   }
 
   return (
-    <div className='flex flex-col mb-4'>
+    <div className="flex flex-col mb-4">
       {/* <div className="flex mb-3">
-        <div className="flex-1 font-bold ">Installed Tools</div>
+        <div className="flex-1 font-bold ">Recommended Tools</div>
         <div className="flex space-x-2">
           <div>
             <FontAwesomeIcon icon={faSlidersH} className="" />
@@ -54,29 +52,15 @@ const InstalledTools = ({
           <div>Filter</div>
         </div>
       </div> */}
-      <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 '>
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
         {
           // tools &&
           //   tools
           //     .filter((tol) => tol.installed === true)
           noSearch === false
             ? list.map(({ name, id, description, icon, url }) => {
-                let newUrl;
-                let newName;
+                const newUrl = url;
 
-                if (window.location.href.includes("localhost")) {
-                  newUrl = url.replace("https://externaltools.zuri.chat", "");
-                  if (newUrl === "/google-drive") {
-                    newUrl = newUrl.replace("-", "");
-                  }
-                } else {
-                  newUrl = url;
-                  if (newUrl === "/google-drive") {
-                    newUrl = newUrl.replace("-", "");
-                  }
-                }
-
-                console.log(newUrl);
                 return (
                   <InstallToolsCard
                     key={id}
@@ -87,17 +71,17 @@ const InstalledTools = ({
                   />
                 );
               })
-            : `No result of  "${text}"  found for installed tools`
+            : `No result of  "${text}"  found for recommended tools`
         }
-        <div className='flex cursor-pointer'>
+        <div className="flex cursor-pointer">
           <div
-            className='bg-gray-300 w-full flex p-4 justify-center items-center rounded-xl space-x-3 border-2 border-dashed '
+            className="bg-gray-300 w-full flex p-4 justify-center items-center rounded-xl space-x-3 border-2 border-dashed "
             onClick={showAvailableTools}
           >
             <div>
-              <FontAwesomeIcon icon={faPlus} className='text-gray-400' />
+              <FontAwesomeIcon icon={faPlus} className="text-gray-400" />
             </div>
-            <div className=''>Add Tools</div>
+            <div className="">Add Tools</div>
           </div>
         </div>
         {/* <div>
