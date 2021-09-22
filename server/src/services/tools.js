@@ -8,9 +8,11 @@ const { v4: uuidv4 } = require("uuid");
 const env = require("../config/env");
 
 const handleBaseUrls = (tool, origin) => {
-  if (origin.includes("localhost")) origin = origin.replace("9000", env.PORT);
+  let apiBase = !origin.includes("localhost")
+    ? "https://externaltools.zuri.chat"
+    : `http://localhost:${env.PORT}`;
 
-  if (!tool.icon.includes(origin)) tool.icon = origin + "apps" + tool.icon;
+  if (!tool.icon.includes(apiBase)) tool.icon = apiBase + "/apps" + tool.icon;
 };
 
 class ToolsService {
@@ -20,7 +22,6 @@ class ToolsService {
       handleBaseUrls(tool, origin);
       return tool;
     });
-    console.log(tools);
     if (query?.sortBy == "collections") tools = _.groupBy(tools, "collection");
 
     return tools;

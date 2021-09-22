@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import styles from "./Tools.module.css"
+import styles from "./Tools.module.css";
 
 const Tool = ({icon, title, text, btn, pad, filterBy}) => {
     return (
@@ -24,7 +24,23 @@ const Tool = ({icon, title, text, btn, pad, filterBy}) => {
             }}>{btn}</button>
             
         </div>
-    )
-}
+      </div>
+      {/* end of title icon box */}
+      <button
+        style={{
+          backgroundColor: "#F0EFEF",
+          borderRadius: ".2rem",
+          color: "#3A3A3A",
+          textTransform: "capitalize",
+          textAlign: "center",
+          marginTop: ".7rem",
+          padding: `${pad && ".3rem"}`,
+        }}
+      >
+        {btn}
+      </button>
+    </div>
+  );
+};
 
-export default Tool
+export default Tool;
