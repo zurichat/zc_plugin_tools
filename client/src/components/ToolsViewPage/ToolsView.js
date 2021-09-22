@@ -4,7 +4,6 @@ import InstalledTools from "../MainPage/Instaledtoolssection";
 import SearchBar from "../SearchBar";
 import TitleBox from "../fragments/TitleBox";
 import RecommendTools from "../ToolsSection/RecommendTools";
-import { useHistory } from "react-router-dom";
 
 const ToolsView = () => {
   const [installList, setInstallList] = useState([]);
@@ -28,8 +27,8 @@ const ToolsView = () => {
 
   useEffect(() => {
     const getInstalledAndRecommendTools = async () => {
-      const instTools = await getInstall();
-      const recoTools = await getRecommend();
+      const instTools = (await getInstall()) || {};
+      const recoTools = (await getRecommend()) || {};
       setInstallList(instTools);
       setAvailableList(recoTools);
       setInstallTools(instTools);
@@ -46,37 +45,41 @@ const ToolsView = () => {
       ? "http://localhost:8500/api"
       : "https://externaltools.zuri.chat/api";
 
-    const res = await fetch(`${apiBase}/tools/recommended`);
-    const status = res.status;
-    const data = await res.json();
-    if (status >= 200 && status <= 299) {
-      const list = data.data;
-      if (list.length > 0) {
+    try {
+      const res = await fetch(`${apiBase}/tools/recommended`);
+      const status = res.status;
+      const data = await res.json();
+      if (status >= 200 && status <= 299) {
+        const list = data.data;
+        if (list.length > 0) {
+          setInstallError(false);
+          setInstallLoading(false);
+          setInstallNetwork(false);
+          setNoInstallItemFetch(false);
+          return list;
+        } else {
+          setInstallError(false);
+          setInstallLoading(false);
+          setInstallNetwork(false);
+          setNoInstallItemFetch(true);
+        }
+      } else if (status >= 500) {
         setInstallError(false);
         setInstallLoading(false);
-        setInstallNetwork(false);
-        setNoInstallItemFetch(false);
-        return list;
+        setInstallNetwork(true);
       } else {
-        setInstallError(false);
-        setInstallLoading(false);
         setInstallNetwork(false);
-        setNoInstallItemFetch(true);
+        setInstallLoading(false);
+        setInstallError(true);
       }
-    } else if (status >= 500) {
-      setInstallError(false);
-      setInstallLoading(false);
-      setInstallNetwork(true);
-    } else {
-      setInstallNetwork(false);
-      setInstallLoading(false);
-      setInstallError(true);
+    } catch (error) {
+      console.log(error);
     }
     // return tools.filter((tool) => tool.installed === true)
   };
 
   const getRecommend = async () => {
-    const origin = window.location.origin;
+    const origin = window.location.href;
     let isLocal = origin.includes("localhost");
     let apiBase = isLocal
       ? "http://localhost:8500/api"
@@ -86,6 +89,7 @@ const ToolsView = () => {
 
     const status = res.status;
     const data = await res.json();
+
     if (status >= 200 && status <= 299) {
       setRecoLoading(false);
       setRecoNetwork(false);
@@ -102,7 +106,6 @@ const ToolsView = () => {
       setRecoNetwork(false);
     }
 
-    console.log(data);
     //  return tools.filter((tool) => tool.installed === false);
   };
 
@@ -196,7 +199,7 @@ const ToolsView = () => {
       {/* <TitleBox
         icon={true}
         title={`${
-          textpresent.length > 0 ? "search result" : "installed tools"
+          textpresent.length > 0 ? "search result" : "recommended tools"
         }`}
         text="filter"
         link={false}

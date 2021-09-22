@@ -5,7 +5,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to the organization’s mail without leaving Zuri Chat",
-    "icon": "/gmail.svg",
+    "icon": "/gmail.png",
     "url": "/gmail"
   },
   {
@@ -40,7 +40,7 @@
     "collection": "Daily Tools",
     "categories": ["Productivity"],
     "description": "Get updates about the organisation's figma files",
-    "icon": "/figma.svg",
+    "icon": "/figma.png",
     "url": "/figma"
   },
   {
@@ -67,7 +67,7 @@
     "collection": "Daily Tools",
     "categories": ["Productivity"],
     "description": "Get access to the organization tools without leaving the zuri chat",
-    "icon": "/github.svg",
+    "icon": "/github.png",
     "url": "/github"
   },
   {
@@ -76,7 +76,7 @@
     "collection": "Daily Tools",
     "categories": ["Fun", "Communication"],
     "description": "View and share interesting gifs with your team on zuri chat",
-    "icon": "/giphy.svg",
+    "icon": "/giphy.png",
     "url": "/giphy"
   },
   {
@@ -166,7 +166,7 @@
     "collection": "Daily Tools",
     "categories": ["Communication"],
     "description": "Get access to content from world’s best designers, right from Zuri chat",
-    "icon": "/dropbox.svg",
+    "icon": "/behance.svg",
     "url": ""
   },
   {

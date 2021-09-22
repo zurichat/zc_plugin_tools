@@ -44,7 +44,7 @@ const InstalledTools = ({
   return (
     <div className="flex flex-col mb-4">
       {/* <div className="flex mb-3">
-        <div className="flex-1 font-bold ">Installed Tools</div>
+        <div className="flex-1 font-bold ">Recommended Tools</div>
         <div className="flex space-x-2">
           <div>
             <FontAwesomeIcon icon={faSlidersH} className="" />
@@ -59,17 +59,8 @@ const InstalledTools = ({
           //     .filter((tol) => tol.installed === true)
           noSearch === false
             ? list.map(({ name, id, description, icon, url }) => {
-                let newUrl;
-                let newName;
+                const newUrl = url;
 
-                if (window.location.href.includes("localhost")) {
-                  newUrl = url.replace("https://externaltools.zuri.chat", "");
-                  newUrl = url.replace("http://localhost:9000", "");
-                } else {
-                  newUrl = url;
-                }
-
-                // console.log(newUrl);
                 return (
                   <InstallToolsCard
                     key={id}
@@ -80,7 +71,7 @@ const InstalledTools = ({
                   />
                 );
               })
-            : `No result of  "${text}"  found for installed tools`
+            : `No result of  "${text}"  found for recommended tools`
         }
         <div className="flex cursor-pointer">
           <div
