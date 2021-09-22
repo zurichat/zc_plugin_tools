@@ -11,7 +11,9 @@ const handleBaseUrls = (tool, origin) => {
   let apiBase = !origin.includes("localhost")
     ? "https://externaltools.zuri.chat"
     : `http://localhost:${env.PORT}`;
-
+  const hasBeenPrefixed =
+    tool.icon.includes("zuri.chat") || tool.icon.includes("localhost");
+  if (hasBeenPrefixed) return;
   if (!tool.icon.includes(apiBase)) tool.icon = apiBase + "/apps" + tool.icon;
 };
 
