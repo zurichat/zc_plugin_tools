@@ -25,7 +25,6 @@ const BotTools = ({ list, text, loading, error, network, noSearch }) => {
             const { id, icon, name, description } = item;
             return (
               <Tool
-                j
                 key={id}
                 icon={icon}
                 title={name}

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./FigmaAbout.module.css";
 
-import logo from "./../images/fignaLogo.png";
+import logo from "./../images/figma.svg";
 
 function MainContent() {
   return (

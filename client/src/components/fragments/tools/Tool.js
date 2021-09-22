@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from "./Tools.module.css";
 import { Link } from "react-router-dom";
 
@@ -10,7 +9,6 @@ const Tool = ({ icon, title, text, btn, pad, item }) => {
     if (editUrl === "/google-drive") {
       editUrl = editUrl.replace("-", "");
     }
-    console.log(editUrl);
   } else {
     if (item) {
       editUrl = item.url;
@@ -20,7 +18,6 @@ const Tool = ({ icon, title, text, btn, pad, item }) => {
     }
   }
   const url = editUrl && editUrl.length > 0 && editUrl;
-  console.log(editUrl);
   return (
     <div className={styles.tool}>
       {url ? (

@@ -7,17 +7,21 @@ const { v4: uuidv4 } = require("uuid");
 
 const env = require("../config/env");
 
-const handleBaseUrls = (tool) => {
-  if (tool.icon.includes(env.image_referrer)) return;
-  if (tool.url) tool.url = env.url_referrer + tool.url;
-  tool.icon = env.image_referrer + "/apps" + tool.icon;
+const handleBaseUrls = (tool, origin) => {
+  let apiBase = !origin.includes("localhost")
+    ? "https://externaltools.zuri.chat"
+    : `http://localhost:${env.PORT}`;
+  const hasBeenPrefixed =
+    tool.icon.includes("zuri.chat") || tool.icon.includes("localhost");
+  if (hasBeenPrefixed) return;
+  if (!tool.icon.includes(apiBase)) tool.icon = apiBase + "/apps" + tool.icon;
 };
 
 class ToolsService {
-  async getAll(query) {
+  async getAll(query, origin) {
     let tools = [...availableTools];
     tools.map((tool) => {
-      handleBaseUrls(tool);
+      handleBaseUrls(tool, origin);
       return tool;
     });
     if (query?.sortBy == "collections") tools = _.groupBy(tools, "collection");
@@ -25,10 +29,10 @@ class ToolsService {
     return tools;
   }
 
-  async getRecommendedTools() {
+  async getRecommendedTools(origin) {
     const tools = [...recommendedTools];
     recommendedTools.map((tool) => {
-      handleBaseUrls(tool);
+      handleBaseUrls(tool, origin);
       return tool;
     });
 
