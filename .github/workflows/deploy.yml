@@ -41,6 +41,7 @@ jobs:
             password: ${{ secrets.PASSWORD }}
             script: |
               cd zc_plugin_tools
+              pwd
               git stash
               git fetch --all
               git reset --hard origin/dev
@@ -71,4 +72,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd zc_plugin_tools/
+            pwd
             pm2 restart all
