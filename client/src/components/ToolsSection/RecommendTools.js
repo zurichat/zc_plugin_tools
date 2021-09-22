@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Tools from "../fragments/tools/Tools";
 import Tool from "../fragments/tools/Tool";
 import TitleBox from "../fragments/TitleBox";
 import LoaderGif from "../fragments/LoaderGif";
 
 const RecommendTools = ({ list, text, loading, error, network, noSearch }) => {
+  const [filterByState, setFilterByState] = useState("All");
+
+  const onFilterBy = (filter) => {
+    setFilterByState(filter);
+  };
+
   if (loading) {
     return <LoaderGif />;
   }
@@ -20,19 +26,43 @@ const RecommendTools = ({ list, text, loading, error, network, noSearch }) => {
   }
   return (
     <div style={{ width: "100%", margin: "3rem 0rem" }}>
-      <TitleBox title="available tools" text="filter" link={false} />
+      <TitleBox
+        title="available tools"
+        text="filter"
+        link={false}
+        icon
+        filter
+        clicked={onFilterBy}
+      />
       <Tools list={list}>
         {noSearch === false
-          ? list.map(({ name, id, description, icon }) => (
-              <Tool
-                key={id}
-                icon={icon}
-                title={name}
-                text={description}
-                btn="add"
-                pad={true}
-              />
-            ))
+          ? list.map(({ name, id, description, icon, collection }) => {
+              if (collection === filterByState) {
+                return (
+                  <Tool
+                    key={id}
+                    icon={icon}
+                    title={name}
+                    text={description}
+                    btn="add"
+                    pad={true}
+
+                  />
+                );
+              } else if (filterByState === "All" || filterByState === "") {
+                return (
+                  <Tool
+                    key={id}
+                    icon={icon}
+                    title={name}
+                    text={description}
+                    btn="add"
+                    pad={true}
+
+                  />
+                );
+              }
+            })
           : `No result of  "${text}"  found for available tools`}
       </Tools>
     </div>

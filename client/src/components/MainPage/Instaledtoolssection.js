@@ -43,7 +43,7 @@ const InstalledTools = ({
 
   return (
     <div className="flex flex-col mb-4">
-      {/* <div className="flex mb-3">
+      <div className="flex mb-3">
         <div className="flex-1 font-bold ">Recommended Tools</div>
         <div className="flex space-x-2">
           <div>
@@ -51,7 +51,7 @@ const InstalledTools = ({
           </div>
           <div>Filter</div>
         </div>
-      </div> */}
+      </div>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
         {
           // tools &&

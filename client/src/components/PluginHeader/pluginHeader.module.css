@@ -4,6 +4,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
+  min-height: 53px;
+
 }
 
 .header div:first-child {
@@ -23,7 +25,6 @@
   display: flex;
   border-radius: 0.3rem;
   align-items: center;
-  padding: 5px 5px;
 }
 .people_div > div {
   position: relative;
