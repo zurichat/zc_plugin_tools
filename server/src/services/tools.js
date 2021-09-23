@@ -38,6 +38,23 @@ class ToolsService {
 
     return tools;
   }
+
+  async getToolsCategories() {
+    let categories = [];
+
+    availableTools.forEach((tool) => {
+      if (categories.length < 1) {
+        categories = tool.categories;
+      }
+      tool.categories.forEach((item) => {
+        if (!categories.includes(item)) {
+          categories.push(item);
+        }
+      });
+    });
+
+    return categories;
+  }
 }
 
 module.exports = new ToolsService();
