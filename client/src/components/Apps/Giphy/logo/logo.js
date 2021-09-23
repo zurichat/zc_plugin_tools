@@ -1,12 +1,12 @@
-import logo from '../../../../assets/giphy.png';
-import './logo.css'
+import logo from "../../../../assets/giphy.svg";
+import "./logo.css";
 
 const Logo = () => {
-    return (
-        <div className="logo-wrapper">
-            <img src={logo} />
-        </div>
-    )
-}
+  return (
+    <div className="logo-wrapper">
+      <img src={logo} />
+    </div>
+  );
+};
 
-export default Logo
+export default Logo;

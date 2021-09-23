@@ -5,7 +5,6 @@ import { useHistory, Link } from "react-router-dom";
 
 const InstallToolsCard = ({ name, image, description, linkName }) => {
   const [modalShowContent, setModalShowContent] = useState(false);
-  // console.log(linkName);
   function MyVerticallyCenteredModal(props) {
     return (
       <Modal
@@ -80,7 +79,7 @@ const InstallToolsCard = ({ name, image, description, linkName }) => {
     <div>
       <Link to={linkName} className='no-underline'>
         <div className='flex '>
-          <div className='bg-white flex w-full p-3 justify-center items-center space-x-4 rounded-lg cursor-pointer'>
+          <div className='bg-white flex w-full p-3 items-center space-x-4 rounded-lg cursor-pointer'>
             <div className=' p-1 border border-gray-300 rounded-lg '>
               <img src={image} alt='' width={50} />
             </div>

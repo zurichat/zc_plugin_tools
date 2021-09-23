@@ -1,4 +1,4 @@
-// app data
+
 export const tools = [
   {
     name: "Gmail",
@@ -8,7 +8,6 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "gmail",
     installed: true,
-    daily: true,
   },
   {
     name: "Figma",
@@ -18,17 +17,15 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "figma",
     installed: true,
-    daily: true,
   },
   {
     name: "Github",
     description:
       "Get access to the organization tools without leaving the zuri chat",
-    image: "./apps/github.png",
+    image: "./apps/github.svg",
     categoryClass: "billiantBots",
     linkName: "github",
     installed: true,
-    daily: true,
   },
   {
     name: "Google Drive",
@@ -38,7 +35,6 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "googledrive",
     installed: true,
-    daily: true,
   },
   {
     name: "Giphy",
@@ -57,7 +53,6 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "test",
     installed: false,
-    daily: true,
   },
   {
     name: "UnSplash",
@@ -112,7 +107,6 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "test",
     installed: false,
-    enterprise: true,
   },
   {
     name: "Behance",
@@ -122,7 +116,6 @@ export const tools = [
     categoryClass: "billiantBots",
     linkName: "test",
     installed: false,
-    enterprise: true,
   },
   {
     name: "Twitter",
@@ -132,7 +125,6 @@ export const tools = [
     categoryClass: "enterpriseApp",
     linkName: "test",
     installed: false,
-    daily: true,
   },
   {
     name: "LinkedIn",
@@ -151,7 +143,6 @@ export const tools = [
     categoryClass: "dailyTools",
     linkName: "test",
     installed: false,
-    enterprise: true,
   },
   {
     name: "Google Calendar",
@@ -161,7 +152,6 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "test",
     installed: false,
-    daily: true,
   },
   {
     name: "Hubspot",
@@ -171,7 +161,6 @@ export const tools = [
     categoryClass: "billiantBots",
     linkName: "test",
     installed: false,
-    bot: true,
   },
   {
     name: "Box",
@@ -181,7 +170,6 @@ export const tools = [
     categoryClass: "dailyTools",
     linkName: "test",
     installed: false,
-    enterprise: true,
   },
   {
     name: "Zoom",
@@ -218,7 +206,6 @@ export const tools = [
     categoryClass: "workFromHome",
     linkName: "test",
     installed: false,
-    bot: true,
   },
   {
     name: "Google Keep",
@@ -237,7 +224,6 @@ export const tools = [
     categoryClass: "billiantBots",
     linkName: "test",
     installed: false,
-    bot: true,
   },
   {
     name: "Google Meet",
@@ -274,6 +260,5 @@ export const tools = [
     categoryClass: "billiantBots",
     linkName: "test",
     installed: false,
-    daily: true,
   },
 ];
