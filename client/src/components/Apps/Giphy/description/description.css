@@ -1,5 +1,5 @@
 .giphy-description  {
-    padding: 0.5em;
+    padding: 0.5em 1.5em;
     width: 75vw;
 }
 
@@ -12,7 +12,6 @@
 .giphy-description .description-links-wrapper{
     margin-left: 1em;
     width: 100%;
-    border-bottom: 1px solid #C1C1C1;
 }
 .giphy-description .description-links-wrapper ul {
     display: flex;
@@ -31,9 +30,9 @@
     color: #767676;
 }
 
-.giphy-description .description-text {
+/* .giphy-description .description-text {
     padding: 1em;
-}
+} */
 
 .giphy-description .description-text p {
     color: #2A2A2A;

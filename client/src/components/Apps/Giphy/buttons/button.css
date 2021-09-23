@@ -9,12 +9,13 @@
 }
 
 .greenButton {
-    background-color: #009B69;
-    color: white;
+    color: #00B87C;
+    border: 1px solid #00B87C;
 }
 
 .greenButton:hover{
-    background: #007c55;
+    background: #00B87C;
+    color: white;
     transition: 0.2s;
 }
 

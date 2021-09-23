@@ -1,6 +1,6 @@
 import './button.css'
 
-export const GreenBtn = (props)=>{
+export const ActionBtn = (props)=>{
     return (
         
             <button className="giphyButton greenButton">

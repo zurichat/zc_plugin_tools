@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { GreenBtn, WhiteBtn } from "../buttons/button";
+import { ActionBtn, WhiteBtn } from "../buttons/button";
 import Logo from "../logo/logo";
 
 import "./descriptionAction.css";
@@ -10,9 +10,10 @@ const DescriptionAction = () => {
     <div className="action-section">
       <Logo />
       <div className="btn-wrapper">
-        <GreenBtn>Add to Zuri Chat</GreenBtn>
+        <ActionBtn>Configuration</ActionBtn>
+        <ActionBtn>App Homepage</ActionBtn>
       </div>
-      <div className="learn">
+      {/* <div className="learn">
         <Link to={`/`}>Learn more & Support</Link>
       </div>
       <div className="categories-section">
@@ -21,7 +22,7 @@ const DescriptionAction = () => {
           <WhiteBtn>Social & fun</WhiteBtn>
           <WhiteBtn>Essential Apps</WhiteBtn>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
