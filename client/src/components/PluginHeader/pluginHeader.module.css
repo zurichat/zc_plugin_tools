@@ -1,0 +1,57 @@
+.header {
+  background-color: #00b87c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  min-height: 53px;
+
+}
+
+.header div:first-child {
+  cursor: pointer;
+}
+
+.route {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.people_div {
+  background-color: white;
+  display: flex;
+  border-radius: 0.3rem;
+  align-items: center;
+}
+.people_div > div {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 3px;
+}
+
+.people_div > div:not(:first-child) {
+  /* background-color: white; */
+  margin-left: -12px;
+  padding: 3px 3px;
+}
+
+.people_div > div:nth-child(1) {
+  z-index: 3;
+}
+
+.people_div > div:nth-child(2) {
+  z-index: 2;
+}
+
+.people_div > div:nth-child(3) {
+  z-index: 1;
+}
+
+.people_count {
+  padding: 0rem 0.75rem;
+  font-size: 1.2rem;
+}

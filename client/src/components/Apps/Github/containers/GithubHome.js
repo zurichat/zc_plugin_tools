@@ -1,30 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Image from "../assets/ZV_64LdGoao.jpg";
-import GithubLogo from "../assets/Rectangle 693.jpg";
+// import githubLogo1 from "../assets/githubLogo1.png";
+// import githublogo from "../assets/githublogo.jpg";
+import github from "../assets/github.svg";
+import GitHubNew from "../assets/github.svg";
 import "../style/GithubHome.css";
 const GithubHome = () => {
   return (
-    <section className='github_home github_home_padding'>
+    <section className="github_home github_home_padding">
       <div className={`github_home_main min-h-screen `}>
         <section className={`github_home_main-section1`}>
           <div className={`flex flex-col gap-4`}>
             <div
               className={`bg-white flex flex-row items-center justify-center py-6 rounded`}
             >
-              <img src={GithubLogo} alt='github logo' />
+              <img src={GitHubNew} alt="github logo" />
             </div>
             <div className={`github_btn_container flex flex-col gap-2`}>
               <Link
                 to={"/github/githubgivepermission"}
-                target='_blank'
-                rel='noopener noreferrer'
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`github_btn_container-btn bg-githubGreen text-white`}
               >
                 Add to Zuri Chat
               </Link>
               <button
-                disabled='disabled'
+                disabled="disabled"
                 className={`github_btn_container-btn bg-transparent text-githubGreen`}
               >
                 Learn More
@@ -75,12 +78,12 @@ const GithubHome = () => {
               </ul>
             </nav>
             <div className={`flex flex-col gap-8`}>
-              <section className='bg-githubBlue flex flex-row gap-1 lg:gap-0 items-center lg text-white font-bold p-4 md:p-5 lg:p-5 rounded'>
-                <h2 className='w-6/12 lg:w-2/6 md:text-3xl lg:text-2xl 2xl:text-4xl '>
+              <section className="bg-githubBlue flex flex-row gap-1 lg:gap-0 items-center lg text-white font-bold p-4 md:p-5 lg:p-5 rounded">
+                <h2 className="w-6/12 lg:w-2/6 md:text-3xl lg:text-2xl 2xl:text-4xl ">
                   Bring your code to the conversations you care about
                 </h2>
-                <div className='w-6/12 lg:w-4/6 rounded overflow-hidden'>
-                  <img src={Image} alt='repository' className='w-full' />
+                <div className="w-6/12 lg:w-4/6 rounded overflow-hidden">
+                  <img src={Image} alt="repository" className="w-full" />
                 </div>
               </section>
               <div
@@ -92,7 +95,7 @@ const GithubHome = () => {
                 </p>
                 <div className={`flex flex-col gap-2`}>
                   <span>With Github on Zuri, you can stay updated on:</span>
-                  <ul className='list-disc flex flex-col gap-1.5 list-inside'>
+                  <ul className="list-disc flex flex-col gap-1.5 list-inside">
                     <li>New commits </li>
                     <li>New pull requests</li>
                     <li> New commits</li>

@@ -2,7 +2,7 @@ const response = require("../utils/response");
 
 class SidebarController {
   async getSideBarEndpoints(req, res) {
-    const endpoints = ["/gmail", "github", "figma", "google-drive", "giphy"];
+    const endpoints = ["/gmail", "github", "figma", "googledrive", "giphy"];
 
     res.send(
       response(

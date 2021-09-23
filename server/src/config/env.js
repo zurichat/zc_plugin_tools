@@ -4,7 +4,7 @@ const mode = env.NODE_ENV || "development";
 
 // common environmental variables for all environments
 const common = {
-  PORT: env.PORT || 3600,
+  PORT: env.PORT || 8500,
   GIPHY_API_KEY: "dqp8GYkt1VqBk7GjiuKUYj4QdbJS4phJ",
   GOOGLE_DRIVE_KEYS: {
     CLIENT_ID:
@@ -21,7 +21,8 @@ const common = {
 const development = {
   NODE_ENV: "development",
   DB_URI: "mongodb://localhost:27017/hobbes",
-  referrer: "https://externaltools.zuri.chat",
+  image_referrer: `http://localhost:8500`,
+  url_referrer: `http://localhost:9000`,
   ...common,
 };
 
@@ -29,7 +30,8 @@ const development = {
 const production = {
   NODE_ENV: "production",
   DB_URI: env.DB_URI,
-  referrer: "https://externaltools.zuri.chat",
+  image_referrer: "https://externaltools.zuri.chat",
+  url_referrer: "https://zuri.chat",
   ...common,
 };
 
