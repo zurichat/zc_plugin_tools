@@ -2,18 +2,17 @@
   display: flex;
   width: 100%;
   align-items: center;
+  padding: 2em;
 }
 
 .giphy-headerr .settingsgiphy,
 .giphy-headerr .dpgiphy {
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
+  margin: 0 0.5em;
 }
 
 .giphy-headerr img.settingsgiphy {
   width: 20px;
   height: 20px;
-  margin-top: 0.8rem;
 }
 
 .giphy-headerr img.dpgiphy {
