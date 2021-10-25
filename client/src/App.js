@@ -1,11 +1,12 @@
+import React from 'react';
 // import ToolsHeader from "./components/toolsheader/toolsheader";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ToolsView from "./components/ToolsViewPage/ToolsView";
 import ToolsDirectory from "./components/ToolsDirectory/ToolsDirectory";
-import Gmail from "./components/Apps/Gmail/Gmail";
+import Gmail from "./components/Gmail/pages/Gmail.jsx";
 import Figma from "./components/Apps/Figma/Figma";
 // import Github from "./components/Apps/Github/Github";
-import Giphy from "./components/Apps/Giphy/Giphy";
+import Giphy from "./components/Giphy/pages/Giphy.jsx";
 // import Authenticate from "./components/Apps/Figma/subRoutes/Authenticate";
 import GoogleDrive from "./components/Apps/GoogleDrive/GoogleDrive";
 import FigmaSubRoutes from "./components/Apps/Figma/SubRoute";
@@ -13,15 +14,15 @@ import FigmaSubRoutes from "./components/Apps/Figma/SubRoute";
 // import HomeLayoutRoutes from "./components/allroutes/homeRoutesLayout";
 // import AppLayoutRoutes from "./components/allroutes/appRoutesLayout";
 // import ToolsDirectoryLayout from "./components/allroutes/toolsDirectoryLayout";
-import GithubHome from "./components/Apps/Github/containers/GithubHome";
-import Githubgivepermission from "./components/Apps/Github/containers/Githubgivepermission";
-import GithubInstalled from "./components/Apps/Github/containers/GithubInstalled";
+import GithubHome from "./components/Github/components/GithubHome.jsx";
+import Githubgivepermission from "./components/Github/components/Githubgivepermission.jsx";
+import GithubInstalled from "./components/Github/components/GithubInstalled.jsx";
 import BaseLayout from "./components/allroutes/baseLayout";
 
 function App() {
   return (
     <div className="flex flex-grow min-h-screen">
-      <div className="flex-grow bg-gray-200">
+      <div className="flex-grow ">
         <BrowserRouter basename="/tools">
           <Switch>
             <BaseLayout>
