@@ -12,7 +12,7 @@ function SingleAppPageTop(props) {
             {capitalizedName}
           </div> */}
         <Link to={"/"} className="no-underline">
-          <div className="flex justify-between items-center space-x-2 cursor-pointer text-black bg-gray-200 border-gray-400 px-2 py-1 hover:bg-gray-400  rounded-full transition transform duration-300 ease-in-out">
+          <div className="flex justify-between items-center space-x-2 cursor-pointer text-black border-gray-400 px-2 py-1 hover:bg-gray-400  rounded-full transition transform duration-300 ease-in-out">
             <div className="font-bold hover:text-white">
               <FontAwesomeIcon icon={faChevronLeft} className="" />
             </div>
