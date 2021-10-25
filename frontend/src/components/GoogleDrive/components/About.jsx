@@ -1,6 +1,6 @@
 import React from "react";
-import Demo from "../assets/ga-img/demo-img.svg";
-import Logo from "../assets/ga-img/drive-logo.svg";
+import Demo from "../assets/demo-img.svg";
+import Logo from "../assets/drive-logo.svg";
 
 export default function About() {
   return (

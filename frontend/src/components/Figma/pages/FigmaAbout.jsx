@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./FigmaAbout.module.css";
-import MainContent from "./MainContent";
-import Screenshots from "./Screenshots";
+// import styles from "../styles/FigmaAbout.module.css";
+import MainContent from "../components/MainContent";
+import Screenshots from "../components/Screenshots";
 
 const FigmaAbout = () => {
   return (

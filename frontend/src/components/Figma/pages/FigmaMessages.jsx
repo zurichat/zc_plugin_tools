@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import FigmaMessagesContainer from "../container/FigmaMessagesContainer";
+import FigmaMessagesContainer from "../components/FigmaMessagesContainer";
 import FigmaTextBar from "../components/FigmaTextBar";
 import Day from "../components/Day";
-import ss1 from "../images/ss1.png";
-import logo from "../images/figma.svg";
-import "../css/FigmaMessages.css";
+import ss1 from "../assets/ss1.png";
+import logo from "../assets/figma.svg";
+import "../styles/FigmaMessages.css";
 
 const FigmaMessages = () => {
   const localHostUrl =
