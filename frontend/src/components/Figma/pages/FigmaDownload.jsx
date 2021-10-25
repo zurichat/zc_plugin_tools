@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../images/figma.svg";
+import logo from "../assets/figma.svg";
 
 function FigmaDownload() {
   const [clicked, setClicked] = useState("desc");

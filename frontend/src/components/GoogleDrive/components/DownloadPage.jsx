@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Modal from "../Modal/index";
+import Modal from "./Modal";
 
 function DownloadPage() {
   const [clicked, setClicked] = useState("desc");

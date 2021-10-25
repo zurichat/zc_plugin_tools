@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./../../searchbar.component";
-import FigmaAbout from "./about-secttion/FigmaAbout";
-import FigmaMessages from "./messages-section/FigmaMessages";
-import FigmaDownload from "./downloads-section/FigmaDownload";
-import logo from "./images/figma.svg";
-import downArrow from "./images/down-arrow-icon.svg";
-import "./css/Figma.css";
+import "../components/searchbar.component";
+import FigmaAbout from "./FigmaAbout";
+import FigmaMessages from "./FigmaMessages";
+import FigmaDownload from "./FigmaDownload";
+import logo from "../assets/figma.svg";
+import downArrow from "../assets/down-arrow-icon.svg";
+import "../styles/Figma.css";
 // import ToolsHeader from "../../toolsheader/toolsheader";
 
 const Figma = () => {

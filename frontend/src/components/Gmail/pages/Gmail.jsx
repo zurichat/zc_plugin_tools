@@ -14,7 +14,7 @@ const Gmail = () => {
   return (
     <>
       {clicked == "about_messages" ? (
-        <About_Messages />
+        <AboutMessages />
       ) : (
         <div className="gmail-container max-w-screen-xl mt-5 pt-5 p-8">
           <div className="gmail-container-l flex flex-col">
@@ -75,7 +75,8 @@ const Gmail = () => {
                 }`}
               >
                 Permission
-              </button>about
+              </button>
+              about
               <button
                 onClick={() => setClicked("sec")}
                 className={`mr-4 sm:px-3 selected-items pb-2 text-gray-600 hover:text-black text-sm font-semibold ${

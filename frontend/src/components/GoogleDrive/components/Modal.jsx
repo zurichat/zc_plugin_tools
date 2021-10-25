@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useCallback } from "react";
 // import { func } from 'prop-types';
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import styles from "../GoogleDrive.module.css";
+import styles from "../styles/GoogleDrive.module.css";
 import NameForm from "./Form";
 
 const Modal = ({ showModal, setShowModal }) => {

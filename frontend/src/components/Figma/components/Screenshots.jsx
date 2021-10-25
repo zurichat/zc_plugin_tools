@@ -1,8 +1,8 @@
 import React from "react";
-import ss1 from "../images/ss1.png";
-import ss2 from "../images/ss2.png";
-import ss3 from "../images/ss3.png";
-import styles from "./FigmaAbout.module.css";
+import ss1 from "../assets/ss1.png";
+import ss2 from "../assets/ss2.png";
+import ss3 from "../assets/ss3.png";
+import styles from "../styles/FigmaAbout.module.css";
 function Screenshots() {
   return (
     <div>

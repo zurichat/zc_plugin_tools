@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import styles from "./GoogleDrive.module.css";
-import Messages from "./Messages/Messages";
-import About from "./About/About";
-import DownloadPage from "./DownloadPage/DownloadPage.js";
+import styles from "../styles/GoogleDrive.module.css";
+import Messages from "../components/Messages";
+import About from "../components/About";
+import DownloadPage from "../components/DownloadPage.jsx";
 // import googledrivelogo from "./assets/googledrivelogo.png";
 // import arrowdown from "./assets/arrowdown.png";
 // import gmailLogo from "./assets/gmailLogo.png";
-import googledrive from "./assets/googledrive.png";
-import arrowdown from "./assets/arrowdown.svg";
+import googledrive from "../assets/googledrive.png";
+import arrowdown from "../assets/arrowdown.svg";
 
 const GoogleDrive = () => {
   const [page, setPage] = useState("download");

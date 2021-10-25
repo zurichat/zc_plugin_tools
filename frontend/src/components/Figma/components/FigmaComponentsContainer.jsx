@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router";
-import FigmaAbout from "../about-secttion/FigmaAbout";
-import FigmaMessages from "../messages-section/FigmaMessages";
-import FigmaDownload from "../downloads-section/FigmaDownload";
+import FigmaAbout from "../pages/FigmaAbout";
+import FigmaMessages from "../pages/FigmaMessages";
+import FigmaDownload from "../pages/FigmaDownload";
 
 const FigmaComponentsContainer = () => {
   const { component } = useParams();

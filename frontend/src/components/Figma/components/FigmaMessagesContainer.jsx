@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import FigmaMessageConnectAccount from "../components/FigmaMessageConnectAccount";
+import FigmaMessageConnectAccount from "./FigmaMessageConnectAccount";
 
 const FigmaMessagesContainer = ({ hero, logo, localHostUrl, deployedUrl }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -14,7 +14,7 @@ const FigmaMessagesContainer = ({ hero, logo, localHostUrl, deployedUrl }) => {
   return (
     <section className={`figma-msgs_msg-container`}>
       <div className={`figma-msgs_msg-container_logo`}>
-        <img src={logo} alt='figma-logo' />
+        <img src={logo} alt="figma-logo" />
       </div>
       <div className={`figma-msgs_msg-container_main-container`}>
         {isVisible && (
