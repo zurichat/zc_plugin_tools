@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./../../searchbar.component";
+import "../../searchbar.component";
 import FigmaAbout from "./about-secttion/FigmaAbout";
 import FigmaMessages from "./messages-section/FigmaMessages";
 import FigmaDownload from "./downloads-section/FigmaDownload";

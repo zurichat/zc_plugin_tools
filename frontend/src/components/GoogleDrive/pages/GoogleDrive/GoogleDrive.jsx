@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./GoogleDrive.module.css";
 import Messages from "./Messages/Messages";
 import About from "./About/About";
-import DownloadPage from "./DownloadPage/DownloadPage.js";
+import DownloadPage from "./DownloadPage/DownloadPage.jsx";
 // import googledrivelogo from "./assets/googledrivelogo.png";
 // import arrowdown from "./assets/arrowdown.png";
 // import gmailLogo from "./assets/gmailLogo.png";
