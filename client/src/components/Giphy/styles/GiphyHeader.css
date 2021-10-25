@@ -1,0 +1,21 @@
+.giphy-headerr {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 2em;
+}
+
+.giphy-headerr .settingsgiphy,
+.giphy-headerr .dpgiphy {
+  margin: 0 0.5em;
+}
+
+.giphy-headerr img.settingsgiphy {
+  width: 20px;
+  height: 20px;
+}
+
+.giphy-headerr img.dpgiphy {
+  width: 35px;
+  height: 35px;
+}

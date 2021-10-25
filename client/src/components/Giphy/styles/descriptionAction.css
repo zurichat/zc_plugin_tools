@@ -1,0 +1,40 @@
+.action-section {
+    padding: 10px;
+    width: 240px;
+}
+
+.action-section .btn-wrapper {
+    width: 100%;
+    margin: 10px auto;
+    border-bottom: 1px solid #C1C1C1;
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+}
+
+.action-section .learn   {
+    padding: 0.3em 0;
+}
+.learn a {
+    color: black;
+}
+.action-section .categories-section {
+    width: 100%;
+    margin: 0.5em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.action-section .categories-section .categoryBtns {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px){
+    .action-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
