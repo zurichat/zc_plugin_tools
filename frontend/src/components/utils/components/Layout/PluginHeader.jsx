@@ -4,8 +4,8 @@ import person1 from "../../assets/person1.svg";
 import person2 from "../../assets/person2.svg";
 import person3 from "../../assets/person3.svg";
 
-import styles from "./pluginHeader.module.css";
-import DownArrowIcon from "../Icons/DownArrowIcon";
+import styles from "../../styles/pluginHeader.module.css";
+import DownArrowIcon from "../DownArrowIcon";
 
 function PluginHeader(props) {
   return (
