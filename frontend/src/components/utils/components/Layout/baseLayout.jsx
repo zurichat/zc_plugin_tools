@@ -1,7 +1,7 @@
 import React from "react";
 import PageTop from "../pageTops/index";
 import { useLocation } from "react-router-dom";
-import PluginHeader from "../PluginHeader/index";
+import PluginHeader from "./PluginHeader";
 
 function BaseLayout({ children }) {
   const path = useLocation().pathname;

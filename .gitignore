@@ -4,3 +4,5 @@ build
 .yarn
 # Local Netlify folder
 .netlify
+temp_auto_push.bat
+temp_interactive_push.bat
