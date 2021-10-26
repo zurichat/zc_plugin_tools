@@ -1,11 +1,13 @@
 {
-  "name": "ZC-plugin-tools-API",
+  "name": "zc-plugin-tools",
   "version": "1.0.0",
   "description": "This api serves all requests for the company online tools on Zuri Chat",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js --env production",
-    "build": "cd ../frontend && yarn install && yarn build",
+    "start": "node server.js --env production",
+    "build": "yarn build:frontend",
+    "build:frontend": "cd ../frontend && yarn install && yarn build && yarn build:rootConfig",
+    "build:rootConfig": "cd ../single_spa && yarn install && yarn build",
     "eslint": "eslint \"./**/*.js\"",
     "eslint:fix": "eslint --fix \"./**/*.js\"",
     "dev": "nodemon --watch */*.* app.js",

@@ -7,7 +7,7 @@ const logFormat = printf(({ level, message, label, timestamp, stack }) => {
 
 const logger = createLogger({
   format: combine(
-    label({ label: "ZC-plugin-tools-API" }),
+    label({ label: "zc_plugin_tools_api" }),
     timestamp(),
     errors({ stack: true }),
     json()
