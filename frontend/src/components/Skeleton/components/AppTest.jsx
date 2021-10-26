@@ -1,5 +1,5 @@
 import React from "react";
-import { tools } from "../../data/tools.data";
+import { tools } from "../../utils/data/tools.data";
 
 // const installed =
 const AppsPage = () => {

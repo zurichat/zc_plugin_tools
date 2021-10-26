@@ -17,7 +17,7 @@ import FigmaSubRoutes from "./components/Figma/pages/SubRoute";
 import GithubHome from "./components/Github/components/GithubHome.jsx";
 import Githubgivepermission from "./components/Github/components/Githubgivepermission.jsx";
 import GithubInstalled from "./components/Github/components/GithubInstalled.jsx";
-import BaseLayout from "./components/allroutes/baseLayout";
+import BaseLayout from "./components/utils/components/Layout/baseLayout";
 
 function App() {
   return (
