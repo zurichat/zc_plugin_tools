@@ -25,7 +25,14 @@ class ToolsService {
       return tool;
     });
     if (query?.sortBy == "collections") tools = _.groupBy(tools, "collection");
-
+    if (query?.category) {
+      let selectedCategory = query.category;
+      tools = tools.filter((tool) => {
+        if (tool.categories.includes(selectedCategory)) {
+          return tool;
+        }
+      });
+    }
     return tools;
   }
 
@@ -37,6 +44,23 @@ class ToolsService {
     });
 
     return tools;
+  }
+
+  async getToolsCategories() {
+    let categories = [];
+
+    availableTools.forEach((tool) => {
+      if (categories.length < 1) {
+        categories = tool.categories;
+      }
+      tool.categories.forEach((category) => {
+        if (!categories.includes(category)) {
+          categories.push(category);
+        }
+      });
+    });
+
+    return categories;
   }
 }
 

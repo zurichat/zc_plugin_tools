@@ -17,6 +17,15 @@ class ToolsController {
       response("Recommended Tools returned successfully", recommendedTools)
     );
   }
+
+  async getToolsCategories(req, res) {
+    const origin = req.headers.referer || req.headers.host;
+    const toolsCategories = await tools.getToolsCategories();
+
+    res.send(
+      response("Tools Categories returned successfully", toolsCategories)
+    );
+  }
 }
 
 module.exports = new ToolsController();

@@ -1,6 +1,10 @@
 const express = require("express");
 
+const env = require("./env");
+const isProduction = env.NODE_ENV == "production";
+
 const path = require("path");
+
 const frontendBase = path.join(
   __dirname,
   "..",
@@ -9,22 +13,26 @@ const frontendBase = path.join(
   "frontend",
   "build"
 );
+const rootConfigBase = path.join(
+  __dirname,
+  "..",
+  "..",
+  "..",
+  "single_spa",
+  "build"
+);
 const frontendIndex = path.join(frontendBase, "zuri-zuri-plugin-tools.js");
+const rootConfigIndex = path.join(rootConfigBase, "");
 
 const staticEngine = (app) => {
   app.use(express.static(frontendBase));
-
-  // app.get("*", (req, res, next) => {
-  //   res.sendFile(frontendIndex);
-  // });
+  app.use(express.static(rootConfigIndex));
 
   app.get("/zuri-zuri-plugin-tools.js", (req, res) => {
     res.sendFile(frontendIndex);
   });
 
-  app.use(
-    express.static(path.join(__dirname, "..", "..", "..", "frontend", "build"))
-  );
+  // y
 };
 
 module.exports = staticEngine;
